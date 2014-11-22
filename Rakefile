@@ -1,12 +1,6 @@
 SOURCE_BRANCH = "master"
 DESTINATION_BRANCH = "gh-pages"
 DESTINATION = "./resources/public"
-
-def check_destination
-  unless Dir.exist? DESTINATION
-    sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git #{DESTINATION}"
-  end
-end
  
 desc "Generate the site and push changes to remote origin"
 task :deploy do
@@ -24,15 +18,17 @@ task :deploy do
   end
 
   # Make sure destination folder exists as git repo
-  check_destination
+  unless Dir.exist? DESTINATION
+    sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git #{DESTINATION}"
+  end
 
   if `git branch` != "master"
     sh "git checkout #{SOURCE_BRANCH}"
   end
 
   # Generate the site
-  `lein clean`
-  `lein cljsbuild prod`
+  puts `lein cljsbuild clean`
+  puts `lein cljsbuild once prod`
 
   # Commit and push to github
   sha = `git log`.match(/[a-z0-9]{40}/)[0]

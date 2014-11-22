@@ -10,3 +10,4 @@ pom.xml.asc
 *.js
 *.js.map
 /resources/public/js
+/resources/public/js-min
