@@ -16,7 +16,7 @@ arimaa.core.session_id = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(null);
 arimaa.core.gameroom_id = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(null);
 arimaa.core.logged_in = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(false);
 arimaa.core.open_games = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(cljs.core.PersistentVector.EMPTY);
-arimaa.core.chat = reagent.core.atom.cljs$core$IFn$_invoke$arity$1("Empty?");
+arimaa.core.chat = reagent.core.atom.cljs$core$IFn$_invoke$arity$1("Empty!");
 arimaa.core.login = (function login(username,password){var c__5823__auto__ = cljs.core.async.chan.cljs$core$IFn$_invoke$arity$1((1));cljs.core.async.impl.dispatch.run(((function (c__5823__auto__){
 return (function (){var f__5824__auto__ = (function (){var switch__5808__auto__ = ((function (c__5823__auto__){
 return (function (state_14895){var state_val_14896 = (state_14895[(1)]);if((state_val_14896 === (2)))
