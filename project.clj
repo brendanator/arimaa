@@ -26,5 +26,4 @@
                     :compiler {:output-to "resources/public/js-min/cljs-min.js"
                                :output-dir "resources/public/js-min"
                                :optimizations :advanced
-                               :pretty-print false
-                               :source-map "resources/public/js-min/cljs-min.js.map"}}}})
+                               :pretty-print false}}}})
