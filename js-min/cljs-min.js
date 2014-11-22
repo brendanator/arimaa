@@ -589,5 +589,3 @@ function lr(){return new R(null,4,5,T,[Yh,new R(null,2,5,T,[Di,"Games"],null),ne
 T,[Jh,$h.a(l)],null)],null),new ab(null,1,[zh,Th.a(l)],null));g.add(l);k+=1}else{e=!0;break a}e=void 0}return e?ee(g.Ha(),b(wc(d))):ee(g.Ha(),null)}g=D(d);return J(fd(new R(null,5,5,T,[Lh,new R(null,2,5,T,[Jh,qh.a(g)],null),new R(null,2,5,T,[Jh,Fi.a(g)],null),new R(null,2,5,T,[Jh,rh.a(g)],null),new R(null,2,5,T,[Jh,$h.a(g)],null)],null),new ab(null,1,[zh,Th.a(g)],null)),b(E(d)))}return null}},null,null)}(I.a?I.a(gr):I.call(null,gr))}()],null)],null)],null)}
 function mr(){return new R(null,2,5,T,[Ki,I.a?I.a(hr):I.call(null,hr)],null)}function nr(){return new R(null,3,5,T,[Yh,new R(null,1,5,T,[lr],null),new R(null,1,5,T,[mr],null)],null)}ca("arimaa.core.run",function(){yk.e(new R(null,1,5,T,[nr],null),document.body);ir();return kr()});
 })();
-
-//# sourceMappingURL=cljs-min.js.map
