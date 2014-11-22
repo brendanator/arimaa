@@ -1,4 +1,5 @@
 SOURCE_BRANCH = "master"
+DESTINATION_BRANCH = "gh-pages"
 DESTINATION = "./resources/public"
 
 def check_destination
@@ -25,17 +26,20 @@ task :deploy do
   # Make sure destination folder exists as git repo
   check_destination
 
-  sh "git checkout #{SOURCE_BRANCH}"
-  Dir.chdir(DESTINATION) { sh "git checkout #{DESTINATION_BRANCH}" }
+  if `git branch` != "master"
+    sh "git checkout #{SOURCE_BRANCH}"
+  end
 
   # Generate the site
-  sh "bundle exec jekyll build"
+  `lein clean`
+  `lein cljsbuild prod`
 
   # Commit and push to github
   sha = `git log`.match(/[a-z0-9]{40}/)[0]
   Dir.chdir(DESTINATION) do
+    sh "git checkout #{DESTINATION_BRANCH}"
     sh "git add --all ."
-    sh "git commit -m 'Updating to #{USERNAME}/#{REPO}@#{sha}.'"
+    sh "git commit -m 'Updating to brendanator/arimaa@#{sha}.'"
     sh "git push --quiet origin #{DESTINATION_BRANCH}"
     puts "Pushed updated branch #{DESTINATION_BRANCH} to GitHub Pages"
   end
