@@ -21,9 +21,7 @@ task :deploy do
   unless Dir.exist? (DESTINATION + "/.git")
     sh "rm -rf #{DESTINATION}"
     sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/brendanator/arimaa.git #{DESTINATION}"
-    Dir.chdir(DESTINATION) do
-      sh "git checkout #{DESTINATION_BRANCH}"
-    end
+    Dir.chdir(DESTINATION) { sh "git checkout #{DESTINATION_BRANCH}" }
   end
 
   if `git branch` != SOURCE_BRANCH
