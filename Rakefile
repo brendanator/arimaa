@@ -18,16 +18,15 @@ task :deploy do
   end
 
   # Make sure destination folder exists as git repo
-  unless Dir.exist? DESTINATION
-    sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/#{USERNAME}/#{REPO}.git #{DESTINATION}"
+  unless Dir.exist? (DESTINATION + "/.git")
+    sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/brendanator/arimaa.git #{DESTINATION}"
   end
 
-  if `git branch` != "master"
+  if `git branch` != SOURCE_BRANCH
     sh "git checkout #{SOURCE_BRANCH}"
   end
 
   # Generate the site
-  puts `lein cljsbuild clean`
   puts `lein cljsbuild once prod`
 
   # Commit and push to github

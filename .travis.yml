@@ -1,0 +1,7 @@
+language: clojure
+
+after_success: rake deploy --quiet
+
+env:
+  global:
+    secure: Jj7pYfjmvgt6F09PZEvElHAo0PPOjv434HuM/RxVsb/kOl8TC2ls6CSGSFrf1wPLfHgz+OPBfG8n0eiWCZVTyD0M1Ld4wLpQmjoVwdI991lDTHRB+ctV8lZyDoXN2JTFrJNtqv/vDSVAPQhpYi5WPW6IhWNJM1DeVenppKmvF08=
