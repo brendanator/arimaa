@@ -21,6 +21,9 @@ task :deploy do
   unless Dir.exist? (DESTINATION + "/.git")
     sh "rm -rf #{DESTINATION}"
     sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/brendanator/arimaa.git #{DESTINATION}"
+    Dir.chdir(DESTINATION) do
+      sh "git checkout #{DESTINATION_BRANCH}"
+    end
   end
 
   if `git branch` != SOURCE_BRANCH
@@ -33,7 +36,6 @@ task :deploy do
   # Commit and push to github
   sha = `git log`.match(/[a-z0-9]{40}/)[0]
   Dir.chdir(DESTINATION) do
-    sh "git checkout #{DESTINATION_BRANCH}"
     sh "git add --all ."
     sh "git commit -m 'Updating to brendanator/arimaa@#{sha}.'"
     sh "git push --quiet origin #{DESTINATION_BRANCH}"
