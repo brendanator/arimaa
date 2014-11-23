@@ -19,7 +19,7 @@ task :deploy do
 
   # Make sure destination folder exists as git repo
   unless Dir.exist? (DESTINATION + "/.git")
-    sh "rmdir -rf #{DESTINATION}"
+    sh "rm -rf #{DESTINATION}"
     sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/brendanator/arimaa.git #{DESTINATION}"
   end
 
