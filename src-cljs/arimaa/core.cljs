@@ -12,7 +12,7 @@
 (def gameroom-id (atom nil))
 (def logged-in (atom false))
 (def open-games (atom []))
-(def chat (atom "Empty!!"))
+(def chat (atom "Empty!!!"))
 
 (defn login [username password]
   (go (let [response (<! (http/post "http://arimaa.com/arimaa/chat/srv.php" {:form-params {:action "login" :username username :password password}}))
