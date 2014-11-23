@@ -21,7 +21,10 @@ task :deploy do
   unless Dir.exist? (DESTINATION + "/.git")
     sh "rm -rf #{DESTINATION}"
     sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/brendanator/arimaa.git #{DESTINATION}"
-    Dir.chdir(DESTINATION) { sh "git checkout #{DESTINATION_BRANCH}" }
+    Dir.chdir(DESTINATION) do
+      sh "git checkout #{DESTINATION_BRANCH}"
+      sh "rm -rf *"
+    end 
   end
 
   if `git branch` != SOURCE_BRANCH
@@ -30,7 +33,7 @@ task :deploy do
 
   # Generate the site
   puts `lein cljsbuild once prod`
-  sh "mv index-min.html #{DESTINATION}/index.html" 
+  sh "cp index-min.html #{DESTINATION}/index.html"
 
   # Commit and push to github
   sha = `git log`.match(/[a-z0-9]{40}/)[0]
