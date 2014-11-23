@@ -23,18 +23,17 @@ task :deploy do
     sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/brendanator/arimaa.git #{DESTINATION}"
     Dir.chdir(DESTINATION) do
       sh "git checkout #{DESTINATION_BRANCH}"
-      sh "rm -rf *"
+      sh "rm -rf js-min"
     end 
   end
 
-  if `git branch` != SOURCE_BRANCH
+  unless `git branch` == SOURCE_BRANCH
     sh "git checkout #{SOURCE_BRANCH}"
   end
 
   # Generate the site
   puts `lein cljsbuild once prod`
   sh "cp index-min.html #{DESTINATION}/index.html"
-  File.write("#{DESTINATION}/CNAME", "arimaa.club")
 
   # Commit and push to github
   sha = `git log`.match(/[a-z0-9]{40}/)[0]
