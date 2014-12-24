@@ -5,4 +5,6 @@
 *.class
 /.lein-*
 /.nrepl-port
-/resources/public
+/site/js
+/site/js-min
+/production

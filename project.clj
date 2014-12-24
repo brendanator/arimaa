@@ -14,13 +14,13 @@
   :cljsbuild 
     {:builds 
       {:dev {:source-paths ["src-cljs"]
-             :compiler {:output-to "resources/public/js/cljs.js"
-                        :output-dir "resources/public/js"
+             :compiler {:output-to "site/js/cljs.js"
+                        :output-dir "site/js"
                         :optimizations :none
                         :pretty-print true
-                        :source-map "resources/public/js/cljs.js.map"}}
+                        :source-map "site/js/cljs.js.map"}}
        :prod {:source-paths ["src-cljs"]
-              :compiler {:output-to "resources/public/js-min/cljs-min.js"
-                         :output-dir "resources/public/js-min"
+              :compiler {:output-to "production/js/cljs.js"
+                         :output-dir "production/js"
                          :optimizations :advanced
                          :pretty-print false}}}})

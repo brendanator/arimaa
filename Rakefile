@@ -1,8 +1,8 @@
 SOURCE_BRANCH = "master"
 DESTINATION_BRANCH = "gh-pages"
-DESTINATION = "./resources/public"
+DESTINATION = "./production"
  
-desc "Generate the site and push changes to remote origin"
+desc "Generate the production site and push changes to remote origin"
 task :deploy do
   # Detect pull request
   if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
@@ -23,7 +23,7 @@ task :deploy do
     sh "git clone https://#{ENV['GIT_NAME']}:#{ENV['GH_TOKEN']}@github.com/brendanator/arimaa.git #{DESTINATION}"
     Dir.chdir(DESTINATION) do
       sh "git checkout #{DESTINATION_BRANCH}"
-      sh "rm -rf js-min"
+      sh "rm -rf js"
     end 
   end
 
@@ -32,9 +32,8 @@ task :deploy do
   end
 
   # Generate the site
+  sh "cp -r site/* #{DESTINATION}"
   puts `lein cljsbuild once prod`
-  sh "cp index-prod.html #{DESTINATION}/index.html"
-  sh "cp resources/arimaa.css #{DESTINATION}/arimaa.css"
 
   # Commit and push to github
   sha = `git log`.match(/[a-z0-9]{40}/)[0]
