@@ -13,57 +13,57 @@ arimaa.requests.decode_value = (function decode_value(value){
 return value.replace("%13","\n").replace("%25","%");
 });
 arimaa.requests.parse_response = (function parse_response(response){
-return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__15713_SHARP_){
-var vec__15715 = clojure.string.split.cljs$core$IFn$_invoke$arity$3(p1__15713_SHARP_,/=/,(2));
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__15715,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__15715,(1),null);
+return cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__15720_SHARP_){
+var vec__15722 = clojure.string.split.cljs$core$IFn$_invoke$arity$3(p1__15720_SHARP_,/=/,(2));
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__15722,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__15722,(1),null);
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(k),arimaa.requests.decode_value(v)], null);
-}),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__15712_SHARP_){
-return cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(p1__15712_SHARP_,"--END--");
-}),clojure.string.split.cljs$core$IFn$_invoke$arity$2(cljs.core.constant$keyword$75.cljs$core$IFn$_invoke$arity$1(response),/\n/))));
+}),cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__15719_SHARP_){
+return cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(p1__15719_SHARP_,"--END--");
+}),clojure.string.split.cljs$core$IFn$_invoke$arity$2(cljs.core.constant$keyword$78.cljs$core$IFn$_invoke$arity$1(response),/\n/))));
 });
 arimaa.requests.parse_games = (function parse_games(response){
-if(cljs.core.truth_(cljs.core.constant$keyword$193.cljs$core$IFn$_invoke$arity$1(response))){
+if(cljs.core.truth_(cljs.core.constant$keyword$196.cljs$core$IFn$_invoke$arity$1(response))){
 return response;
 } else {
-return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$194,cljs.core.map.cljs$core$IFn$_invoke$arity$2(arimaa.requests.parse_response,cljs.core.vals(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(response,cljs.core.constant$keyword$195)))], null);
+return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$197,cljs.core.map.cljs$core$IFn$_invoke$arity$2(arimaa.requests.parse_response,cljs.core.vals(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(response,cljs.core.constant$keyword$198)))], null);
 }
 });
 arimaa.requests.login = (function login(username,password){
-return cljs.core.async.map_LT_(arimaa.requests.parse_response,cljs_http.client.post.cljs$core$IFn$_invoke$arity$variadic(arimaa.requests.protocol1_url,cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$74,false,cljs.core.constant$keyword$95,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$196,"login",cljs.core.constant$keyword$56,username,cljs.core.constant$keyword$48,password], null)], null)], 0)));
+return cljs.core.async.map_LT_(arimaa.requests.parse_response,cljs_http.client.post.cljs$core$IFn$_invoke$arity$variadic(arimaa.requests.protocol1_url,cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$77,false,cljs.core.constant$keyword$98,new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$199,"login",cljs.core.constant$keyword$59,username,cljs.core.constant$keyword$51,password], null)], null)], 0)));
 });
 arimaa.requests.gameroom_state = (function gameroom_state(session_id){
 return cljs.core.async.map_LT_((function (response){
-return cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic((function (){var G__15717 = cljs.core.constant$keyword$75.cljs$core$IFn$_invoke$arity$1(response);
-return JSON.parse(G__15717);
+return cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic((function (){var G__15724 = cljs.core.constant$keyword$78.cljs$core$IFn$_invoke$arity$1(response);
+return JSON.parse(G__15724);
 })(),cljs.core.array_seq([cljs.core.constant$keyword$16,true], 0));
-}),cljs_http.client.post.cljs$core$IFn$_invoke$arity$variadic(arimaa.requests.protocol2_url,cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$74,false,cljs.core.constant$keyword$86,"text/plain",cljs.core.constant$keyword$94,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$197,session_id,cljs.core.constant$keyword$196,"state"], null)], null)], 0)));
+}),cljs_http.client.post.cljs$core$IFn$_invoke$arity$variadic(arimaa.requests.protocol2_url,cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$77,false,cljs.core.constant$keyword$89,"text/plain",cljs.core.constant$keyword$97,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$200,session_id,cljs.core.constant$keyword$199,"state"], null)], null)], 0)));
 });
 arimaa.requests.parse_chat_line = (function parse_chat_line(chat_line){
 var timestamp = cljs_time.format.unparse(cljs_time.format.formatter.cljs$core$IFn$_invoke$arity$1("HH:mm"),cljs_time.coerce.from_long(((1000) * cljs.core.first(chat_line))));
 var player_name = cljs.core.second(chat_line);
 var chat_type = cljs.core.keyword.cljs$core$IFn$_invoke$arity$1(cljs.core.nth.cljs$core$IFn$_invoke$arity$2(chat_line,(2)));
-var chat = new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$198,timestamp,cljs.core.constant$keyword$199,player_name,cljs.core.constant$keyword$200,chat_type], null);
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(chat_type,cljs.core.constant$keyword$201)){
-return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([chat,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$202,[cljs.core.str("#"),cljs.core.str(cljs.core.nth.cljs$core$IFn$_invoke$arity$2(chat_line,(3)))].join(''),cljs.core.constant$keyword$139,cljs.core.nth.cljs$core$IFn$_invoke$arity$2(chat_line,(4))], null)], 0));
+var chat = new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$201,timestamp,cljs.core.constant$keyword$202,player_name,cljs.core.constant$keyword$203,chat_type], null);
+if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(chat_type,cljs.core.constant$keyword$204)){
+return cljs.core.merge.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([chat,new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$205,[cljs.core.str("#"),cljs.core.str(cljs.core.nth.cljs$core$IFn$_invoke$arity$2(chat_line,(3)))].join(''),cljs.core.constant$keyword$142,cljs.core.nth.cljs$core$IFn$_invoke$arity$2(chat_line,(4))], null)], 0));
 } else {
 return chat;
 }
 });
 arimaa.requests.parse_chat = (function parse_chat(response){
-var response_lines = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__15718_SHARP_){
-return clojure.string.split.cljs$core$IFn$_invoke$arity$3(p1__15718_SHARP_,/\t/,(5));
-}),clojure.string.split.cljs$core$IFn$_invoke$arity$2(cljs.core.constant$keyword$75.cljs$core$IFn$_invoke$arity$1(response),/\n/));
+var response_lines = cljs.core.map.cljs$core$IFn$_invoke$arity$2((function (p1__15725_SHARP_){
+return clojure.string.split.cljs$core$IFn$_invoke$arity$3(p1__15725_SHARP_,/\t/,(5));
+}),clojure.string.split.cljs$core$IFn$_invoke$arity$2(cljs.core.constant$keyword$78.cljs$core$IFn$_invoke$arity$1(response),/\n/));
 var header = cljs.core.first(cljs.core.first(response_lines));
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(header,"OK")){
-return new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$203,cljs.core.first(cljs.core.second(response_lines)),cljs.core.constant$keyword$204,cljs.core.map.cljs$core$IFn$_invoke$arity$2(arimaa.requests.parse_chat_line,cljs.core.drop.cljs$core$IFn$_invoke$arity$2((2),response_lines))], null);
+return new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$206,cljs.core.first(cljs.core.second(response_lines)),cljs.core.constant$keyword$207,cljs.core.map.cljs$core$IFn$_invoke$arity$2(arimaa.requests.parse_chat_line,cljs.core.drop.cljs$core$IFn$_invoke$arity$2((2),response_lines))], null);
 } else {
 if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(header,"Nothing new")){
-return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$204,cljs.core.PersistentVector.EMPTY], null);
+return new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$207,cljs.core.PersistentVector.EMPTY], null);
 } else {
 if(cljs.core.truth_(header)){
-var G__15720 = [cljs.core.str("Unhandled header"),cljs.core.str(response)].join('');
-return alert(G__15720);
+var G__15727 = [cljs.core.str("Unhandled header"),cljs.core.str(response)].join('');
+return alert(G__15727);
 } else {
 return null;
 }
@@ -71,8 +71,8 @@ return null;
 }
 });
 arimaa.requests.fetch_chat = (function fetch_chat(username,auth,data){
-return cljs.core.async.map_LT_(arimaa.requests.parse_chat,cljs_http.client.post.cljs$core$IFn$_invoke$arity$variadic(arimaa.requests.chat_url,cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$74,false,cljs.core.constant$keyword$95,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$49,username,cljs.core.constant$keyword$38,auth,cljs.core.constant$keyword$203,data,cljs.core.constant$keyword$205,"fetch"], null)], null)], 0)));
+return cljs.core.async.map_LT_(arimaa.requests.parse_chat,cljs_http.client.post.cljs$core$IFn$_invoke$arity$variadic(arimaa.requests.chat_url,cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$77,false,cljs.core.constant$keyword$98,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$52,username,cljs.core.constant$keyword$41,auth,cljs.core.constant$keyword$206,data,cljs.core.constant$keyword$208,"fetch"], null)], null)], 0)));
 });
 arimaa.requests.send_chat = (function send_chat(username,auth,message){
-return cljs_http.client.post.cljs$core$IFn$_invoke$arity$variadic(arimaa.requests.chat_url,cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$74,false,cljs.core.constant$keyword$95,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$49,username,cljs.core.constant$keyword$38,auth,cljs.core.constant$keyword$205,"msg",cljs.core.constant$keyword$203,message], null)], null)], 0));
+return cljs_http.client.post.cljs$core$IFn$_invoke$arity$variadic(arimaa.requests.chat_url,cljs.core.array_seq([new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$77,false,cljs.core.constant$keyword$98,new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$52,username,cljs.core.constant$keyword$41,auth,cljs.core.constant$keyword$208,"msg",cljs.core.constant$keyword$206,message], null)], null)], 0));
 });

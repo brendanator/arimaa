@@ -200,23 +200,23 @@ var atom__1 = (function (x){
 return reagent.ratom.atom.cljs$core$IFn$_invoke$arity$1(x);
 });
 var atom__2 = (function() { 
-var G__16234__delegate = function (x,rest){
+var G__16232__delegate = function (x,rest){
 return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(reagent.ratom.atom,x,rest);
 };
-var G__16234 = function (x,var_args){
+var G__16232 = function (x,var_args){
 var rest = null;
 if (arguments.length > 1) {
   rest = cljs.core.array_seq(Array.prototype.slice.call(arguments, 1),0);
 } 
-return G__16234__delegate.call(this,x,rest);};
-G__16234.cljs$lang$maxFixedArity = 1;
-G__16234.cljs$lang$applyTo = (function (arglist__16235){
-var x = cljs.core.first(arglist__16235);
-var rest = cljs.core.rest(arglist__16235);
-return G__16234__delegate(x,rest);
+return G__16232__delegate.call(this,x,rest);};
+G__16232.cljs$lang$maxFixedArity = 1;
+G__16232.cljs$lang$applyTo = (function (arglist__16233){
+var x = cljs.core.first(arglist__16233);
+var rest = cljs.core.rest(arglist__16233);
+return G__16232__delegate(x,rest);
 });
-G__16234.cljs$core$IFn$_invoke$arity$variadic = G__16234__delegate;
-return G__16234;
+G__16232.cljs$core$IFn$_invoke$arity$variadic = G__16232__delegate;
+return G__16232;
 })()
 ;
 atom = function(x,var_args){
@@ -275,8 +275,8 @@ return cursor;
 * Run f using requestAnimationFrame or equivalent.
 */
 reagent.core.next_tick = (function next_tick(f){
-var G__16239 = f;
-return (reagent.impl.batching.next_tick.cljs$core$IFn$_invoke$arity$1 ? reagent.impl.batching.next_tick.cljs$core$IFn$_invoke$arity$1(G__16239) : reagent.impl.batching.next_tick.call(null,G__16239));
+var G__16237 = f;
+return (reagent.impl.batching.next_tick.cljs$core$IFn$_invoke$arity$1 ? reagent.impl.batching.next_tick.cljs$core$IFn$_invoke$arity$1(G__16237) : reagent.impl.batching.next_tick.call(null,G__16237));
 });
 /**
 * Works just like clojure.core/partial, except that it is an IFn, and
@@ -294,9 +294,9 @@ if (arguments.length > 1) {
 } 
 return partial__delegate.call(this,f,args);};
 partial.cljs$lang$maxFixedArity = 1;
-partial.cljs$lang$applyTo = (function (arglist__16240){
-var f = cljs.core.first(arglist__16240);
-var args = cljs.core.rest(arglist__16240);
+partial.cljs$lang$applyTo = (function (arglist__16238){
+var f = cljs.core.first(arglist__16238);
+var args = cljs.core.rest(arglist__16238);
 return partial__delegate(f,args);
 });
 partial.cljs$core$IFn$_invoke$arity$variadic = partial__delegate;
