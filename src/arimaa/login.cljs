@@ -2,6 +2,7 @@
   (:require
     [arimaa.requests :as requests]
     [arimaa.state :refer [username session-id gameroom-id]]
+    [arimaa.utils :refer [initial-focus-wrapper]]
     [reagent.core :as reagent :refer [atom]])
   (:require-macros
     [cljs.core.async.macros :refer [go]]))
@@ -15,18 +16,6 @@
             (reset! session-id (:sid response))
             (reset! gameroom-id (:grid response)))))))
 
-(defn username-input-view [username-input login]
-  [:div
-    [:label {:for "username"} "Username"]
-    [:input {:name "username" :value @username-input :type "text"
-             :on-change #(reset! username-input (-> % .-target .-value))
-             :on-key-up #(if (= (.-keyCode %) 13) (login))}]])
-
-(def focused-username-input-view
-  (with-meta
-    username-input-view
-    {:component-did-mount #(.focus (reagent/dom-node %))}))
-
 (defn login-view []
   (let [username-input (atom "")
         password (atom "")
@@ -34,7 +23,12 @@
         login #(login @username-input @password @login-error)]
     (fn []
       [:section.login-form
-        [focused-username-input-view username-input login]
+        [:div
+          [:label {:for "username"} "Username"]
+          [initial-focus-wrapper
+            [:input {:name "username" :value @username-input :type "text"
+                     :on-change #(reset! username-input (-> % .-target .-value))
+                     :on-key-up #(if (= (.-keyCode %) 13) (login))}]]]
         [:div
           [:label {:for "password"} "Password"]
           [:input {:name "password" :value @password :type "password"
