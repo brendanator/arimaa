@@ -168,9 +168,8 @@
 
 (defn writer
   "Return a transit writer. type maybe either :json or :json-verbose.
-   opts is a map containing a :handlers entry. :handlers is a JavaScript
-   array of interleaved type constructors and handler instances for those 
-   type constructors."
+  opts is a map containing a :handlers entry. :handlers is a map of
+  type constructors to handler instances."
   ([type] (writer type nil))
   ([type opts]
      (let [keyword-handler (KeywordHandler.)
@@ -252,7 +251,8 @@
   ([tag-fn rep-fn str-rep-fn]
      (write-handler tag-fn rep-fn str-rep-fn nil))
   ([tag-fn rep-fn str-rep-fn verbose-handler-fn]
-     (reify Object
+     (reify
+       Object
        (tag [_ o] (tag-fn o))
        (rep [_ o] (rep-fn o))
        (stringRep [_ o] (when str-rep-fn (str-rep-fn o)))

@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-2371
+// Compiled by ClojureScript 0.0-2511
 goog.provide('reagent.core');
 goog.require('cljs.core');
 goog.require('reagent.impl.util');
@@ -7,17 +7,13 @@ goog.require('reagent.interop');
 goog.require('reagent.ratom');
 goog.require('reagent.impl.template');
 goog.require('reagent.impl.batching');
-goog.require('reagent.impl.component');
-goog.require('reagent.impl.util');
-goog.require('reagent.impl.template');
-goog.require('reagent.ratom');
-goog.require('reagent.impl.batching');
 goog.require('reagent.debug');
 reagent.core.is_client = reagent.impl.util.is_client;
 /**
 * Turns a vector of Hiccup syntax into a React component. Returns form unchanged if it is not a vector.
 */
-reagent.core.as_component = (function as_component(form){return reagent.impl.template.as_component.cljs$core$IFn$_invoke$arity$1(form);
+reagent.core.as_component = (function as_component(form){
+return reagent.impl.template.as_component.cljs$core$IFn$_invoke$arity$1(form);
 });
 /**
 * Render a Reagent component into the DOM. The first argument may be either a
@@ -29,11 +25,15 @@ reagent.core.as_component = (function as_component(form){return reagent.impl.tem
 */
 reagent.core.render_component = (function() {
 var render_component = null;
-var render_component__2 = (function (comp,container){return render_component.cljs$core$IFn$_invoke$arity$3(comp,container,null);
+var render_component__2 = (function (comp,container){
+return render_component.cljs$core$IFn$_invoke$arity$3(comp,container,null);
 });
-var render_component__3 = (function (comp,container,callback){var f = (function (){return reagent.core.as_component(((cljs.core.fn_QMARK_(comp))?(function (){return (comp.cljs$core$IFn$_invoke$arity$0 ? comp.cljs$core$IFn$_invoke$arity$0() : comp.call(null));
+var render_component__3 = (function (comp,container,callback){
+var f = (function (){
+return reagent.core.as_component(((cljs.core.fn_QMARK_(comp))?(function (){return (comp.cljs$core$IFn$_invoke$arity$0 ? comp.cljs$core$IFn$_invoke$arity$0() : comp.call(null));
 })():comp));
-});return reagent.impl.util.render_component(f,container,callback);
+});
+return reagent.impl.util.render_component(f,container,callback);
 });
 render_component = function(comp,container,callback){
 switch(arguments.length){
@@ -52,14 +52,17 @@ return render_component;
 /**
 * Remove a component from the given DOM node.
 */
-reagent.core.unmount_component_at_node = (function unmount_component_at_node(container){return reagent.impl.util.unmount_component_at_node(container);
+reagent.core.unmount_component_at_node = (function unmount_component_at_node(container){
+return reagent.impl.util.unmount_component_at_node(container);
 });
 /**
 * Turns a component into an HTML string.
 */
-reagent.core.render_component_to_string = (function render_component_to_string(component){return (React["renderComponentToString"])(reagent.core.as_component(component));
+reagent.core.render_component_to_string = (function render_component_to_string(component){
+return (React["renderComponentToString"])(reagent.core.as_component(component));
 });
-reagent.core.force_update_all = (function force_update_all(){return reagent.impl.util.force_update_all();
+reagent.core.force_update_all = (function force_update_all(){
+return reagent.impl.util.force_update_all();
 });
 goog.exportSymbol('reagent.core.force_update_all', reagent.core.force_update_all);
 /**
@@ -77,86 +80,104 @@ goog.exportSymbol('reagent.core.force_update_all', reagent.core.force_update_all
 * 
 * Everything is optional, except :render.
 */
-reagent.core.create_class = (function create_class(spec){return reagent.impl.template.create_class(spec);
+reagent.core.create_class = (function create_class(spec){
+return reagent.impl.template.create_class(spec);
 });
 /**
 * Returns the current React component (a.k.a this) in a component
 * function.
 */
-reagent.core.current_component = (function current_component(){return reagent.impl.component._STAR_current_component_STAR_;
+reagent.core.current_component = (function current_component(){
+return reagent.impl.component._STAR_current_component_STAR_;
 });
 /**
 * Returns the state of a component, as set with replace-state or set-state.
 */
-reagent.core.state = (function state(this$){if(reagent.impl.util.reagent_component_QMARK_(this$))
-{} else
-{throw (new Error(("Assert failed: "+cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol("util","reagent-component?","util/reagent-component?",1508385933,null),new cljs.core.Symbol(null,"this","this",1028897902,null))], 0))))));
+reagent.core.state = (function state(this$){
+if(reagent.impl.util.reagent_component_QMARK_(this$)){
+} else {
+throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol("util","reagent-component?","util/reagent-component?",1508385933,null),new cljs.core.Symbol(null,"this","this",1028897902,null))], 0)))].join('')));
 }
+
 return reagent.impl.component.state(this$);
 });
 /**
 * Set state of a component.
 */
-reagent.core.replace_state = (function replace_state(this$,new_state){if(reagent.impl.util.reagent_component_QMARK_(this$))
-{} else
-{throw (new Error(("Assert failed: "+cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol("util","reagent-component?","util/reagent-component?",1508385933,null),new cljs.core.Symbol(null,"this","this",1028897902,null))], 0))))));
+reagent.core.replace_state = (function replace_state(this$,new_state){
+if(reagent.impl.util.reagent_component_QMARK_(this$)){
+} else {
+throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol("util","reagent-component?","util/reagent-component?",1508385933,null),new cljs.core.Symbol(null,"this","this",1028897902,null))], 0)))].join('')));
 }
-if(((new_state == null)) || (cljs.core.map_QMARK_(new_state)))
-{} else
-{throw (new Error(("Assert failed: "+cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol(null,"or","or",1876275696,null),cljs.core.list(new cljs.core.Symbol(null,"nil?","nil?",1612038930,null),new cljs.core.Symbol(null,"new-state","new-state",1150182315,null)),cljs.core.list(new cljs.core.Symbol(null,"map?","map?",-1780568534,null),new cljs.core.Symbol(null,"new-state","new-state",1150182315,null)))], 0))))));
+
+if(((new_state == null)) || (cljs.core.map_QMARK_(new_state))){
+} else {
+throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol(null,"or","or",1876275696,null),cljs.core.list(new cljs.core.Symbol(null,"nil?","nil?",1612038930,null),new cljs.core.Symbol(null,"new-state","new-state",1150182315,null)),cljs.core.list(new cljs.core.Symbol(null,"map?","map?",-1780568534,null),new cljs.core.Symbol(null,"new-state","new-state",1150182315,null)))], 0)))].join('')));
 }
+
 return reagent.impl.component.replace_state(this$,new_state);
 });
 /**
 * Merge component state with new-state.
 */
-reagent.core.set_state = (function set_state(this$,new_state){if(reagent.impl.util.reagent_component_QMARK_(this$))
-{} else
-{throw (new Error(("Assert failed: "+cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol("util","reagent-component?","util/reagent-component?",1508385933,null),new cljs.core.Symbol(null,"this","this",1028897902,null))], 0))))));
+reagent.core.set_state = (function set_state(this$,new_state){
+if(reagent.impl.util.reagent_component_QMARK_(this$)){
+} else {
+throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol("util","reagent-component?","util/reagent-component?",1508385933,null),new cljs.core.Symbol(null,"this","this",1028897902,null))], 0)))].join('')));
 }
-if(((new_state == null)) || (cljs.core.map_QMARK_(new_state)))
-{} else
-{throw (new Error(("Assert failed: "+cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol(null,"or","or",1876275696,null),cljs.core.list(new cljs.core.Symbol(null,"nil?","nil?",1612038930,null),new cljs.core.Symbol(null,"new-state","new-state",1150182315,null)),cljs.core.list(new cljs.core.Symbol(null,"map?","map?",-1780568534,null),new cljs.core.Symbol(null,"new-state","new-state",1150182315,null)))], 0))))));
+
+if(((new_state == null)) || (cljs.core.map_QMARK_(new_state))){
+} else {
+throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol(null,"or","or",1876275696,null),cljs.core.list(new cljs.core.Symbol(null,"nil?","nil?",1612038930,null),new cljs.core.Symbol(null,"new-state","new-state",1150182315,null)),cljs.core.list(new cljs.core.Symbol(null,"map?","map?",-1780568534,null),new cljs.core.Symbol(null,"new-state","new-state",1150182315,null)))], 0)))].join('')));
 }
+
 return reagent.impl.component.set_state(this$,new_state);
 });
 /**
 * Returns the props passed to a component.
 */
-reagent.core.props = (function props(this$){if(reagent.impl.util.reagent_component_QMARK_(this$))
-{} else
-{throw (new Error(("Assert failed: "+cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol("util","reagent-component?","util/reagent-component?",1508385933,null),new cljs.core.Symbol(null,"this","this",1028897902,null))], 0))))));
+reagent.core.props = (function props(this$){
+if(reagent.impl.util.reagent_component_QMARK_(this$)){
+} else {
+throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol("util","reagent-component?","util/reagent-component?",1508385933,null),new cljs.core.Symbol(null,"this","this",1028897902,null))], 0)))].join('')));
 }
+
 return reagent.impl.util.get_props(this$);
 });
 /**
 * Returns the children passed to a component.
 */
-reagent.core.children = (function children(this$){if(reagent.impl.util.reagent_component_QMARK_(this$))
-{} else
-{throw (new Error(("Assert failed: "+cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol("util","reagent-component?","util/reagent-component?",1508385933,null),new cljs.core.Symbol(null,"this","this",1028897902,null))], 0))))));
+reagent.core.children = (function children(this$){
+if(reagent.impl.util.reagent_component_QMARK_(this$)){
+} else {
+throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol("util","reagent-component?","util/reagent-component?",1508385933,null),new cljs.core.Symbol(null,"this","this",1028897902,null))], 0)))].join('')));
 }
+
 return reagent.impl.util.get_children(this$);
 });
 /**
 * Returns the entire Hiccup form passed to the component.
 */
-reagent.core.argv = (function argv(this$){if(reagent.impl.util.reagent_component_QMARK_(this$))
-{} else
-{throw (new Error(("Assert failed: "+cljs.core.str.cljs$core$IFn$_invoke$arity$1(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol("util","reagent-component?","util/reagent-component?",1508385933,null),new cljs.core.Symbol(null,"this","this",1028897902,null))], 0))))));
+reagent.core.argv = (function argv(this$){
+if(reagent.impl.util.reagent_component_QMARK_(this$)){
+} else {
+throw (new Error([cljs.core.str("Assert failed: "),cljs.core.str(cljs.core.pr_str.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq([cljs.core.list(new cljs.core.Symbol("util","reagent-component?","util/reagent-component?",1508385933,null),new cljs.core.Symbol(null,"this","this",1028897902,null))], 0)))].join('')));
 }
+
 return reagent.impl.util.get_argv(this$);
 });
 /**
 * Returns the root DOM node of a mounted component.
 */
-reagent.core.dom_node = (function dom_node(this$){return (this$["getDOMNode"])();
+reagent.core.dom_node = (function dom_node(this$){
+return (this$["getDOMNode"])();
 });
 /**
 * Utility function that merges two maps, handling :class and :style
 * specially, like React's transferPropsTo.
 */
-reagent.core.merge_props = (function merge_props(defaults,props){return reagent.impl.util.merge_props(defaults,props);
+reagent.core.merge_props = (function merge_props(defaults,props){
+return reagent.impl.util.merge_props(defaults,props);
 });
 /**
 * Render dirty components immediately to the DOM.
@@ -164,7 +185,8 @@ reagent.core.merge_props = (function merge_props(defaults,props){return reagent.
 * Note that this may not work in event handlers, since React.js does
 * batching of updates there.
 */
-reagent.core.flush = (function flush(){return reagent.impl.batching.flush();
+reagent.core.flush = (function flush(){
+return reagent.impl.batching.flush();
 });
 /**
 * Like clojure.core/atom, except that it keeps track of derefs.
@@ -174,23 +196,27 @@ reagent.core.flush = (function flush(){return reagent.impl.batching.flush();
 */
 reagent.core.atom = (function() {
 var atom = null;
-var atom__1 = (function (x){return reagent.ratom.atom.cljs$core$IFn$_invoke$arity$1(x);
+var atom__1 = (function (x){
+return reagent.ratom.atom.cljs$core$IFn$_invoke$arity$1(x);
 });
 var atom__2 = (function() { 
-var G__15192__delegate = function (x,rest){return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(reagent.ratom.atom,x,rest);
+var G__16111__delegate = function (x,rest){
+return cljs.core.apply.cljs$core$IFn$_invoke$arity$3(reagent.ratom.atom,x,rest);
 };
-var G__15192 = function (x,var_args){
-var rest = null;if (arguments.length > 1) {
-  rest = cljs.core.array_seq(Array.prototype.slice.call(arguments, 1),0);} 
-return G__15192__delegate.call(this,x,rest);};
-G__15192.cljs$lang$maxFixedArity = 1;
-G__15192.cljs$lang$applyTo = (function (arglist__15193){
-var x = cljs.core.first(arglist__15193);
-var rest = cljs.core.rest(arglist__15193);
-return G__15192__delegate(x,rest);
+var G__16111 = function (x,var_args){
+var rest = null;
+if (arguments.length > 1) {
+  rest = cljs.core.array_seq(Array.prototype.slice.call(arguments, 1),0);
+} 
+return G__16111__delegate.call(this,x,rest);};
+G__16111.cljs$lang$maxFixedArity = 1;
+G__16111.cljs$lang$applyTo = (function (arglist__16112){
+var x = cljs.core.first(arglist__16112);
+var rest = cljs.core.rest(arglist__16112);
+return G__16111__delegate(x,rest);
 });
-G__15192.cljs$core$IFn$_invoke$arity$variadic = G__15192__delegate;
-return G__15192;
+G__16111.cljs$core$IFn$_invoke$arity$variadic = G__16111__delegate;
+return G__16111;
 })()
 ;
 atom = function(x,var_args){
@@ -223,10 +249,13 @@ return atom;
 */
 reagent.core.cursor = (function() {
 var cursor = null;
-var cursor__1 = (function (path){return (function (ra){return cursor.cljs$core$IFn$_invoke$arity$2(path,ra);
+var cursor__1 = (function (path){
+return (function (ra){
+return cursor.cljs$core$IFn$_invoke$arity$2(path,ra);
 });
 });
-var cursor__2 = (function (path,ra){return reagent.ratom.cursor(path,ra);
+var cursor__2 = (function (path,ra){
+return reagent.ratom.cursor(path,ra);
 });
 cursor = function(path,ra){
 switch(arguments.length){
@@ -245,7 +274,9 @@ return cursor;
 /**
 * Run f using requestAnimationFrame or equivalent.
 */
-reagent.core.next_tick = (function next_tick(f){var G__15197 = f;return (reagent.impl.batching.next_tick.cljs$core$IFn$_invoke$arity$1 ? reagent.impl.batching.next_tick.cljs$core$IFn$_invoke$arity$1(G__15197) : reagent.impl.batching.next_tick.call(null,G__15197));
+reagent.core.next_tick = (function next_tick(f){
+var G__16116 = f;
+return (reagent.impl.batching.next_tick.cljs$core$IFn$_invoke$arity$1 ? reagent.impl.batching.next_tick.cljs$core$IFn$_invoke$arity$1(G__16116) : reagent.impl.batching.next_tick.call(null,G__16116));
 });
 /**
 * Works just like clojure.core/partial, except that it is an IFn, and
@@ -253,16 +284,19 @@ reagent.core.next_tick = (function next_tick(f){var G__15197 = f;return (reagent
 * @param {...*} var_args
 */
 reagent.core.partial = (function() { 
-var partial__delegate = function (f,args){return (new reagent.impl.util.partial_ifn(f,args,null));
+var partial__delegate = function (f,args){
+return (new reagent.impl.util.partial_ifn(f,args,null));
 };
 var partial = function (f,var_args){
-var args = null;if (arguments.length > 1) {
-  args = cljs.core.array_seq(Array.prototype.slice.call(arguments, 1),0);} 
+var args = null;
+if (arguments.length > 1) {
+  args = cljs.core.array_seq(Array.prototype.slice.call(arguments, 1),0);
+} 
 return partial__delegate.call(this,f,args);};
 partial.cljs$lang$maxFixedArity = 1;
-partial.cljs$lang$applyTo = (function (arglist__15198){
-var f = cljs.core.first(arglist__15198);
-var args = cljs.core.rest(arglist__15198);
+partial.cljs$lang$applyTo = (function (arglist__16117){
+var f = cljs.core.first(arglist__16117);
+var args = cljs.core.rest(arglist__16117);
 return partial__delegate(f,args);
 });
 partial.cljs$core$IFn$_invoke$arity$variadic = partial__delegate;
