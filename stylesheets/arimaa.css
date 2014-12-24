@@ -87,3 +87,10 @@ body {
 .chat-input button {    
     float: right;
 }
+
+.games {
+    position: relative;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: scroll;
+}
