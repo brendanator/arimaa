@@ -33,7 +33,8 @@ task :deploy do
 
   # Generate the site
   puts `lein cljsbuild once prod`
-  sh "cp index-min.html #{DESTINATION}/index.html"
+  sh "cp index-prod.html #{DESTINATION}/index.html"
+  sh "cp resources/arimaa.css #{DESTINATION}/arimaa.css"
 
   # Commit and push to github
   sha = `git log`.match(/[a-z0-9]{40}/)[0]
