@@ -9,7 +9,9 @@
 (def username (atom nil))
 
 (defn logged-in []
-  (not (nil? @username)))
+  (and 
+    (not (nil? @username)) 
+    (not (nil? @session-id))))
 
 (defn auth []
   (:auth (:me @gameroom-state)))

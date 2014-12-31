@@ -4,7 +4,7 @@
     [arimaa.state :refer [username auth]]
     [arimaa.utils :refer [initial-focus-wrapper scroll-bottom-wrapper]]
     [reagent.core :as reagent :refer [atom]]
-    [cljs.core.async :as async :refer [timeout]])
+    [cljs.core.async :as async :refer [chan close! timeout]])
   (:require-macros
     [cljs.core.async.macros :refer [go]]))
 
@@ -31,21 +31,36 @@
       :out [chat-event chat :span.fa.fa-arrow-left.chat-icon "went out"]
       :timeout [chat-event chat :span.fa.fa-arrow-down.chat-icon "timed out"])])
 
-(defn update-chat-log [chatter latest-data]
-  (go (loop [] (<! (timeout 500))
-        (let [{:keys [chats data]} (<! (requests/fetch-chat @username (auth) @latest-data))]
-          (swap! chatter concat chats)
-          (if data (reset! latest-data data)))
-        (recur))))
+(defn chat-log-channel []
+  (let [c (chan)]
+    (go (loop [chat [] latest-data nil] 
+          (<! (timeout 500))
+          (let [{:keys [chats data]} (<! (requests/fetch-chat @username (auth) latest-data))]
+            (if data
+              (let [new-chat (concat chat chats)]
+                (when (>! c new-chat)
+                  (recur new-chat data)))
+              (recur chat latest-data)))))
+    c))
 
-(defn chat-log []
-  (let [chatter (atom [])
-        latest-data (atom nil)]
-    (update-chat-log chatter latest-data)
-    (fn []
-      [scroll-bottom-wrapper
-        [:div#chat-log.chat-log
-          (map chat-row @chatter)]])))
+(defn chat-log [chat]
+  [scroll-bottom-wrapper
+    [:div#chat-log.chat-log
+      (map chat-row @chat)]])
+
+(defn chat-log-view []
+  (let [chat (atom [])
+        chat-chan (chat-log-channel)
+        mounted-chat-log (with-meta chat-log
+                           {:component-will-unmount #(close! chat-chan)})]
+
+    (go (loop []
+          (let [new-chat (<! chat-chan)]
+            (reset! chat new-chat)
+            (when new-chat
+              (recur)))))
+
+    [mounted-chat-log chat]))
 
 (defn chat-input []
   (let [message (atom "")
@@ -63,5 +78,5 @@
 
 (defn chat-view []
   [:section.chat.pure-u-2-5
-    [chat-log]
+    [chat-log-view]
     [chat-input]])

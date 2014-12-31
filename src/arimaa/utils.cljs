@@ -18,3 +18,5 @@
          #(if @scroll-bottom 
            (let [element (reagent/dom-node %)] 
              (set! (.-scrollTop element) (.-scrollHeight element))))})))
+
+(def cols (map #(char (+ 96 %)) (range 1 9)))

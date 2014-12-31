@@ -12,10 +12,10 @@
 
 (defn- decode-value [value]
   (-> value
-      (.replace "%13" "\n")
-      (.replace "%25" "%")))
+      (string/replace "%13" "\n")
+      (string/replace "%25" "%")))
 
-(defn- parse-response [response]
+(defn- parse-protocol1 [response]
   (->> (string/split (:body response) #"\n")
        (filter #(not= % "--END--"))
        (map #(let [[k v] (string/split % #"=" 2)] [(keyword k) (decode-value v)]))
@@ -23,11 +23,11 @@
 
 (defn- parse-games [response]
   (if (:error response) response
-    {:games (map parse-response (vals (dissoc response :num)))}))
+    {:games (map parse-protocol1 (vals (dissoc response :num)))}))
 
 (defn login [username password]
   (async/map<
-    parse-response
+    parse-protocol1
     (http/post protocol1-url 
       {:with-credentials? false 
        :form-params 
@@ -35,6 +35,81 @@
           :username username 
           :password password}})))
  
+(defn reserve-seat [session-id game-id role]
+  (async/map<
+    parse-protocol1
+    (http/post protocol1-url 
+      {:with-credentials? false 
+       :form-params 
+         {:action "reserveseat" 
+          :sid session-id 
+          :gid game-id
+          :role (case role
+                  :gold "w"
+                  :silver "b"
+                  :view "v")}})))  
+
+(defn sit [gameserver-url gameroom-id temporary-authentication-id]
+  (async/map<
+    parse-protocol1
+    (http/post gameserver-url 
+      {:with-credentials? false 
+       :form-params 
+         {:action "sit" 
+          :grid gameroom-id
+          :tid temporary-authentication-id}})))
+
+(defn- parse-move [move-string]
+  (let [items (string/split move-string " ")
+        [move steps] (split-at 1 items)]
+    {:move (first move) :steps (vec steps)}))
+
+(defn- parse-moves [moves-string]
+  (map parse-move (string/split moves-string "\n")))
+
+(defn- make-piece [piece-string row col]
+  (let [animal (case (.toUpperCase piece-string)
+                 "R" :rabbit
+                 "C" :cat
+                 "D" :dog
+                 "H" :horse
+                 "M" :camel
+                 "E" :elephant
+                 nil)
+        colour (if (= piece-string (.toUpperCase piece-string))
+                 :gold
+                 :silver)]
+    (when animal
+      {:animal animal :colour colour :square {:row row :col (char (+ 96 col))}})))
+
+(defn- parse-piece [position-string row col]
+  (-> position-string
+    (nth row)
+    (nth (+ 1 (* 2 col)))
+    (make-piece row col)))
+
+(defn- parse-position [value]
+  (let [piece-string (map seq (rest (string/split (decode-value value) #"\n")))]
+    (remove nil?
+      (for [row (range 1 9) col (range 1 9)]
+        (parse-piece piece-string row col)))))
+
+(defn- parse-game-state [value]
+  (-> value
+      parse-protocol1
+      (update-in [:moves] parse-moves)
+      (update-in [:position] parse-position)))
+
+(defn game-state [gameserver-url gameserver-session-id]
+  (async/map<
+    parse-game-state
+    (http/post gameserver-url 
+      {:with-credentials? false 
+       :form-params 
+         {:action "gamestate" 
+          :sid gameserver-session-id
+          :wait 0}})))
+
 (defn gameroom-state [session-id]
   (async/map<
     (fn [response] (js->clj (js/JSON.parse (:body response)) :keywordize-keys true))

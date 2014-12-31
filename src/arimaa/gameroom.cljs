@@ -1,7 +1,9 @@
 (ns arimaa.gameroom
   (:require
     [arimaa.requests :as requests]
-    [arimaa.state :refer [gameroom-state logged-in session-id]]
+    [arimaa.state :refer [gameroom-state logged-in session-id gameroom-id]]
+    [arimaa.utils :refer [cols]]
+    [reagent.core :as reagent :refer [atom]]
     [cljs.core.async :as async :refer [timeout]])
   (:require-macros
     [cljs.core.async.macros :refer [go]]))
@@ -36,6 +38,59 @@
            :target "_blank"} "View game"]
       [:span (:brating game)]]])
 
+(defn gameboard-square-class [row col]
+  (cond 
+    (and (or (= col \c) ( = col \f)) (or (= row 3) ( = row 6)))
+    "trap"
+    (= row 8)
+    "gold-goal"
+    (= row 1)
+    "silver-goal"))
+
+(defn update-game-state [game-id game-state]
+  (go (let [reserve-seat-response (<! (requests/reserve-seat @session-id game-id :view))
+            sit-response (<! (requests/sit (:gsurl reserve-seat-response) @gameroom-id (:tid reserve-seat-response)))]
+        (loop [] 
+          (reset! game-state (<! (requests/game-state (:gsurl reserve-seat-response) (:sid sit-response))))
+          (<! (timeout 1000))
+          (recur)))))
+
+(defn piece-at-square [position col row]
+  (first 
+    (filter 
+      (fn [piece] (= {:col col :row row} (:square piece))) 
+      position)))
+
+(defn piece-to-image [piece]
+  (let [colour-char (if (= :gold (:colour piece)) "w" "b")
+        animal-char (case (:animal piece)
+                      :rabbit "r"
+                      :cat "c"
+                      :dog "d"
+                      :horse "h"
+                      :camel "m"
+                      :elephant "e")]
+    (str "http://arimaa.com/arimaa/jsClient/pro/images/" colour-char animal-char ".gif")))
+
+(defn piece-image-at-square [position col row]
+  (let [piece (piece-at-square position col row)]
+    (if piece 
+      [:img.piece {:src (piece-to-image piece)}]
+      [:img.piece {:src "http://arimaa.com/arimaa/jsClient/pro/images/sp.gif"}])))
+
+(defn ingame-view [game]
+  (let [game-state (atom {})]
+    (update-game-state (:id game) game-state)
+      (fn []
+        (let [position (:position @game-state)]
+          [:table.gameboard
+            [:tbody
+              (for [row (range 1 9)]
+                [:tr
+                  (for [col cols]
+                    [:td {:class (gameboard-square-class row col)}
+                      [piece-image-at-square position col row]])])]]))))
+
 (defn my-games-view []
   [:section 
     [:header 
@@ -55,7 +110,8 @@
     [:header 
       [:h4 "Live games"]]
     [:div
-      (map game-view (:livegames @gameroom-state))]])
+      (for [live-game (:livegames @gameroom-state)]
+        ^{:key (:id live-game)} [ingame-view live-game])]])
 
 (defn recent-games-view []
   [:section 
