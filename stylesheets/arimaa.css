@@ -94,3 +94,34 @@ body {
     max-height: 100vh;
     overflow-y: scroll;
 }
+
+.gameboard {
+    padding-bottom: 100%;
+    background-color: #d0d0d0;
+    box-sizing: border-box;
+}
+
+.gameboard td {
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+}
+
+td.gold-goal {
+    background-color: #ddcc66;    
+}
+
+td.silver-goal {
+    background-color: #ccccf2;    
+}
+
+td.trap {
+    background-color: #edc0c0;
+}
+
+img.piece {
+    min-height: 4rem;
+    min-width: 4rem;
+    max-height: 4rem;
+    max-width: 4rem;
+}
