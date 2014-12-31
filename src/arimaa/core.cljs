@@ -16,7 +16,7 @@
     [login-view]))
 
 (defn ^:export run []
-  (reagent/render-component 
+  (reagent/render-component
     [arimaa-web]
     (.-body js/document)))
 

@@ -9,14 +9,14 @@
     [cljs.core.async.macros :refer [go]]))
 
 (defn chat-message [chat]
-  [:div 
+  [:div
     [:span.chat-timestamp (:timestamp chat)]
     [:span {:style {:color (:color chat)}}
       [:span.chat-player (:player-name chat)]
       [:span.chat-message (:message chat)]]])
 
 (defn chat-event [chat icon text]
-  [:div 
+  [:div
     [:span.chat-timestamp (:timestamp chat)]
     [icon]
     [:span.chat-event
@@ -33,7 +33,7 @@
 
 (defn chat-log-channel []
   (let [c (chan)]
-    (go (loop [chat [] latest-data nil] 
+    (go (loop [chat [] latest-data nil]
           (<! (timeout 500))
           (let [{:keys [chats data]} (<! (requests/fetch-chat @username (auth) latest-data))]
             (if data
@@ -70,7 +70,7 @@
     (fn []
       [:div.chat-input
         [:button {:on-click send-chat} "Send"]
-        [:span 
+        [:span
           [initial-focus-wrapper
             [:input {:type "text" :value @message
                      :on-change #(reset! message (-> % .-target .-value))

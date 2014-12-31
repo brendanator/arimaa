@@ -9,8 +9,8 @@
 (def username (atom nil))
 
 (defn logged-in []
-  (and 
-    (not (nil? @username)) 
+  (and
+    (not (nil? @username))
     (not (nil? @session-id))))
 
 (defn auth []

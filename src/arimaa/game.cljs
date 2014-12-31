@@ -35,15 +35,15 @@
 (defn pieces-at [board squares]
   (filter (fn [piece] (squares (:square piece))) board))
 
-(def stronger-animals 
-  {:rabbit #{:cat :dog :horse :camel :elephant} 
-   :cat #{:dog :horse :camel :elephant} 
-   :dog #{:horse :camel :elephant} 
-   :horse #{:camel :elephant} 
-   :camel #{:elephant} 
+(def stronger-animals
+  {:rabbit #{:cat :dog :horse :camel :elephant}
+   :cat #{:dog :horse :camel :elephant}
+   :dog #{:horse :camel :elephant}
+   :horse #{:camel :elephant}
+   :camel #{:elephant}
    :elephant #{}})
 
-(def weaker-animals 
+(def weaker-animals
   {:elephant #{:camel :horse :dog :cat :rabbit}
    :camel #{:horse :dog :cat :rabbit}
    :horse #{:dog :cat :rabbit}
@@ -58,17 +58,17 @@
   (filter #(not= (:colour piece) (:colour %)) pieces))
 
 (defn stronger-enemy-pieces [piece pieces]
-  (filter 
-    (stronger-animals (:animal piece)) 
+  (filter
+    (stronger-animals (:animal piece))
     (enemy-pieces piece pieces)))
 
 (defn weaker-enemy-pieces [piece pieces]
-  (filter 
-    (weaker-animals (:animal piece)) 
+  (filter
+    (weaker-animals (:animal piece))
     (enemy-pieces piece pieces)))
 
 (defn is-frozen [piece adjacent-pieces]
-  (let [colour (:colour piece) 
+  (let [colour (:colour piece)
         stronger-anmls (stronger-animals piece)]
     (and
       (empty? (friendly-pieces piece adjacent-pieces))
@@ -104,6 +104,6 @@
         (map #(make-step piece %) (find-empty adjacent-sqs board))
         ; enemy steps
         (map #(make-step enemy (:square piece) enemies))
-          
+
         ))))
 

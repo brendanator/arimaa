@@ -13,13 +13,13 @@
         (reset! gameroom-state response))))
 
 (defn update-games []
-  (go (while (logged-in) 
+  (go (while (logged-in)
         (<! (timeout 2000))
         (update-gameroom-state))))
 
 (defn new-game-view []
-  [:section 
-    [:header 
+  [:section
+    [:header
       [:h4 "New game"]]])
 
 (defn game-view [game]
@@ -39,7 +39,7 @@
       [:span (:brating game)]]])
 
 (defn gameboard-square-class [row col]
-  (cond 
+  (cond
     (and (or (= col \c) ( = col \f)) (or (= row 3) ( = row 6)))
     "trap"
     (= row 8)
@@ -49,16 +49,19 @@
 
 (defn update-game-state [game-id game-state]
   (go (let [reserve-seat-response (<! (requests/reserve-seat @session-id game-id :view))
-            sit-response (<! (requests/sit (:gsurl reserve-seat-response) @gameroom-id (:tid reserve-seat-response)))]
-        (loop [] 
-          (reset! game-state (<! (requests/game-state (:gsurl reserve-seat-response) (:sid sit-response))))
-          (<! (timeout 1000))
-          (recur)))))
+            sit-response (<! (requests/sit (:gsurl reserve-seat-response) @gameroom-id (:tid reserve-seat-response)))
+            game-state-response (<! (requests/game-state (:gsurl reserve-seat-response) (:sid sit-response)))]
+        (reset! game-state game-state-response)
+        (loop [chat-length (:chatlength game-state-response) move-length (:movelength gameroom-state-response)]
+          (let [game-state-response (<! (requests/game-state (:gsurl reserve-seat-response) (:sid sit-response)))]
+            (<! (timeout 1000))
+            (reset! game-state game-state-response)
+            (recur chat-length move-length))))))
 
 (defn piece-at-square [position col row]
-  (first 
-    (filter 
-      (fn [piece] (= {:col col :row row} (:square piece))) 
+  (first
+    (filter
+      (fn [piece] (= {:col col :row row} (:square piece)))
       position)))
 
 (defn piece-to-image [piece]
@@ -74,7 +77,7 @@
 
 (defn piece-image-at-square [position col row]
   (let [piece (piece-at-square position col row)]
-    (if piece 
+    (if piece
       [:img.piece {:src (piece-to-image piece)}]
       [:img.piece {:src "http://arimaa.com/arimaa/jsClient/pro/images/sp.gif"}])))
 
@@ -92,30 +95,30 @@
                       [piece-image-at-square position col row]])])]]))))
 
 (defn my-games-view []
-  [:section 
-    [:header 
+  [:section
+    [:header
       [:h4 "My games"]]
     [:div
       (map game-view (:mygames @gameroom-state))]])
 
 (defn open-games-view []
-  [:section 
-    [:header 
+  [:section
+    [:header
       [:h4 "Open games"]]
     [:div
       (map game-view (:opengames @gameroom-state))]])
 
 (defn live-games-view []
-  [:section 
-    [:header 
+  [:section
+    [:header
       [:h4 "Live games"]]
     [:div
       (for [live-game (:livegames @gameroom-state)]
         ^{:key (:id live-game)} [ingame-view live-game])]])
 
 (defn recent-games-view []
-  [:section 
-    [:header 
+  [:section
+    [:header
       [:h4 "Recent games"]]
     [:div
       (map game-view (:recentgames @gameroom-state))]])

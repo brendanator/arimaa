@@ -28,34 +28,34 @@
 (defn login [username password]
   (async/map<
     parse-protocol1
-    (http/post protocol1-url 
-      {:with-credentials? false 
-       :form-params 
-         {:action "login" 
-          :username username 
+    (http/post protocol1-url
+      {:with-credentials? false
+       :form-params
+         {:action "login"
+          :username username
           :password password}})))
- 
+
 (defn reserve-seat [session-id game-id role]
   (async/map<
     parse-protocol1
-    (http/post protocol1-url 
-      {:with-credentials? false 
-       :form-params 
-         {:action "reserveseat" 
-          :sid session-id 
+    (http/post protocol1-url
+      {:with-credentials? false
+       :form-params
+         {:action "reserveseat"
+          :sid session-id
           :gid game-id
           :role (case role
                   :gold "w"
                   :silver "b"
-                  :view "v")}})))  
+                  :view "v")}})))
 
 (defn sit [gameserver-url gameroom-id temporary-authentication-id]
   (async/map<
     parse-protocol1
-    (http/post gameserver-url 
-      {:with-credentials? false 
-       :form-params 
-         {:action "sit" 
+    (http/post gameserver-url
+      {:with-credentials? false
+       :form-params
+         {:action "sit"
           :grid gameroom-id
           :tid temporary-authentication-id}})))
 
@@ -103,21 +103,21 @@
 (defn game-state [gameserver-url gameserver-session-id]
   (async/map<
     parse-game-state
-    (http/post gameserver-url 
-      {:with-credentials? false 
-       :form-params 
-         {:action "gamestate" 
+    (http/post gameserver-url
+      {:with-credentials? false
+       :form-params
+         {:action "gamestate"
           :sid gameserver-session-id
           :wait 0}})))
 
 (defn gameroom-state [session-id]
   (async/map<
     (fn [response] (js->clj (js/JSON.parse (:body response)) :keywordize-keys true))
-    (http/post protocol2-url 
-      {:with-credentials? false 
-       :content-type "text/plain" 
+    (http/post protocol2-url
+      {:with-credentials? false
+       :content-type "text/plain"
        :json-params {:sid session-id :action "state"}})))
- 
+
 (defn- parse-chat-line [chat-line]
   (let [timestamp (unparse (formatter "HH:mm") (coerce/from-long (* 1000 (first chat-line))))
         player-name (second chat-line)
@@ -126,22 +126,22 @@
     (if (= chat-type :msg)
       (merge chat {:color (str "#" (nth chat-line 3)) :message (nth chat-line 4)})
       chat)))
- 
+
 (defn- parse-chat [response]
-  (let [response-lines (map #(string/split % #"\t" 5) (string/split (:body response) #"\n")) 
+  (let [response-lines (map #(string/split % #"\t" 5) (string/split (:body response) #"\n"))
         header (first (first response-lines))]
     (cond (= header "OK") {:data (first (second response-lines)) :chats (map parse-chat-line (drop 2 response-lines))}
           (= header "Nothing new") {:chats []}
           header (js/alert (str "Unhandled header" response)))))
- 
+
 (defn fetch-chat [username auth data]
   (async/map<
     parse-chat
-    (http/post chat-url 
-      {:with-credentials? false 
+    (http/post chat-url
+      {:with-credentials? false
        :form-params {:user username :auth auth :data data :cmd "fetch"}})))
 
 (defn send-chat [username auth message]
-  (http/post chat-url 
-    {:with-credentials? false 
+  (http/post chat-url
+    {:with-credentials? false
      :form-params {:user username :auth auth :cmd "msg" :data message}}))
