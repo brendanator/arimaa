@@ -1,6 +1,8 @@
 (ns arimaa.utils
   (:require
-    [reagent.core :as reagent]))
+    [reagent.core :as reagent :refer [atom]])
+  (:require-macros
+    [cljs.core.async.macros :refer [go]]))
 
 (def initial-focus-wrapper
   (with-meta identity
@@ -20,3 +22,10 @@
              (set! (.-scrollTop element) (.-scrollHeight element))))})))
 
 (def cols (map #(char (+ 96 %)) (range 1 9)))
+
+(defn subscribe-atom-to-channel! [atm channel]
+  (go (loop []
+      (let [new-value (<! channel)]
+        (reset! atm new-value)
+        (when new-value
+          (recur))))))

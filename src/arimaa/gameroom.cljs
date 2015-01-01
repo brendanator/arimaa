@@ -2,20 +2,20 @@
   (:require
     [arimaa.requests :as requests]
     [arimaa.state :refer [gameroom-state logged-in session-id gameroom-id]]
-    [arimaa.utils :refer [cols]]
+    [arimaa.utils :refer [cols subscribe-atom-to-channel!]]
     [reagent.core :as reagent :refer [atom]]
-    [cljs.core.async :as async :refer [timeout]])
+    [cljs.core.async :as async :refer [chan timeout]])
   (:require-macros
     [cljs.core.async.macros :refer [go]]))
 
-(defn update-gameroom-state []
-  (go (let [response (<! (requests/gameroom-state @session-id))]
-        (reset! gameroom-state response))))
-
-(defn update-games []
-  (go (while (logged-in)
-        (<! (timeout 2000))
-        (update-gameroom-state))))
+(defn gameroom-state-channel []
+  (let [c (chan)]
+    (go (loop []
+          (let [gameroom-state-response (<! (requests/gameroom-state @session-id))]
+              (when (>! c gameroom-state-response)
+                (<! (timeout 2000))
+                (recur)))))
+    c))
 
 (defn new-game-view []
   [:section
@@ -47,16 +47,15 @@
     (= row 1)
     "silver-goal"))
 
-(defn update-game-state [game-id game-state]
-  (go (let [reserve-seat-response (<! (requests/reserve-seat @session-id game-id :view))
-            sit-response (<! (requests/sit (:gsurl reserve-seat-response) @gameroom-id (:tid reserve-seat-response)))
-            game-state-response (<! (requests/game-state (:gsurl reserve-seat-response) (:sid sit-response)))]
-        (reset! game-state game-state-response)
-        (loop [chat-length (:chatlength game-state-response) move-length (:movelength gameroom-state-response)]
-          (let [game-state-response (<! (requests/game-state (:gsurl reserve-seat-response) (:sid sit-response)))]
-            (<! (timeout 1000))
-            (reset! game-state game-state-response)
-            (recur chat-length move-length))))))
+(defn game-state-channel [game-id]
+  (let [c (chan)]
+    (go (let [reserve-seat-response (<! (requests/reserve-seat @session-id game-id :view))
+              sit-response (<! (requests/sit (:gsurl reserve-seat-response) @gameroom-id (:tid reserve-seat-response)))]
+          (loop [last-change 0]
+            (let [game-state-response (<! (requests/game-state (:gsurl reserve-seat-response) (:sid sit-response) last-change))]
+              (when (>! c game-state-response)
+                (recur (:lastchange game-state-response)))))))
+    c))
 
 (defn piece-at-square [position col row]
   (first
@@ -82,17 +81,18 @@
       [:img.piece {:src "http://arimaa.com/arimaa/jsClient/pro/images/sp.gif"}])))
 
 (defn ingame-view [game]
-  (let [game-state (atom {})]
-    (update-game-state (:id game) game-state)
-      (fn []
-        (let [position (:position @game-state)]
-          [:table.gameboard
-            [:tbody
-              (for [row (range 1 9)]
-                [:tr
-                  (for [col cols]
-                    [:td {:class (gameboard-square-class row col)}
-                      [piece-image-at-square position col row]])])]]))))
+  (let [game-state (atom {})
+        game-state-chan (game-state-channel (:id game))]
+    (subscribe-atom-to-channel! game-state game-state-chan)
+    (fn []
+      (let [position (:position @game-state)]
+        [:table.gameboard
+          [:tbody
+            (for [row (range 1 9)]
+              [:tr
+                (for [col cols]
+                  [:td {:class (gameboard-square-class row col)}
+                    [piece-image-at-square position col row]])])]]))))
 
 (defn my-games-view []
   [:section
@@ -124,7 +124,7 @@
       (map game-view (:recentgames @gameroom-state))]])
 
 (defn gameroom-view []
-  (update-gameroom-state)
+  (subscribe-atom-to-channel! gameroom-state (gameroom-state-channel))
   [:section.games.pure-u-3-5
     [new-game-view]
     [my-games-view]

@@ -100,7 +100,7 @@
       (update-in [:moves] parse-moves)
       (update-in [:position] parse-position)))
 
-(defn game-state [gameserver-url gameserver-session-id]
+(defn game-state [gameserver-url gameserver-session-id last-change]
   (async/map<
     parse-game-state
     (http/post gameserver-url
@@ -108,7 +108,9 @@
        :form-params
          {:action "gamestate"
           :sid gameserver-session-id
-          :wait 0}})))
+          :wait 1
+          :lastchange last-change
+          :maxwait 1}})))
 
 (defn gameroom-state [session-id]
   (async/map<

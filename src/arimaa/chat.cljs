@@ -2,7 +2,7 @@
   (:require
     [arimaa.requests :as requests]
     [arimaa.state :refer [username auth]]
-    [arimaa.utils :refer [initial-focus-wrapper scroll-bottom-wrapper]]
+    [arimaa.utils :refer [initial-focus-wrapper scroll-bottom-wrapper subscribe-atom-to-channel!]]
     [reagent.core :as reagent :refer [atom]]
     [cljs.core.async :as async :refer [chan close! timeout]])
   (:require-macros
@@ -53,13 +53,7 @@
         chat-chan (chat-log-channel)
         mounted-chat-log (with-meta chat-log
                            {:component-will-unmount #(close! chat-chan)})]
-
-    (go (loop []
-          (let [new-chat (<! chat-chan)]
-            (reset! chat new-chat)
-            (when new-chat
-              (recur)))))
-
+    (subscribe-atom-to-channel! chat chat-chan)
     [mounted-chat-log chat]))
 
 (defn chat-input []
