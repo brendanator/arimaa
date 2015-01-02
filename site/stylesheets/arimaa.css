@@ -84,7 +84,7 @@ body {
     display: block;
     overflow: hidden;
 }
-.chat-input button {    
+.chat-input button {
     float: right;
 }
 
@@ -108,11 +108,11 @@ body {
 }
 
 td.gold-goal {
-    background-color: #ddcc66;    
+    background-color: #ddcc66;
 }
 
 td.silver-goal {
-    background-color: #ccccf2;    
+    background-color: #ccccf2;
 }
 
 td.trap {
@@ -120,8 +120,38 @@ td.trap {
 }
 
 img.piece {
+    position: relative;
     min-height: 4rem;
     min-width: 4rem;
     max-height: 4rem;
     max-width: 4rem;
 }
+
+img.captured {
+    -webkit-animation: captured 1s forwards;
+    -moz-animation: captured 1s forwards;
+    animation: captured 1s forwards;
+}
+
+/* move animations */
+@-moz-keyframes move-left { to { -moz-transform: left -4rem; } }
+@-webkit-keyframes move-left { to { -webkit-transform: left -4rem; } }
+@keyframes move-left { to { -webkit-transform: left -4rem; } }
+
+@-moz-keyframes move-right { to { -moz-transform: left 4rem; } }
+@-webkit-keyframes move-right { to { -webkit-transform: left 4rem; } }
+@keyframes move-right { to { -webkit-transform: left 4rem; } }
+
+@-moz-keyframes move-up { to { -moz-transform: top -4rem; } }
+@-webkit-keyframes move-up { to { -webkit-transform: top -4rem; } }
+@keyframes move-up { to { -webkit-transform: top -4rem; } }
+
+@-moz-keyframes move-down { to { -moz-transform: top 4rem; } }
+@-webkit-keyframes move-down { to { -webkit-transform: top 4rem; } }
+@keyframes move-down { to { -webkit-transform: top 4rem; } }
+
+/* capture animation */
+@-moz-keyframes captured { to { -moz-transform: rotate(360deg) scale(0, 0); } }
+@-webkit-keyframes captured { to { -webkit-transform: rotate(360deg) scale(0, 0); } }
+@keyframes captured { to { -webkit-transform: rotate(360deg) scale(0, 0); } }
+

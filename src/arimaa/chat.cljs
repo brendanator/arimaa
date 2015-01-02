@@ -2,7 +2,7 @@
   (:require
     [arimaa.requests :as requests]
     [arimaa.state :refer [username auth]]
-    [arimaa.utils :refer [initial-focus-wrapper scroll-bottom-wrapper subscribe-atom-to-channel!]]
+    [arimaa.utils :refer [initial-focus-wrapper markup-user-messages scroll-bottom-wrapper subscribe-atom-to-channel!]]
     [reagent.core :as reagent :refer [atom]]
     [cljs.core.async :as async :refer [chan close! timeout]])
   (:require-macros
@@ -13,7 +13,7 @@
     [:span.chat-timestamp (:timestamp chat)]
     [:span {:style {:color (:color chat)}}
       [:span.chat-player (:player-name chat)]
-      [:span.chat-message (:message chat)]]])
+      [:span.chat-message (markup-user-messages (:message chat))]]])
 
 (defn chat-event [chat icon text]
   [:div

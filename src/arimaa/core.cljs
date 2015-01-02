@@ -19,3 +19,5 @@
   (reagent/render-component
     [arimaa-web]
     (.-body js/document)))
+
+(arimaa.login/login "arimaaweb" "arimaa" nil)

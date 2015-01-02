@@ -1,10 +1,11 @@
 (ns arimaa.gameroom
   (:require
+    [arimaa.game :refer [show]]
     [arimaa.requests :as requests]
     [arimaa.state :refer [gameroom-state logged-in session-id gameroom-id]]
-    [arimaa.utils :refer [cols subscribe-atom-to-channel!]]
+    [arimaa.utils :refer [cols scroll-bottom-wrapper subscribe-atom-to-channel!]]
     [reagent.core :as reagent :refer [atom]]
-    [cljs.core.async :as async :refer [chan timeout]])
+    [cljs.core.async :as async :refer [chan close! timeout]])
   (:require-macros
     [cljs.core.async.macros :refer [go]]))
 
@@ -40,7 +41,7 @@
 
 (defn gameboard-square-class [row col]
   (cond
-    (and (or (= col \c) ( = col \f)) (or (= row 3) ( = row 6)))
+    (and (or (= col \c) ( = col \f)) (or (= row 3) (= row 6)))
     "trap"
     (= row 8)
     "gold-goal"
@@ -58,11 +59,13 @@
     c))
 
 (defn piece-at-square [position col row]
-  (first
-    (filter
-      (fn [piece] (= {:col col :row row} (:square piece)))
-      position)))
+  (:piece
+    (first
+      (filter
+        (fn [piece] (= {:col col :row row} (:square piece)))
+        position))))
 
+; Consider using svg images - http://arimaa.com/arimaa/graphics/bw/svg/
 (defn piece-to-image [piece]
   (let [colour-char (if (= :gold (:colour piece)) "w" "b")
         animal-char (case (:animal piece)
@@ -80,19 +83,32 @@
       [:img.piece {:src (piece-to-image piece)}]
       [:img.piece {:src "http://arimaa.com/arimaa/jsClient/pro/images/sp.gif"}])))
 
+(defn gameboard-view [position]
+  [:table.gameboard
+    [:tbody
+      (for [row (range 1 9)]
+        [:tr
+          (for [col cols]
+            [:td {:class (gameboard-square-class row col)}
+              [piece-image-at-square position col row]])])]])
+
+(defn move-box [moves]
+  [scroll-bottom-wrapper
+    [:select {:size 15}
+      (for [move moves]
+        (let [steps (:steps move)]
+          [:option (show move)]))]])
+
 (defn ingame-view [game]
   (let [game-state (atom {})
-        game-state-chan (game-state-channel (:id game))]
-    (subscribe-atom-to-channel! game-state game-state-chan)
+        game-state-chan (game-state-channel (:id game))
+        mounted-gameboard-view (with-meta gameboard-view
+                                          {:component-did-mount #(subscribe-atom-to-channel! game-state game-state-chan)
+                                           :component-did-unmount #(close! game-state-chan)})]
     (fn []
-      (let [position (:position @game-state)]
-        [:table.gameboard
-          [:tbody
-            (for [row (range 1 9)]
-              [:tr
-                (for [col cols]
-                  [:td {:class (gameboard-square-class row col)}
-                    [piece-image-at-square position col row]])])]]))))
+      [:div
+        [mounted-gameboard-view (:position @game-state)]
+        [move-box (:moves @game-state)]])))
 
 (defn my-games-view []
   [:section
