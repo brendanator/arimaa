@@ -13,7 +13,7 @@
     [:span.chat-timestamp (:timestamp chat)]
     [:span {:style {:color (:color chat)}}
       [:span.chat-player (:player-name chat)]
-      [:span.chat-message (markup-user-messages (:message chat))]]])
+      (into [:span.chat-message] (markup-user-messages (:message chat)))]])
 
 (defn chat-event [chat icon text]
   [:div
