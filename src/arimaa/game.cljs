@@ -56,8 +56,8 @@
           new-square (case direction
                        :north (Square. col (inc row))
                        :south (Square. col (dec row))
-                       :east (Square. (inc col) row)
-                       :west (Square. (dec col) row))
+                       :east (Square. (-> col .charCodeAt inc char) row)
+                       :west (Square. (-> col .charCodeAt dec char) row))
           new-piece-position (PiecePosition. (:piece piece-position) new-square)]
       (->> position
            (remove #{piece-position})
@@ -99,9 +99,13 @@
   AShow
   (show [this] (str (show step1) " " (show step2))))
 
-(defrecord Move [move-number steps]
+(defrecord Turn [number colour]
   AShow
-  (show [this] (str move-number " " (apply str (interpose " " (map show steps))))))
+  (show [this] (str number (if (= colour :gold) "g" "s"))))
+
+(defrecord Move [turn steps]
+  AShow
+  (show [this] (str (show turn) " " (apply str (interpose " " (map show steps))))))
 
 ; a board is a collection of PiecePositions
 

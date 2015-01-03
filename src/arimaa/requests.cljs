@@ -1,6 +1,6 @@
 (ns arimaa.requests
   (:require
-    [arimaa.game :refer [Piece Square Step Capture Move PiecePosition PlaceStartingPiece]]
+    [arimaa.game :refer [Piece Square Step Capture Turn Move PiecePosition PlaceStartingPiece]]
     [cljs-http.client :as http]
     [cljs.core.async :as async]
     [clojure.string :as string]
@@ -89,17 +89,20 @@
 
 (defn- parse-step [step-string]
   (if-let [step (re-find step-regex step-string)]
-    (Step. (PiecePosition. (parse-piece (second step)) (Square. (nth step 2) (nth step 3))) (parse-direction (nth step 4)))
+    (Step. (PiecePosition. (parse-piece (second step)) (Square. (nth step 2) (int (nth step 3)))) (parse-direction (nth step 4)))
     (if-let [place-starting-piece (re-find place-starting-piece-regex step-string)]
-      (PlaceStartingPiece. (PiecePosition. (parse-piece (second place-starting-piece)) (Square. (nth place-starting-piece 2) (nth place-starting-piece 3))))
+      (PlaceStartingPiece. (PiecePosition. (parse-piece (second place-starting-piece)) (Square. (nth place-starting-piece 2) (int (nth place-starting-piece 3)))))
       (if-let [capture (re-find capture-regex step-string)]
-        (Capture. (PiecePosition. (parse-piece (second capture)) (Square. (nth capture 2) (nth capture 3))))))))
+        (Capture. (PiecePosition. (parse-piece (second capture)) (Square. (nth capture 2) (int (nth capture 3)))))))))
+
+(defn- parse-turn [turn-string]
+  (let [[_ number colour-string] (re-find #"(\d+)([wb])" turn-string)]
+    (Turn. number (if (= colour-string "w") :gold :silver))))
 
 (defn- parse-move [move-string]
   (let [items (string/split move-string " ")
-        [move-number steps] (split-at 1 items)
-        precious-metal-move (-> (first move-number) (string/replace "w" "g") (string/replace "b" "s"))]
-    (Move. precious-metal-move (map parse-step steps))))
+        [turn steps] (split-at 1 items)]
+    (Move. (parse-turn (first turn)) (map parse-step steps))))
 
 (defn- parse-moves [moves-string]
   (map parse-move (string/split moves-string "\n")))

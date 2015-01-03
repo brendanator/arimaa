@@ -11,8 +11,8 @@
 
   :plugins [[lein-cljsbuild "1.0.3"]]
 
-  :cljsbuild 
-    {:builds 
+  :cljsbuild
+    {:builds
       {:dev {:source-paths ["src"]
              :compiler {:output-to "site/js/cljs.js"
                         :output-dir "site/js"
