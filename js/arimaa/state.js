@@ -7,14 +7,14 @@ arimaa.state.gameroom_id = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(null)
 arimaa.state.gameroom_state = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(null);
 arimaa.state.username = reagent.core.atom.cljs$core$IFn$_invoke$arity$1(null);
 arimaa.state.logged_in = (function logged_in(){
-return (!(((function (){var G__11416 = arimaa.state.username;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__11416) : cljs.core.deref.call(null,G__11416));
-})() == null))) && (!(((function (){var G__11417 = arimaa.state.session_id;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__11417) : cljs.core.deref.call(null,G__11417));
+return (!(((function (){var G__16141 = arimaa.state.username;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__16141) : cljs.core.deref.call(null,G__16141));
+})() == null))) && (!(((function (){var G__16142 = arimaa.state.session_id;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__16142) : cljs.core.deref.call(null,G__16142));
 })() == null)));
 });
 arimaa.state.auth = (function auth(){
-return cljs.core.constant$keyword$42.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$43.cljs$core$IFn$_invoke$arity$1((function (){var G__11419 = arimaa.state.gameroom_state;
-return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__11419) : cljs.core.deref.call(null,G__11419));
+return cljs.core.constant$keyword$38.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$39.cljs$core$IFn$_invoke$arity$1((function (){var G__16144 = arimaa.state.gameroom_state;
+return (cljs.core.deref.cljs$core$IFn$_invoke$arity$1 ? cljs.core.deref.cljs$core$IFn$_invoke$arity$1(G__16144) : cljs.core.deref.call(null,G__16144));
 })()));
 });

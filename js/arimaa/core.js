@@ -18,4 +18,3 @@ arimaa.core.run = (function run(){
 return reagent.core.render_component.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [arimaa.core.arimaa_web], null),document.body);
 });
 goog.exportSymbol('arimaa.core.run', arimaa.core.run);
-arimaa.login.login("arimaaweb","arimaa",null);
