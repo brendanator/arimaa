@@ -1,6 +1,7 @@
 // Compiled by ClojureScript 0.0-2511
 goog.provide('arimaa.utils');
 goog.require('cljs.core');
+goog.require('clojure.string');
 goog.require('reagent.core');
 arimaa.utils.initial_focus_wrapper = cljs.core.with_meta(cljs.core.identity,new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$38,(function (p1__11312_SHARP_){
 return reagent.core.dom_node(p1__11312_SHARP_).focus();
@@ -201,4 +202,10 @@ return (cljs.core.async.impl.ioc_helpers.run_state_machine_wrapped.cljs$core$IFn
 (cljs.core.async.impl.dispatch.run.cljs$core$IFn$_invoke$arity$1 ? cljs.core.async.impl.dispatch.run.cljs$core$IFn$_invoke$arity$1(G__11374_11399) : cljs.core.async.impl.dispatch.run.call(null,G__11374_11399));
 
 return c__5853__auto__;
+});
+arimaa.utils.url_regex = /^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/\S*)?$/i;
+arimaa.utils.markup_user_messages = (function markup_user_messages(value){
+return clojure.string.replace(value,arimaa.utils.url_regex,(function (p1__11409_SHARP_){
+return [cljs.core.str("<a href=\""),cljs.core.str(p1__11409_SHARP_),cljs.core.str("\">"),cljs.core.str(p1__11409_SHARP_),cljs.core.str("</a>")].join('');
+}));
 });
