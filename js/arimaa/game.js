@@ -1,34 +1,34 @@
-// Compiled by ClojureScript 0.0-2511
+// Compiled by ClojureScript 0.0-2657 {}
 goog.provide('arimaa.game');
 goog.require('cljs.core');
-arimaa.game.animals = new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$57,cljs.core.constant$keyword$58,cljs.core.constant$keyword$59,cljs.core.constant$keyword$60,cljs.core.constant$keyword$61,cljs.core.constant$keyword$62], null);
-arimaa.game.colour = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$63,cljs.core.constant$keyword$64], null);
-arimaa.game.direction = new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$65,cljs.core.constant$keyword$66,cljs.core.constant$keyword$67,cljs.core.constant$keyword$68], null);
+arimaa.game.animals = new cljs.core.PersistentVector(null, 6, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$22,cljs.core.constant$keyword$23,cljs.core.constant$keyword$24,cljs.core.constant$keyword$25,cljs.core.constant$keyword$26,cljs.core.constant$keyword$27], null);
+arimaa.game.colour = new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$28,cljs.core.constant$keyword$29], null);
+arimaa.game.direction = new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$30,cljs.core.constant$keyword$31,cljs.core.constant$keyword$32,cljs.core.constant$keyword$33], null);
 
-arimaa.game.AShow = (function (){var obj16146 = {};
-return obj16146;
+arimaa.game.AShow = (function (){var obj16302 = {};
+return obj16302;
 })();
 
 arimaa.game.show = (function show(this$){
-if((function (){var and__3618__auto__ = this$;
-if(and__3618__auto__){
+if((function (){var and__3719__auto__ = this$;
+if(and__3719__auto__){
 return this$.arimaa$game$AShow$show$arity$1;
 } else {
-return and__3618__auto__;
+return and__3719__auto__;
 }
 })()){
 return this$.arimaa$game$AShow$show$arity$1(this$);
 } else {
-var x__4274__auto__ = (((this$ == null))?null:this$);
-return (function (){var or__3630__auto__ = (arimaa.game.show[(function (){var G__16150 = x__4274__auto__;
-return goog.typeOf(G__16150);
+var x__4375__auto__ = (((this$ == null))?null:this$);
+return (function (){var or__3731__auto__ = (arimaa.game.show[(function (){var G__16306 = x__4375__auto__;
+return goog.typeOf(G__16306);
 })()]);
-if(or__3630__auto__){
-return or__3630__auto__;
+if(or__3731__auto__){
+return or__3731__auto__;
 } else {
-var or__3630__auto____$1 = (arimaa.game.show["_"]);
-if(or__3630__auto____$1){
-return or__3630__auto____$1;
+var or__3731__auto____$1 = (arimaa.game.show["_"]);
+if(or__3731__auto____$1){
+return or__3731__auto____$1;
 } else {
 throw cljs.core.missing_protocol("AShow.show",this$);
 }
@@ -58,17 +58,17 @@ this.__hash = __hash;
 this.cljs$lang$protocol_mask$partition0$ = 2229667594;
 this.cljs$lang$protocol_mask$partition1$ = 8192;
 })
-arimaa.game.Square.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4233__auto__,k__4234__auto__){
+arimaa.game.Square.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4334__auto__,k__4335__auto__){
 var self__ = this;
-var this__4233__auto____$1 = this;
-return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4233__auto____$1,k__4234__auto__,null);
+var this__4334__auto____$1 = this;
+return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4334__auto____$1,k__4335__auto__,null);
 });
 
-arimaa.game.Square.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4235__auto__,k16152,else__4236__auto__){
+arimaa.game.Square.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4336__auto__,k16308,else__4337__auto__){
 var self__ = this;
-var this__4235__auto____$1 = this;
-var G__16154 = (((k16152 instanceof cljs.core.Keyword))?k16152.fqn:null);
-switch (G__16154) {
+var this__4336__auto____$1 = this;
+var G__16310 = (((k16308 instanceof cljs.core.Keyword))?k16308.fqn:null);
+switch (G__16310) {
 case "row":
 return self__.row;
 
@@ -78,62 +78,62 @@ return self__.col;
 
 break;
 default:
-return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16152,else__4236__auto__);
+return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16308,else__4337__auto__);
 
 }
 });
 
-arimaa.game.Square.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4247__auto__,writer__4248__auto__,opts__4249__auto__){
+arimaa.game.Square.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4348__auto__,writer__4349__auto__,opts__4350__auto__){
 var self__ = this;
-var this__4247__auto____$1 = this;
-var pr_pair__4250__auto__ = ((function (this__4247__auto____$1){
-return (function (keyval__4251__auto__){
-return cljs.core.pr_sequential_writer(writer__4248__auto__,cljs.core.pr_writer,""," ","",opts__4249__auto__,keyval__4251__auto__);
-});})(this__4247__auto____$1))
+var this__4348__auto____$1 = this;
+var pr_pair__4351__auto__ = ((function (this__4348__auto____$1){
+return (function (keyval__4352__auto__){
+return cljs.core.pr_sequential_writer(writer__4349__auto__,cljs.core.pr_writer,""," ","",opts__4350__auto__,keyval__4352__auto__);
+});})(this__4348__auto____$1))
 ;
-return cljs.core.pr_sequential_writer(writer__4248__auto__,pr_pair__4250__auto__,"#arimaa.game.Square{",", ","}",opts__4249__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$69,self__.col],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$70,self__.row],null))], null),self__.__extmap));
+return cljs.core.pr_sequential_writer(writer__4349__auto__,pr_pair__4351__auto__,"#arimaa.game.Square{",", ","}",opts__4350__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$34,self__.col],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$35,self__.row],null))], null),self__.__extmap));
 });
 
-arimaa.game.Square.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4231__auto__){
+arimaa.game.Square.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4332__auto__){
 var self__ = this;
-var this__4231__auto____$1 = this;
+var this__4332__auto____$1 = this;
 return self__.__meta;
 });
 
-arimaa.game.Square.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4227__auto__){
+arimaa.game.Square.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4328__auto__){
 var self__ = this;
-var this__4227__auto____$1 = this;
+var this__4328__auto____$1 = this;
 return (new arimaa.game.Square(self__.col,self__.row,self__.__meta,self__.__extmap,self__.__hash));
 });
 
-arimaa.game.Square.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4237__auto__){
+arimaa.game.Square.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4338__auto__){
 var self__ = this;
-var this__4237__auto____$1 = this;
+var this__4338__auto____$1 = this;
 return (2 + cljs.core.count(self__.__extmap));
 });
 
-arimaa.game.Square.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4228__auto__){
+arimaa.game.Square.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4329__auto__){
 var self__ = this;
-var this__4228__auto____$1 = this;
-var h__4051__auto__ = self__.__hash;
-if(!((h__4051__auto__ == null))){
-return h__4051__auto__;
+var this__4329__auto____$1 = this;
+var h__4152__auto__ = self__.__hash;
+if(!((h__4152__auto__ == null))){
+return h__4152__auto__;
 } else {
-var h__4051__auto____$1 = cljs.core.hash_imap(this__4228__auto____$1);
-self__.__hash = h__4051__auto____$1;
+var h__4152__auto____$1 = cljs.core.hash_imap(this__4329__auto____$1);
+self__.__hash = h__4152__auto____$1;
 
-return h__4051__auto____$1;
+return h__4152__auto____$1;
 }
 });
 
-arimaa.game.Square.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4229__auto__,other__4230__auto__){
+arimaa.game.Square.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4330__auto__,other__4331__auto__){
 var self__ = this;
-var this__4229__auto____$1 = this;
-if(cljs.core.truth_((function (){var and__3618__auto__ = other__4230__auto__;
-if(cljs.core.truth_(and__3618__auto__)){
-return ((this__4229__auto____$1.constructor === other__4230__auto__.constructor)) && (cljs.core.equiv_map(this__4229__auto____$1,other__4230__auto__));
+var this__4330__auto____$1 = this;
+if(cljs.core.truth_((function (){var and__3719__auto__ = other__4331__auto__;
+if(cljs.core.truth_(and__3719__auto__)){
+return ((this__4330__auto____$1.constructor === other__4331__auto__.constructor)) && (cljs.core.equiv_map(this__4330__auto____$1,other__4331__auto__));
 } else {
-return and__3618__auto__;
+return and__3719__auto__;
 }
 })())){
 return true;
@@ -150,76 +150,76 @@ var this$__$1 = this;
 return [cljs.core.str(self__.col),cljs.core.str(self__.row)].join('');
 });
 
-arimaa.game.Square.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4242__auto__,k__4243__auto__){
+arimaa.game.Square.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4343__auto__,k__4344__auto__){
 var self__ = this;
-var this__4242__auto____$1 = this;
-if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$69,null,cljs.core.constant$keyword$70,null], null), null),k__4243__auto__)){
-return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4242__auto____$1),self__.__meta),k__4243__auto__);
+var this__4343__auto____$1 = this;
+if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$34,null,cljs.core.constant$keyword$35,null], null), null),k__4344__auto__)){
+return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4343__auto____$1),self__.__meta),k__4344__auto__);
 } else {
-return (new arimaa.game.Square(self__.col,self__.row,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4243__auto__)),null));
+return (new arimaa.game.Square(self__.col,self__.row,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4344__auto__)),null));
 }
 });
 
-arimaa.game.Square.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4240__auto__,k__4241__auto__,G__16151){
+arimaa.game.Square.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4341__auto__,k__4342__auto__,G__16307){
 var self__ = this;
-var this__4240__auto____$1 = this;
-var pred__16155 = cljs.core.keyword_identical_QMARK_;
-var expr__16156 = k__4241__auto__;
-if(cljs.core.truth_((function (){var G__16158 = cljs.core.constant$keyword$69;
-var G__16159 = expr__16156;
-return (pred__16155.cljs$core$IFn$_invoke$arity$2 ? pred__16155.cljs$core$IFn$_invoke$arity$2(G__16158,G__16159) : pred__16155.call(null,G__16158,G__16159));
+var this__4341__auto____$1 = this;
+var pred__16311 = cljs.core.keyword_identical_QMARK_;
+var expr__16312 = k__4342__auto__;
+if(cljs.core.truth_((function (){var G__16314 = cljs.core.constant$keyword$34;
+var G__16315 = expr__16312;
+return (pred__16311.cljs$core$IFn$_invoke$arity$2 ? pred__16311.cljs$core$IFn$_invoke$arity$2(G__16314,G__16315) : pred__16311.call(null,G__16314,G__16315));
 })())){
-return (new arimaa.game.Square(G__16151,self__.row,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.Square(G__16307,self__.row,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_((function (){var G__16160 = cljs.core.constant$keyword$70;
-var G__16161 = expr__16156;
-return (pred__16155.cljs$core$IFn$_invoke$arity$2 ? pred__16155.cljs$core$IFn$_invoke$arity$2(G__16160,G__16161) : pred__16155.call(null,G__16160,G__16161));
+if(cljs.core.truth_((function (){var G__16316 = cljs.core.constant$keyword$35;
+var G__16317 = expr__16312;
+return (pred__16311.cljs$core$IFn$_invoke$arity$2 ? pred__16311.cljs$core$IFn$_invoke$arity$2(G__16316,G__16317) : pred__16311.call(null,G__16316,G__16317));
 })())){
-return (new arimaa.game.Square(self__.col,G__16151,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.Square(self__.col,G__16307,self__.__meta,self__.__extmap,null));
 } else {
-return (new arimaa.game.Square(self__.col,self__.row,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4241__auto__,G__16151),null));
+return (new arimaa.game.Square(self__.col,self__.row,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4342__auto__,G__16307),null));
 }
 }
 });
 
-arimaa.game.Square.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4245__auto__){
+arimaa.game.Square.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4346__auto__){
 var self__ = this;
-var this__4245__auto____$1 = this;
-return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$69,self__.col],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$70,self__.row],null))], null),self__.__extmap));
+var this__4346__auto____$1 = this;
+return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$34,self__.col],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$35,self__.row],null))], null),self__.__extmap));
 });
 
-arimaa.game.Square.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4232__auto__,G__16151){
+arimaa.game.Square.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4333__auto__,G__16307){
 var self__ = this;
-var this__4232__auto____$1 = this;
-return (new arimaa.game.Square(self__.col,self__.row,G__16151,self__.__extmap,self__.__hash));
+var this__4333__auto____$1 = this;
+return (new arimaa.game.Square(self__.col,self__.row,G__16307,self__.__extmap,self__.__hash));
 });
 
-arimaa.game.Square.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4238__auto__,entry__4239__auto__){
+arimaa.game.Square.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4339__auto__,entry__4340__auto__){
 var self__ = this;
-var this__4238__auto____$1 = this;
-if(cljs.core.vector_QMARK_(entry__4239__auto__)){
-return cljs.core._assoc(this__4238__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(1)));
+var this__4339__auto____$1 = this;
+if(cljs.core.vector_QMARK_(entry__4340__auto__)){
+return cljs.core._assoc(this__4339__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(1)));
 } else {
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4238__auto____$1,entry__4239__auto__);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4339__auto____$1,entry__4340__auto__);
 }
 });
 
 arimaa.game.Square.cljs$lang$type = true;
 
-arimaa.game.Square.cljs$lang$ctorPrSeq = (function (this__4267__auto__){
+arimaa.game.Square.cljs$lang$ctorPrSeq = (function (this__4368__auto__){
 return cljs.core._conj(cljs.core.List.EMPTY,"arimaa.game/Square");
 });
 
-arimaa.game.Square.cljs$lang$ctorPrWriter = (function (this__4267__auto__,writer__4268__auto__){
-return cljs.core._write(writer__4268__auto__,"arimaa.game/Square");
+arimaa.game.Square.cljs$lang$ctorPrWriter = (function (this__4368__auto__,writer__4369__auto__){
+return cljs.core._write(writer__4369__auto__,"arimaa.game/Square");
 });
 
 arimaa.game.__GT_Square = (function __GT_Square(col,row){
 return (new arimaa.game.Square(col,row,null,null,null));
 });
 
-arimaa.game.map__GT_Square = (function map__GT_Square(G__16153){
-return (new arimaa.game.Square(cljs.core.constant$keyword$69.cljs$core$IFn$_invoke$arity$1(G__16153),cljs.core.constant$keyword$70.cljs$core$IFn$_invoke$arity$1(G__16153),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__16153,cljs.core.constant$keyword$69,cljs.core.array_seq([cljs.core.constant$keyword$70], 0)),null));
+arimaa.game.map__GT_Square = (function map__GT_Square(G__16309){
+return (new arimaa.game.Square(cljs.core.constant$keyword$34.cljs$core$IFn$_invoke$arity$1(G__16309),cljs.core.constant$keyword$35.cljs$core$IFn$_invoke$arity$1(G__16309),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__16309,cljs.core.constant$keyword$34,cljs.core.array_seq([cljs.core.constant$keyword$35], 0)),null));
 });
 
 
@@ -243,17 +243,17 @@ this.__hash = __hash;
 this.cljs$lang$protocol_mask$partition0$ = 2229667594;
 this.cljs$lang$protocol_mask$partition1$ = 8192;
 })
-arimaa.game.Piece.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4233__auto__,k__4234__auto__){
+arimaa.game.Piece.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4334__auto__,k__4335__auto__){
 var self__ = this;
-var this__4233__auto____$1 = this;
-return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4233__auto____$1,k__4234__auto__,null);
+var this__4334__auto____$1 = this;
+return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4334__auto____$1,k__4335__auto__,null);
 });
 
-arimaa.game.Piece.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4235__auto__,k16164,else__4236__auto__){
+arimaa.game.Piece.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4336__auto__,k16320,else__4337__auto__){
 var self__ = this;
-var this__4235__auto____$1 = this;
-var G__16166 = (((k16164 instanceof cljs.core.Keyword))?k16164.fqn:null);
-switch (G__16166) {
+var this__4336__auto____$1 = this;
+var G__16322 = (((k16320 instanceof cljs.core.Keyword))?k16320.fqn:null);
+switch (G__16322) {
 case "colour":
 return self__.colour;
 
@@ -263,62 +263,62 @@ return self__.animal;
 
 break;
 default:
-return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16164,else__4236__auto__);
+return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16320,else__4337__auto__);
 
 }
 });
 
-arimaa.game.Piece.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4247__auto__,writer__4248__auto__,opts__4249__auto__){
+arimaa.game.Piece.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4348__auto__,writer__4349__auto__,opts__4350__auto__){
 var self__ = this;
-var this__4247__auto____$1 = this;
-var pr_pair__4250__auto__ = ((function (this__4247__auto____$1){
-return (function (keyval__4251__auto__){
-return cljs.core.pr_sequential_writer(writer__4248__auto__,cljs.core.pr_writer,""," ","",opts__4249__auto__,keyval__4251__auto__);
-});})(this__4247__auto____$1))
+var this__4348__auto____$1 = this;
+var pr_pair__4351__auto__ = ((function (this__4348__auto____$1){
+return (function (keyval__4352__auto__){
+return cljs.core.pr_sequential_writer(writer__4349__auto__,cljs.core.pr_writer,""," ","",opts__4350__auto__,keyval__4352__auto__);
+});})(this__4348__auto____$1))
 ;
-return cljs.core.pr_sequential_writer(writer__4248__auto__,pr_pair__4250__auto__,"#arimaa.game.Piece{",", ","}",opts__4249__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$71,self__.animal],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$72,self__.colour],null))], null),self__.__extmap));
+return cljs.core.pr_sequential_writer(writer__4349__auto__,pr_pair__4351__auto__,"#arimaa.game.Piece{",", ","}",opts__4350__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$36,self__.animal],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$37,self__.colour],null))], null),self__.__extmap));
 });
 
-arimaa.game.Piece.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4231__auto__){
+arimaa.game.Piece.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4332__auto__){
 var self__ = this;
-var this__4231__auto____$1 = this;
+var this__4332__auto____$1 = this;
 return self__.__meta;
 });
 
-arimaa.game.Piece.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4227__auto__){
+arimaa.game.Piece.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4328__auto__){
 var self__ = this;
-var this__4227__auto____$1 = this;
+var this__4328__auto____$1 = this;
 return (new arimaa.game.Piece(self__.animal,self__.colour,self__.__meta,self__.__extmap,self__.__hash));
 });
 
-arimaa.game.Piece.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4237__auto__){
+arimaa.game.Piece.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4338__auto__){
 var self__ = this;
-var this__4237__auto____$1 = this;
+var this__4338__auto____$1 = this;
 return (2 + cljs.core.count(self__.__extmap));
 });
 
-arimaa.game.Piece.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4228__auto__){
+arimaa.game.Piece.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4329__auto__){
 var self__ = this;
-var this__4228__auto____$1 = this;
-var h__4051__auto__ = self__.__hash;
-if(!((h__4051__auto__ == null))){
-return h__4051__auto__;
+var this__4329__auto____$1 = this;
+var h__4152__auto__ = self__.__hash;
+if(!((h__4152__auto__ == null))){
+return h__4152__auto__;
 } else {
-var h__4051__auto____$1 = cljs.core.hash_imap(this__4228__auto____$1);
-self__.__hash = h__4051__auto____$1;
+var h__4152__auto____$1 = cljs.core.hash_imap(this__4329__auto____$1);
+self__.__hash = h__4152__auto____$1;
 
-return h__4051__auto____$1;
+return h__4152__auto____$1;
 }
 });
 
-arimaa.game.Piece.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4229__auto__,other__4230__auto__){
+arimaa.game.Piece.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4330__auto__,other__4331__auto__){
 var self__ = this;
-var this__4229__auto____$1 = this;
-if(cljs.core.truth_((function (){var and__3618__auto__ = other__4230__auto__;
-if(cljs.core.truth_(and__3618__auto__)){
-return ((this__4229__auto____$1.constructor === other__4230__auto__.constructor)) && (cljs.core.equiv_map(this__4229__auto____$1,other__4230__auto__));
+var this__4330__auto____$1 = this;
+if(cljs.core.truth_((function (){var and__3719__auto__ = other__4331__auto__;
+if(cljs.core.truth_(and__3719__auto__)){
+return ((this__4330__auto____$1.constructor === other__4331__auto__.constructor)) && (cljs.core.equiv_map(this__4330__auto____$1,other__4331__auto__));
 } else {
-return and__3618__auto__;
+return and__3719__auto__;
 }
 })())){
 return true;
@@ -332,8 +332,8 @@ arimaa.game.Piece.prototype.arimaa$game$AShow$ = true;
 arimaa.game.Piece.prototype.arimaa$game$AShow$show$arity$1 = (function (this$){
 var self__ = this;
 var this$__$1 = this;
-var animal_char = (function (){var G__16167 = (((self__.animal instanceof cljs.core.Keyword))?self__.animal.fqn:null);
-switch (G__16167) {
+var animal_char = (function (){var G__16323 = (((self__.animal instanceof cljs.core.Keyword))?self__.animal.fqn:null);
+switch (G__16323) {
 case "elephant":
 return "e";
 
@@ -363,83 +363,83 @@ throw (new Error([cljs.core.str("No matching clause: "),cljs.core.str(self__.ani
 
 }
 })();
-if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.constant$keyword$63,self__.colour)){
+if(cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.constant$keyword$28,self__.colour)){
 return animal_char.toUpperCase();
 } else {
 return animal_char;
 }
 });
 
-arimaa.game.Piece.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4242__auto__,k__4243__auto__){
+arimaa.game.Piece.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4343__auto__,k__4344__auto__){
 var self__ = this;
-var this__4242__auto____$1 = this;
-if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$71,null,cljs.core.constant$keyword$72,null], null), null),k__4243__auto__)){
-return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4242__auto____$1),self__.__meta),k__4243__auto__);
+var this__4343__auto____$1 = this;
+if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$36,null,cljs.core.constant$keyword$37,null], null), null),k__4344__auto__)){
+return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4343__auto____$1),self__.__meta),k__4344__auto__);
 } else {
-return (new arimaa.game.Piece(self__.animal,self__.colour,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4243__auto__)),null));
+return (new arimaa.game.Piece(self__.animal,self__.colour,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4344__auto__)),null));
 }
 });
 
-arimaa.game.Piece.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4240__auto__,k__4241__auto__,G__16163){
+arimaa.game.Piece.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4341__auto__,k__4342__auto__,G__16319){
 var self__ = this;
-var this__4240__auto____$1 = this;
-var pred__16168 = cljs.core.keyword_identical_QMARK_;
-var expr__16169 = k__4241__auto__;
-if(cljs.core.truth_((function (){var G__16171 = cljs.core.constant$keyword$71;
-var G__16172 = expr__16169;
-return (pred__16168.cljs$core$IFn$_invoke$arity$2 ? pred__16168.cljs$core$IFn$_invoke$arity$2(G__16171,G__16172) : pred__16168.call(null,G__16171,G__16172));
+var this__4341__auto____$1 = this;
+var pred__16324 = cljs.core.keyword_identical_QMARK_;
+var expr__16325 = k__4342__auto__;
+if(cljs.core.truth_((function (){var G__16327 = cljs.core.constant$keyword$36;
+var G__16328 = expr__16325;
+return (pred__16324.cljs$core$IFn$_invoke$arity$2 ? pred__16324.cljs$core$IFn$_invoke$arity$2(G__16327,G__16328) : pred__16324.call(null,G__16327,G__16328));
 })())){
-return (new arimaa.game.Piece(G__16163,self__.colour,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.Piece(G__16319,self__.colour,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_((function (){var G__16173 = cljs.core.constant$keyword$72;
-var G__16174 = expr__16169;
-return (pred__16168.cljs$core$IFn$_invoke$arity$2 ? pred__16168.cljs$core$IFn$_invoke$arity$2(G__16173,G__16174) : pred__16168.call(null,G__16173,G__16174));
+if(cljs.core.truth_((function (){var G__16329 = cljs.core.constant$keyword$37;
+var G__16330 = expr__16325;
+return (pred__16324.cljs$core$IFn$_invoke$arity$2 ? pred__16324.cljs$core$IFn$_invoke$arity$2(G__16329,G__16330) : pred__16324.call(null,G__16329,G__16330));
 })())){
-return (new arimaa.game.Piece(self__.animal,G__16163,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.Piece(self__.animal,G__16319,self__.__meta,self__.__extmap,null));
 } else {
-return (new arimaa.game.Piece(self__.animal,self__.colour,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4241__auto__,G__16163),null));
+return (new arimaa.game.Piece(self__.animal,self__.colour,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4342__auto__,G__16319),null));
 }
 }
 });
 
-arimaa.game.Piece.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4245__auto__){
+arimaa.game.Piece.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4346__auto__){
 var self__ = this;
-var this__4245__auto____$1 = this;
-return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$71,self__.animal],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$72,self__.colour],null))], null),self__.__extmap));
+var this__4346__auto____$1 = this;
+return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$36,self__.animal],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$37,self__.colour],null))], null),self__.__extmap));
 });
 
-arimaa.game.Piece.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4232__auto__,G__16163){
+arimaa.game.Piece.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4333__auto__,G__16319){
 var self__ = this;
-var this__4232__auto____$1 = this;
-return (new arimaa.game.Piece(self__.animal,self__.colour,G__16163,self__.__extmap,self__.__hash));
+var this__4333__auto____$1 = this;
+return (new arimaa.game.Piece(self__.animal,self__.colour,G__16319,self__.__extmap,self__.__hash));
 });
 
-arimaa.game.Piece.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4238__auto__,entry__4239__auto__){
+arimaa.game.Piece.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4339__auto__,entry__4340__auto__){
 var self__ = this;
-var this__4238__auto____$1 = this;
-if(cljs.core.vector_QMARK_(entry__4239__auto__)){
-return cljs.core._assoc(this__4238__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(1)));
+var this__4339__auto____$1 = this;
+if(cljs.core.vector_QMARK_(entry__4340__auto__)){
+return cljs.core._assoc(this__4339__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(1)));
 } else {
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4238__auto____$1,entry__4239__auto__);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4339__auto____$1,entry__4340__auto__);
 }
 });
 
 arimaa.game.Piece.cljs$lang$type = true;
 
-arimaa.game.Piece.cljs$lang$ctorPrSeq = (function (this__4267__auto__){
+arimaa.game.Piece.cljs$lang$ctorPrSeq = (function (this__4368__auto__){
 return cljs.core._conj(cljs.core.List.EMPTY,"arimaa.game/Piece");
 });
 
-arimaa.game.Piece.cljs$lang$ctorPrWriter = (function (this__4267__auto__,writer__4268__auto__){
-return cljs.core._write(writer__4268__auto__,"arimaa.game/Piece");
+arimaa.game.Piece.cljs$lang$ctorPrWriter = (function (this__4368__auto__,writer__4369__auto__){
+return cljs.core._write(writer__4369__auto__,"arimaa.game/Piece");
 });
 
 arimaa.game.__GT_Piece = (function __GT_Piece(animal,colour){
 return (new arimaa.game.Piece(animal,colour,null,null,null));
 });
 
-arimaa.game.map__GT_Piece = (function map__GT_Piece(G__16165){
-return (new arimaa.game.Piece(cljs.core.constant$keyword$71.cljs$core$IFn$_invoke$arity$1(G__16165),cljs.core.constant$keyword$72.cljs$core$IFn$_invoke$arity$1(G__16165),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__16165,cljs.core.constant$keyword$71,cljs.core.array_seq([cljs.core.constant$keyword$72], 0)),null));
+arimaa.game.map__GT_Piece = (function map__GT_Piece(G__16321){
+return (new arimaa.game.Piece(cljs.core.constant$keyword$36.cljs$core$IFn$_invoke$arity$1(G__16321),cljs.core.constant$keyword$37.cljs$core$IFn$_invoke$arity$1(G__16321),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__16321,cljs.core.constant$keyword$36,cljs.core.array_seq([cljs.core.constant$keyword$37], 0)),null));
 });
 
 
@@ -463,17 +463,17 @@ this.__hash = __hash;
 this.cljs$lang$protocol_mask$partition0$ = 2229667594;
 this.cljs$lang$protocol_mask$partition1$ = 8192;
 })
-arimaa.game.PiecePosition.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4233__auto__,k__4234__auto__){
+arimaa.game.PiecePosition.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4334__auto__,k__4335__auto__){
 var self__ = this;
-var this__4233__auto____$1 = this;
-return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4233__auto____$1,k__4234__auto__,null);
+var this__4334__auto____$1 = this;
+return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4334__auto____$1,k__4335__auto__,null);
 });
 
-arimaa.game.PiecePosition.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4235__auto__,k16178,else__4236__auto__){
+arimaa.game.PiecePosition.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4336__auto__,k16334,else__4337__auto__){
 var self__ = this;
-var this__4235__auto____$1 = this;
-var G__16180 = (((k16178 instanceof cljs.core.Keyword))?k16178.fqn:null);
-switch (G__16180) {
+var this__4336__auto____$1 = this;
+var G__16336 = (((k16334 instanceof cljs.core.Keyword))?k16334.fqn:null);
+switch (G__16336) {
 case "square":
 return self__.square;
 
@@ -483,62 +483,62 @@ return self__.piece;
 
 break;
 default:
-return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16178,else__4236__auto__);
+return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16334,else__4337__auto__);
 
 }
 });
 
-arimaa.game.PiecePosition.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4247__auto__,writer__4248__auto__,opts__4249__auto__){
+arimaa.game.PiecePosition.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4348__auto__,writer__4349__auto__,opts__4350__auto__){
 var self__ = this;
-var this__4247__auto____$1 = this;
-var pr_pair__4250__auto__ = ((function (this__4247__auto____$1){
-return (function (keyval__4251__auto__){
-return cljs.core.pr_sequential_writer(writer__4248__auto__,cljs.core.pr_writer,""," ","",opts__4249__auto__,keyval__4251__auto__);
-});})(this__4247__auto____$1))
+var this__4348__auto____$1 = this;
+var pr_pair__4351__auto__ = ((function (this__4348__auto____$1){
+return (function (keyval__4352__auto__){
+return cljs.core.pr_sequential_writer(writer__4349__auto__,cljs.core.pr_writer,""," ","",opts__4350__auto__,keyval__4352__auto__);
+});})(this__4348__auto____$1))
 ;
-return cljs.core.pr_sequential_writer(writer__4248__auto__,pr_pair__4250__auto__,"#arimaa.game.PiecePosition{",", ","}",opts__4249__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$73,self__.piece],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$74,self__.square],null))], null),self__.__extmap));
+return cljs.core.pr_sequential_writer(writer__4349__auto__,pr_pair__4351__auto__,"#arimaa.game.PiecePosition{",", ","}",opts__4350__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$38,self__.piece],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$39,self__.square],null))], null),self__.__extmap));
 });
 
-arimaa.game.PiecePosition.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4231__auto__){
+arimaa.game.PiecePosition.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4332__auto__){
 var self__ = this;
-var this__4231__auto____$1 = this;
+var this__4332__auto____$1 = this;
 return self__.__meta;
 });
 
-arimaa.game.PiecePosition.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4227__auto__){
+arimaa.game.PiecePosition.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4328__auto__){
 var self__ = this;
-var this__4227__auto____$1 = this;
+var this__4328__auto____$1 = this;
 return (new arimaa.game.PiecePosition(self__.piece,self__.square,self__.__meta,self__.__extmap,self__.__hash));
 });
 
-arimaa.game.PiecePosition.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4237__auto__){
+arimaa.game.PiecePosition.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4338__auto__){
 var self__ = this;
-var this__4237__auto____$1 = this;
+var this__4338__auto____$1 = this;
 return (2 + cljs.core.count(self__.__extmap));
 });
 
-arimaa.game.PiecePosition.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4228__auto__){
+arimaa.game.PiecePosition.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4329__auto__){
 var self__ = this;
-var this__4228__auto____$1 = this;
-var h__4051__auto__ = self__.__hash;
-if(!((h__4051__auto__ == null))){
-return h__4051__auto__;
+var this__4329__auto____$1 = this;
+var h__4152__auto__ = self__.__hash;
+if(!((h__4152__auto__ == null))){
+return h__4152__auto__;
 } else {
-var h__4051__auto____$1 = cljs.core.hash_imap(this__4228__auto____$1);
-self__.__hash = h__4051__auto____$1;
+var h__4152__auto____$1 = cljs.core.hash_imap(this__4329__auto____$1);
+self__.__hash = h__4152__auto____$1;
 
-return h__4051__auto____$1;
+return h__4152__auto____$1;
 }
 });
 
-arimaa.game.PiecePosition.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4229__auto__,other__4230__auto__){
+arimaa.game.PiecePosition.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4330__auto__,other__4331__auto__){
 var self__ = this;
-var this__4229__auto____$1 = this;
-if(cljs.core.truth_((function (){var and__3618__auto__ = other__4230__auto__;
-if(cljs.core.truth_(and__3618__auto__)){
-return ((this__4229__auto____$1.constructor === other__4230__auto__.constructor)) && (cljs.core.equiv_map(this__4229__auto____$1,other__4230__auto__));
+var this__4330__auto____$1 = this;
+if(cljs.core.truth_((function (){var and__3719__auto__ = other__4331__auto__;
+if(cljs.core.truth_(and__3719__auto__)){
+return ((this__4330__auto____$1.constructor === other__4331__auto__.constructor)) && (cljs.core.equiv_map(this__4330__auto____$1,other__4331__auto__));
 } else {
-return and__3618__auto__;
+return and__3719__auto__;
 }
 })())){
 return true;
@@ -555,103 +555,103 @@ var this$__$1 = this;
 return [cljs.core.str(arimaa.game.show(self__.piece)),cljs.core.str(arimaa.game.show(self__.square))].join('');
 });
 
-arimaa.game.PiecePosition.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4242__auto__,k__4243__auto__){
+arimaa.game.PiecePosition.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4343__auto__,k__4344__auto__){
 var self__ = this;
-var this__4242__auto____$1 = this;
-if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$73,null,cljs.core.constant$keyword$74,null], null), null),k__4243__auto__)){
-return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4242__auto____$1),self__.__meta),k__4243__auto__);
+var this__4343__auto____$1 = this;
+if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$38,null,cljs.core.constant$keyword$39,null], null), null),k__4344__auto__)){
+return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4343__auto____$1),self__.__meta),k__4344__auto__);
 } else {
-return (new arimaa.game.PiecePosition(self__.piece,self__.square,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4243__auto__)),null));
+return (new arimaa.game.PiecePosition(self__.piece,self__.square,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4344__auto__)),null));
 }
 });
 
-arimaa.game.PiecePosition.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4240__auto__,k__4241__auto__,G__16177){
+arimaa.game.PiecePosition.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4341__auto__,k__4342__auto__,G__16333){
 var self__ = this;
-var this__4240__auto____$1 = this;
-var pred__16181 = cljs.core.keyword_identical_QMARK_;
-var expr__16182 = k__4241__auto__;
-if(cljs.core.truth_((function (){var G__16184 = cljs.core.constant$keyword$73;
-var G__16185 = expr__16182;
-return (pred__16181.cljs$core$IFn$_invoke$arity$2 ? pred__16181.cljs$core$IFn$_invoke$arity$2(G__16184,G__16185) : pred__16181.call(null,G__16184,G__16185));
+var this__4341__auto____$1 = this;
+var pred__16337 = cljs.core.keyword_identical_QMARK_;
+var expr__16338 = k__4342__auto__;
+if(cljs.core.truth_((function (){var G__16340 = cljs.core.constant$keyword$38;
+var G__16341 = expr__16338;
+return (pred__16337.cljs$core$IFn$_invoke$arity$2 ? pred__16337.cljs$core$IFn$_invoke$arity$2(G__16340,G__16341) : pred__16337.call(null,G__16340,G__16341));
 })())){
-return (new arimaa.game.PiecePosition(G__16177,self__.square,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.PiecePosition(G__16333,self__.square,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_((function (){var G__16186 = cljs.core.constant$keyword$74;
-var G__16187 = expr__16182;
-return (pred__16181.cljs$core$IFn$_invoke$arity$2 ? pred__16181.cljs$core$IFn$_invoke$arity$2(G__16186,G__16187) : pred__16181.call(null,G__16186,G__16187));
+if(cljs.core.truth_((function (){var G__16342 = cljs.core.constant$keyword$39;
+var G__16343 = expr__16338;
+return (pred__16337.cljs$core$IFn$_invoke$arity$2 ? pred__16337.cljs$core$IFn$_invoke$arity$2(G__16342,G__16343) : pred__16337.call(null,G__16342,G__16343));
 })())){
-return (new arimaa.game.PiecePosition(self__.piece,G__16177,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.PiecePosition(self__.piece,G__16333,self__.__meta,self__.__extmap,null));
 } else {
-return (new arimaa.game.PiecePosition(self__.piece,self__.square,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4241__auto__,G__16177),null));
+return (new arimaa.game.PiecePosition(self__.piece,self__.square,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4342__auto__,G__16333),null));
 }
 }
 });
 
-arimaa.game.PiecePosition.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4245__auto__){
+arimaa.game.PiecePosition.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4346__auto__){
 var self__ = this;
-var this__4245__auto____$1 = this;
-return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$73,self__.piece],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$74,self__.square],null))], null),self__.__extmap));
+var this__4346__auto____$1 = this;
+return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$38,self__.piece],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$39,self__.square],null))], null),self__.__extmap));
 });
 
-arimaa.game.PiecePosition.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4232__auto__,G__16177){
+arimaa.game.PiecePosition.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4333__auto__,G__16333){
 var self__ = this;
-var this__4232__auto____$1 = this;
-return (new arimaa.game.PiecePosition(self__.piece,self__.square,G__16177,self__.__extmap,self__.__hash));
+var this__4333__auto____$1 = this;
+return (new arimaa.game.PiecePosition(self__.piece,self__.square,G__16333,self__.__extmap,self__.__hash));
 });
 
-arimaa.game.PiecePosition.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4238__auto__,entry__4239__auto__){
+arimaa.game.PiecePosition.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4339__auto__,entry__4340__auto__){
 var self__ = this;
-var this__4238__auto____$1 = this;
-if(cljs.core.vector_QMARK_(entry__4239__auto__)){
-return cljs.core._assoc(this__4238__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(1)));
+var this__4339__auto____$1 = this;
+if(cljs.core.vector_QMARK_(entry__4340__auto__)){
+return cljs.core._assoc(this__4339__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(1)));
 } else {
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4238__auto____$1,entry__4239__auto__);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4339__auto____$1,entry__4340__auto__);
 }
 });
 
 arimaa.game.PiecePosition.cljs$lang$type = true;
 
-arimaa.game.PiecePosition.cljs$lang$ctorPrSeq = (function (this__4267__auto__){
+arimaa.game.PiecePosition.cljs$lang$ctorPrSeq = (function (this__4368__auto__){
 return cljs.core._conj(cljs.core.List.EMPTY,"arimaa.game/PiecePosition");
 });
 
-arimaa.game.PiecePosition.cljs$lang$ctorPrWriter = (function (this__4267__auto__,writer__4268__auto__){
-return cljs.core._write(writer__4268__auto__,"arimaa.game/PiecePosition");
+arimaa.game.PiecePosition.cljs$lang$ctorPrWriter = (function (this__4368__auto__,writer__4369__auto__){
+return cljs.core._write(writer__4369__auto__,"arimaa.game/PiecePosition");
 });
 
 arimaa.game.__GT_PiecePosition = (function __GT_PiecePosition(piece,square){
 return (new arimaa.game.PiecePosition(piece,square,null,null,null));
 });
 
-arimaa.game.map__GT_PiecePosition = (function map__GT_PiecePosition(G__16179){
-return (new arimaa.game.PiecePosition(cljs.core.constant$keyword$73.cljs$core$IFn$_invoke$arity$1(G__16179),cljs.core.constant$keyword$74.cljs$core$IFn$_invoke$arity$1(G__16179),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__16179,cljs.core.constant$keyword$73,cljs.core.array_seq([cljs.core.constant$keyword$74], 0)),null));
+arimaa.game.map__GT_PiecePosition = (function map__GT_PiecePosition(G__16335){
+return (new arimaa.game.PiecePosition(cljs.core.constant$keyword$38.cljs$core$IFn$_invoke$arity$1(G__16335),cljs.core.constant$keyword$39.cljs$core$IFn$_invoke$arity$1(G__16335),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__16335,cljs.core.constant$keyword$38,cljs.core.array_seq([cljs.core.constant$keyword$39], 0)),null));
 });
 
 
-arimaa.game.ASteps = (function (){var obj16190 = {};
-return obj16190;
+arimaa.game.ASteps = (function (){var obj16346 = {};
+return obj16346;
 })();
 
 arimaa.game.step_count = (function step_count(this$){
-if((function (){var and__3618__auto__ = this$;
-if(and__3618__auto__){
+if((function (){var and__3719__auto__ = this$;
+if(and__3719__auto__){
 return this$.arimaa$game$ASteps$step_count$arity$1;
 } else {
-return and__3618__auto__;
+return and__3719__auto__;
 }
 })()){
 return this$.arimaa$game$ASteps$step_count$arity$1(this$);
 } else {
-var x__4274__auto__ = (((this$ == null))?null:this$);
-return (function (){var or__3630__auto__ = (arimaa.game.step_count[(function (){var G__16194 = x__4274__auto__;
-return goog.typeOf(G__16194);
+var x__4375__auto__ = (((this$ == null))?null:this$);
+return (function (){var or__3731__auto__ = (arimaa.game.step_count[(function (){var G__16350 = x__4375__auto__;
+return goog.typeOf(G__16350);
 })()]);
-if(or__3630__auto__){
-return or__3630__auto__;
+if(or__3731__auto__){
+return or__3731__auto__;
 } else {
-var or__3630__auto____$1 = (arimaa.game.step_count["_"]);
-if(or__3630__auto____$1){
-return or__3630__auto____$1;
+var or__3731__auto____$1 = (arimaa.game.step_count["_"]);
+if(or__3731__auto____$1){
+return or__3731__auto____$1;
 } else {
 throw cljs.core.missing_protocol("ASteps.step-count",this$);
 }
@@ -661,25 +661,25 @@ throw cljs.core.missing_protocol("ASteps.step-count",this$);
 });
 
 arimaa.game.steps = (function steps(this$){
-if((function (){var and__3618__auto__ = this$;
-if(and__3618__auto__){
+if((function (){var and__3719__auto__ = this$;
+if(and__3719__auto__){
 return this$.arimaa$game$ASteps$steps$arity$1;
 } else {
-return and__3618__auto__;
+return and__3719__auto__;
 }
 })()){
 return this$.arimaa$game$ASteps$steps$arity$1(this$);
 } else {
-var x__4274__auto__ = (((this$ == null))?null:this$);
-return (function (){var or__3630__auto__ = (arimaa.game.steps[(function (){var G__16198 = x__4274__auto__;
-return goog.typeOf(G__16198);
+var x__4375__auto__ = (((this$ == null))?null:this$);
+return (function (){var or__3731__auto__ = (arimaa.game.steps[(function (){var G__16354 = x__4375__auto__;
+return goog.typeOf(G__16354);
 })()]);
-if(or__3630__auto__){
-return or__3630__auto__;
+if(or__3731__auto__){
+return or__3731__auto__;
 } else {
-var or__3630__auto____$1 = (arimaa.game.steps["_"]);
-if(or__3630__auto____$1){
-return or__3630__auto____$1;
+var or__3731__auto____$1 = (arimaa.game.steps["_"]);
+if(or__3731__auto____$1){
+return or__3731__auto____$1;
 } else {
 throw cljs.core.missing_protocol("ASteps.steps",this$);
 }
@@ -689,30 +689,30 @@ throw cljs.core.missing_protocol("ASteps.steps",this$);
 });
 
 
-arimaa.game.AUpdatePosition = (function (){var obj16200 = {};
-return obj16200;
+arimaa.game.AUpdatePosition = (function (){var obj16356 = {};
+return obj16356;
 })();
 
 arimaa.game.update_position = (function update_position(this$,position){
-if((function (){var and__3618__auto__ = this$;
-if(and__3618__auto__){
+if((function (){var and__3719__auto__ = this$;
+if(and__3719__auto__){
 return this$.arimaa$game$AUpdatePosition$update_position$arity$2;
 } else {
-return and__3618__auto__;
+return and__3719__auto__;
 }
 })()){
 return this$.arimaa$game$AUpdatePosition$update_position$arity$2(this$,position);
 } else {
-var x__4274__auto__ = (((this$ == null))?null:this$);
-return (function (){var or__3630__auto__ = (arimaa.game.update_position[(function (){var G__16204 = x__4274__auto__;
-return goog.typeOf(G__16204);
+var x__4375__auto__ = (((this$ == null))?null:this$);
+return (function (){var or__3731__auto__ = (arimaa.game.update_position[(function (){var G__16360 = x__4375__auto__;
+return goog.typeOf(G__16360);
 })()]);
-if(or__3630__auto__){
-return or__3630__auto__;
+if(or__3731__auto__){
+return or__3731__auto__;
 } else {
-var or__3630__auto____$1 = (arimaa.game.update_position["_"]);
-if(or__3630__auto____$1){
-return or__3630__auto____$1;
+var or__3731__auto____$1 = (arimaa.game.update_position["_"]);
+if(or__3731__auto____$1){
+return or__3731__auto____$1;
 } else {
 throw cljs.core.missing_protocol("AUpdatePosition.update-position",this$);
 }
@@ -740,78 +740,78 @@ this.__hash = __hash;
 this.cljs$lang$protocol_mask$partition0$ = 2229667594;
 this.cljs$lang$protocol_mask$partition1$ = 8192;
 })
-arimaa.game.PlaceStartingPiece.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4233__auto__,k__4234__auto__){
+arimaa.game.PlaceStartingPiece.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4334__auto__,k__4335__auto__){
 var self__ = this;
-var this__4233__auto____$1 = this;
-return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4233__auto____$1,k__4234__auto__,null);
+var this__4334__auto____$1 = this;
+return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4334__auto____$1,k__4335__auto__,null);
 });
 
-arimaa.game.PlaceStartingPiece.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4235__auto__,k16206,else__4236__auto__){
+arimaa.game.PlaceStartingPiece.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4336__auto__,k16362,else__4337__auto__){
 var self__ = this;
-var this__4235__auto____$1 = this;
-var G__16208 = (((k16206 instanceof cljs.core.Keyword))?k16206.fqn:null);
-switch (G__16208) {
+var this__4336__auto____$1 = this;
+var G__16364 = (((k16362 instanceof cljs.core.Keyword))?k16362.fqn:null);
+switch (G__16364) {
 case "piece-position":
 return self__.piece_position;
 
 break;
 default:
-return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16206,else__4236__auto__);
+return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16362,else__4337__auto__);
 
 }
 });
 
-arimaa.game.PlaceStartingPiece.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4247__auto__,writer__4248__auto__,opts__4249__auto__){
+arimaa.game.PlaceStartingPiece.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4348__auto__,writer__4349__auto__,opts__4350__auto__){
 var self__ = this;
-var this__4247__auto____$1 = this;
-var pr_pair__4250__auto__ = ((function (this__4247__auto____$1){
-return (function (keyval__4251__auto__){
-return cljs.core.pr_sequential_writer(writer__4248__auto__,cljs.core.pr_writer,""," ","",opts__4249__auto__,keyval__4251__auto__);
-});})(this__4247__auto____$1))
+var this__4348__auto____$1 = this;
+var pr_pair__4351__auto__ = ((function (this__4348__auto____$1){
+return (function (keyval__4352__auto__){
+return cljs.core.pr_sequential_writer(writer__4349__auto__,cljs.core.pr_writer,""," ","",opts__4350__auto__,keyval__4352__auto__);
+});})(this__4348__auto____$1))
 ;
-return cljs.core.pr_sequential_writer(writer__4248__auto__,pr_pair__4250__auto__,"#arimaa.game.PlaceStartingPiece{",", ","}",opts__4249__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$75,self__.piece_position],null))], null),self__.__extmap));
+return cljs.core.pr_sequential_writer(writer__4349__auto__,pr_pair__4351__auto__,"#arimaa.game.PlaceStartingPiece{",", ","}",opts__4350__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$40,self__.piece_position],null))], null),self__.__extmap));
 });
 
-arimaa.game.PlaceStartingPiece.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4231__auto__){
+arimaa.game.PlaceStartingPiece.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4332__auto__){
 var self__ = this;
-var this__4231__auto____$1 = this;
+var this__4332__auto____$1 = this;
 return self__.__meta;
 });
 
-arimaa.game.PlaceStartingPiece.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4227__auto__){
+arimaa.game.PlaceStartingPiece.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4328__auto__){
 var self__ = this;
-var this__4227__auto____$1 = this;
+var this__4328__auto____$1 = this;
 return (new arimaa.game.PlaceStartingPiece(self__.piece_position,self__.__meta,self__.__extmap,self__.__hash));
 });
 
-arimaa.game.PlaceStartingPiece.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4237__auto__){
+arimaa.game.PlaceStartingPiece.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4338__auto__){
 var self__ = this;
-var this__4237__auto____$1 = this;
+var this__4338__auto____$1 = this;
 return (1 + cljs.core.count(self__.__extmap));
 });
 
-arimaa.game.PlaceStartingPiece.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4228__auto__){
+arimaa.game.PlaceStartingPiece.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4329__auto__){
 var self__ = this;
-var this__4228__auto____$1 = this;
-var h__4051__auto__ = self__.__hash;
-if(!((h__4051__auto__ == null))){
-return h__4051__auto__;
+var this__4329__auto____$1 = this;
+var h__4152__auto__ = self__.__hash;
+if(!((h__4152__auto__ == null))){
+return h__4152__auto__;
 } else {
-var h__4051__auto____$1 = cljs.core.hash_imap(this__4228__auto____$1);
-self__.__hash = h__4051__auto____$1;
+var h__4152__auto____$1 = cljs.core.hash_imap(this__4329__auto____$1);
+self__.__hash = h__4152__auto____$1;
 
-return h__4051__auto____$1;
+return h__4152__auto____$1;
 }
 });
 
-arimaa.game.PlaceStartingPiece.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4229__auto__,other__4230__auto__){
+arimaa.game.PlaceStartingPiece.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4330__auto__,other__4331__auto__){
 var self__ = this;
-var this__4229__auto____$1 = this;
-if(cljs.core.truth_((function (){var and__3618__auto__ = other__4230__auto__;
-if(cljs.core.truth_(and__3618__auto__)){
-return ((this__4229__auto____$1.constructor === other__4230__auto__.constructor)) && (cljs.core.equiv_map(this__4229__auto____$1,other__4230__auto__));
+var this__4330__auto____$1 = this;
+if(cljs.core.truth_((function (){var and__3719__auto__ = other__4331__auto__;
+if(cljs.core.truth_(and__3719__auto__)){
+return ((this__4330__auto____$1.constructor === other__4331__auto__.constructor)) && (cljs.core.equiv_map(this__4330__auto____$1,other__4331__auto__));
 } else {
-return and__3618__auto__;
+return and__3719__auto__;
 }
 })())){
 return true;
@@ -828,41 +828,41 @@ var this$__$1 = this;
 return arimaa.game.show(self__.piece_position);
 });
 
-arimaa.game.PlaceStartingPiece.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4242__auto__,k__4243__auto__){
+arimaa.game.PlaceStartingPiece.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4343__auto__,k__4344__auto__){
 var self__ = this;
-var this__4242__auto____$1 = this;
-if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$75,null], null), null),k__4243__auto__)){
-return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4242__auto____$1),self__.__meta),k__4243__auto__);
+var this__4343__auto____$1 = this;
+if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$40,null], null), null),k__4344__auto__)){
+return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4343__auto____$1),self__.__meta),k__4344__auto__);
 } else {
-return (new arimaa.game.PlaceStartingPiece(self__.piece_position,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4243__auto__)),null));
+return (new arimaa.game.PlaceStartingPiece(self__.piece_position,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4344__auto__)),null));
 }
 });
 
-arimaa.game.PlaceStartingPiece.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4240__auto__,k__4241__auto__,G__16205){
+arimaa.game.PlaceStartingPiece.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4341__auto__,k__4342__auto__,G__16361){
 var self__ = this;
-var this__4240__auto____$1 = this;
-var pred__16209 = cljs.core.keyword_identical_QMARK_;
-var expr__16210 = k__4241__auto__;
-if(cljs.core.truth_((function (){var G__16212 = cljs.core.constant$keyword$75;
-var G__16213 = expr__16210;
-return (pred__16209.cljs$core$IFn$_invoke$arity$2 ? pred__16209.cljs$core$IFn$_invoke$arity$2(G__16212,G__16213) : pred__16209.call(null,G__16212,G__16213));
+var this__4341__auto____$1 = this;
+var pred__16365 = cljs.core.keyword_identical_QMARK_;
+var expr__16366 = k__4342__auto__;
+if(cljs.core.truth_((function (){var G__16368 = cljs.core.constant$keyword$40;
+var G__16369 = expr__16366;
+return (pred__16365.cljs$core$IFn$_invoke$arity$2 ? pred__16365.cljs$core$IFn$_invoke$arity$2(G__16368,G__16369) : pred__16365.call(null,G__16368,G__16369));
 })())){
-return (new arimaa.game.PlaceStartingPiece(G__16205,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.PlaceStartingPiece(G__16361,self__.__meta,self__.__extmap,null));
 } else {
-return (new arimaa.game.PlaceStartingPiece(self__.piece_position,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4241__auto__,G__16205),null));
+return (new arimaa.game.PlaceStartingPiece(self__.piece_position,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4342__auto__,G__16361),null));
 }
 });
 
-arimaa.game.PlaceStartingPiece.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4245__auto__){
+arimaa.game.PlaceStartingPiece.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4346__auto__){
 var self__ = this;
-var this__4245__auto____$1 = this;
-return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$75,self__.piece_position],null))], null),self__.__extmap));
+var this__4346__auto____$1 = this;
+return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$40,self__.piece_position],null))], null),self__.__extmap));
 });
 
-arimaa.game.PlaceStartingPiece.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4232__auto__,G__16205){
+arimaa.game.PlaceStartingPiece.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4333__auto__,G__16361){
 var self__ = this;
-var this__4232__auto____$1 = this;
-return (new arimaa.game.PlaceStartingPiece(self__.piece_position,G__16205,self__.__extmap,self__.__hash));
+var this__4333__auto____$1 = this;
+return (new arimaa.game.PlaceStartingPiece(self__.piece_position,G__16361,self__.__extmap,self__.__hash));
 });
 
 arimaa.game.PlaceStartingPiece.prototype.arimaa$game$AUpdatePosition$ = true;
@@ -873,32 +873,32 @@ var this$__$1 = this;
 return cljs.core.cons(self__.piece_position,position);
 });
 
-arimaa.game.PlaceStartingPiece.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4238__auto__,entry__4239__auto__){
+arimaa.game.PlaceStartingPiece.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4339__auto__,entry__4340__auto__){
 var self__ = this;
-var this__4238__auto____$1 = this;
-if(cljs.core.vector_QMARK_(entry__4239__auto__)){
-return cljs.core._assoc(this__4238__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(1)));
+var this__4339__auto____$1 = this;
+if(cljs.core.vector_QMARK_(entry__4340__auto__)){
+return cljs.core._assoc(this__4339__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(1)));
 } else {
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4238__auto____$1,entry__4239__auto__);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4339__auto____$1,entry__4340__auto__);
 }
 });
 
 arimaa.game.PlaceStartingPiece.cljs$lang$type = true;
 
-arimaa.game.PlaceStartingPiece.cljs$lang$ctorPrSeq = (function (this__4267__auto__){
+arimaa.game.PlaceStartingPiece.cljs$lang$ctorPrSeq = (function (this__4368__auto__){
 return cljs.core._conj(cljs.core.List.EMPTY,"arimaa.game/PlaceStartingPiece");
 });
 
-arimaa.game.PlaceStartingPiece.cljs$lang$ctorPrWriter = (function (this__4267__auto__,writer__4268__auto__){
-return cljs.core._write(writer__4268__auto__,"arimaa.game/PlaceStartingPiece");
+arimaa.game.PlaceStartingPiece.cljs$lang$ctorPrWriter = (function (this__4368__auto__,writer__4369__auto__){
+return cljs.core._write(writer__4369__auto__,"arimaa.game/PlaceStartingPiece");
 });
 
 arimaa.game.__GT_PlaceStartingPiece = (function __GT_PlaceStartingPiece(piece_position){
 return (new arimaa.game.PlaceStartingPiece(piece_position,null,null,null));
 });
 
-arimaa.game.map__GT_PlaceStartingPiece = (function map__GT_PlaceStartingPiece(G__16207){
-return (new arimaa.game.PlaceStartingPiece(cljs.core.constant$keyword$75.cljs$core$IFn$_invoke$arity$1(G__16207),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(G__16207,cljs.core.constant$keyword$75),null));
+arimaa.game.map__GT_PlaceStartingPiece = (function map__GT_PlaceStartingPiece(G__16363){
+return (new arimaa.game.PlaceStartingPiece(cljs.core.constant$keyword$40.cljs$core$IFn$_invoke$arity$1(G__16363),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(G__16363,cljs.core.constant$keyword$40),null));
 });
 
 
@@ -922,17 +922,17 @@ this.__hash = __hash;
 this.cljs$lang$protocol_mask$partition0$ = 2229667594;
 this.cljs$lang$protocol_mask$partition1$ = 8192;
 })
-arimaa.game.Step.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4233__auto__,k__4234__auto__){
+arimaa.game.Step.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4334__auto__,k__4335__auto__){
 var self__ = this;
-var this__4233__auto____$1 = this;
-return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4233__auto____$1,k__4234__auto__,null);
+var this__4334__auto____$1 = this;
+return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4334__auto____$1,k__4335__auto__,null);
 });
 
-arimaa.game.Step.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4235__auto__,k16216,else__4236__auto__){
+arimaa.game.Step.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4336__auto__,k16372,else__4337__auto__){
 var self__ = this;
-var this__4235__auto____$1 = this;
-var G__16218 = (((k16216 instanceof cljs.core.Keyword))?k16216.fqn:null);
-switch (G__16218) {
+var this__4336__auto____$1 = this;
+var G__16374 = (((k16372 instanceof cljs.core.Keyword))?k16372.fqn:null);
+switch (G__16374) {
 case "direction":
 return self__.direction;
 
@@ -942,7 +942,7 @@ return self__.piece_position;
 
 break;
 default:
-return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16216,else__4236__auto__);
+return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16372,else__4337__auto__);
 
 }
 });
@@ -961,57 +961,57 @@ var this$__$1 = this;
 return cljs.core.seq(this$__$1);
 });
 
-arimaa.game.Step.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4247__auto__,writer__4248__auto__,opts__4249__auto__){
+arimaa.game.Step.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4348__auto__,writer__4349__auto__,opts__4350__auto__){
 var self__ = this;
-var this__4247__auto____$1 = this;
-var pr_pair__4250__auto__ = ((function (this__4247__auto____$1){
-return (function (keyval__4251__auto__){
-return cljs.core.pr_sequential_writer(writer__4248__auto__,cljs.core.pr_writer,""," ","",opts__4249__auto__,keyval__4251__auto__);
-});})(this__4247__auto____$1))
+var this__4348__auto____$1 = this;
+var pr_pair__4351__auto__ = ((function (this__4348__auto____$1){
+return (function (keyval__4352__auto__){
+return cljs.core.pr_sequential_writer(writer__4349__auto__,cljs.core.pr_writer,""," ","",opts__4350__auto__,keyval__4352__auto__);
+});})(this__4348__auto____$1))
 ;
-return cljs.core.pr_sequential_writer(writer__4248__auto__,pr_pair__4250__auto__,"#arimaa.game.Step{",", ","}",opts__4249__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$75,self__.piece_position],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$76,self__.direction],null))], null),self__.__extmap));
+return cljs.core.pr_sequential_writer(writer__4349__auto__,pr_pair__4351__auto__,"#arimaa.game.Step{",", ","}",opts__4350__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$40,self__.piece_position],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$41,self__.direction],null))], null),self__.__extmap));
 });
 
-arimaa.game.Step.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4231__auto__){
+arimaa.game.Step.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4332__auto__){
 var self__ = this;
-var this__4231__auto____$1 = this;
+var this__4332__auto____$1 = this;
 return self__.__meta;
 });
 
-arimaa.game.Step.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4227__auto__){
+arimaa.game.Step.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4328__auto__){
 var self__ = this;
-var this__4227__auto____$1 = this;
+var this__4328__auto____$1 = this;
 return (new arimaa.game.Step(self__.piece_position,self__.direction,self__.__meta,self__.__extmap,self__.__hash));
 });
 
-arimaa.game.Step.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4237__auto__){
+arimaa.game.Step.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4338__auto__){
 var self__ = this;
-var this__4237__auto____$1 = this;
+var this__4338__auto____$1 = this;
 return (2 + cljs.core.count(self__.__extmap));
 });
 
-arimaa.game.Step.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4228__auto__){
+arimaa.game.Step.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4329__auto__){
 var self__ = this;
-var this__4228__auto____$1 = this;
-var h__4051__auto__ = self__.__hash;
-if(!((h__4051__auto__ == null))){
-return h__4051__auto__;
+var this__4329__auto____$1 = this;
+var h__4152__auto__ = self__.__hash;
+if(!((h__4152__auto__ == null))){
+return h__4152__auto__;
 } else {
-var h__4051__auto____$1 = cljs.core.hash_imap(this__4228__auto____$1);
-self__.__hash = h__4051__auto____$1;
+var h__4152__auto____$1 = cljs.core.hash_imap(this__4329__auto____$1);
+self__.__hash = h__4152__auto____$1;
 
-return h__4051__auto____$1;
+return h__4152__auto____$1;
 }
 });
 
-arimaa.game.Step.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4229__auto__,other__4230__auto__){
+arimaa.game.Step.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4330__auto__,other__4331__auto__){
 var self__ = this;
-var this__4229__auto____$1 = this;
-if(cljs.core.truth_((function (){var and__3618__auto__ = other__4230__auto__;
-if(cljs.core.truth_(and__3618__auto__)){
-return ((this__4229__auto____$1.constructor === other__4230__auto__.constructor)) && (cljs.core.equiv_map(this__4229__auto____$1,other__4230__auto__));
+var this__4330__auto____$1 = this;
+if(cljs.core.truth_((function (){var and__3719__auto__ = other__4331__auto__;
+if(cljs.core.truth_(and__3719__auto__)){
+return ((this__4330__auto____$1.constructor === other__4331__auto__.constructor)) && (cljs.core.equiv_map(this__4330__auto____$1,other__4331__auto__));
 } else {
-return and__3618__auto__;
+return and__3719__auto__;
 }
 })())){
 return true;
@@ -1025,8 +1025,8 @@ arimaa.game.Step.prototype.arimaa$game$AShow$ = true;
 arimaa.game.Step.prototype.arimaa$game$AShow$show$arity$1 = (function (this$){
 var self__ = this;
 var this$__$1 = this;
-var direction_char = (function (){var G__16219 = (((self__.direction instanceof cljs.core.Keyword))?self__.direction.fqn:null);
-switch (G__16219) {
+var direction_char = (function (){var G__16375 = (((self__.direction instanceof cljs.core.Keyword))?self__.direction.fqn:null);
+switch (G__16375) {
 case "west":
 return "w";
 
@@ -1051,48 +1051,48 @@ throw (new Error([cljs.core.str("No matching clause: "),cljs.core.str(self__.dir
 return [cljs.core.str(arimaa.game.show(self__.piece_position)),cljs.core.str(direction_char)].join('');
 });
 
-arimaa.game.Step.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4242__auto__,k__4243__auto__){
+arimaa.game.Step.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4343__auto__,k__4344__auto__){
 var self__ = this;
-var this__4242__auto____$1 = this;
-if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$75,null,cljs.core.constant$keyword$76,null], null), null),k__4243__auto__)){
-return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4242__auto____$1),self__.__meta),k__4243__auto__);
+var this__4343__auto____$1 = this;
+if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$40,null,cljs.core.constant$keyword$41,null], null), null),k__4344__auto__)){
+return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4343__auto____$1),self__.__meta),k__4344__auto__);
 } else {
-return (new arimaa.game.Step(self__.piece_position,self__.direction,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4243__auto__)),null));
+return (new arimaa.game.Step(self__.piece_position,self__.direction,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4344__auto__)),null));
 }
 });
 
-arimaa.game.Step.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4240__auto__,k__4241__auto__,G__16215){
+arimaa.game.Step.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4341__auto__,k__4342__auto__,G__16371){
 var self__ = this;
-var this__4240__auto____$1 = this;
-var pred__16220 = cljs.core.keyword_identical_QMARK_;
-var expr__16221 = k__4241__auto__;
-if(cljs.core.truth_((function (){var G__16223 = cljs.core.constant$keyword$75;
-var G__16224 = expr__16221;
-return (pred__16220.cljs$core$IFn$_invoke$arity$2 ? pred__16220.cljs$core$IFn$_invoke$arity$2(G__16223,G__16224) : pred__16220.call(null,G__16223,G__16224));
+var this__4341__auto____$1 = this;
+var pred__16376 = cljs.core.keyword_identical_QMARK_;
+var expr__16377 = k__4342__auto__;
+if(cljs.core.truth_((function (){var G__16379 = cljs.core.constant$keyword$40;
+var G__16380 = expr__16377;
+return (pred__16376.cljs$core$IFn$_invoke$arity$2 ? pred__16376.cljs$core$IFn$_invoke$arity$2(G__16379,G__16380) : pred__16376.call(null,G__16379,G__16380));
 })())){
-return (new arimaa.game.Step(G__16215,self__.direction,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.Step(G__16371,self__.direction,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_((function (){var G__16225 = cljs.core.constant$keyword$76;
-var G__16226 = expr__16221;
-return (pred__16220.cljs$core$IFn$_invoke$arity$2 ? pred__16220.cljs$core$IFn$_invoke$arity$2(G__16225,G__16226) : pred__16220.call(null,G__16225,G__16226));
+if(cljs.core.truth_((function (){var G__16381 = cljs.core.constant$keyword$41;
+var G__16382 = expr__16377;
+return (pred__16376.cljs$core$IFn$_invoke$arity$2 ? pred__16376.cljs$core$IFn$_invoke$arity$2(G__16381,G__16382) : pred__16376.call(null,G__16381,G__16382));
 })())){
-return (new arimaa.game.Step(self__.piece_position,G__16215,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.Step(self__.piece_position,G__16371,self__.__meta,self__.__extmap,null));
 } else {
-return (new arimaa.game.Step(self__.piece_position,self__.direction,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4241__auto__,G__16215),null));
+return (new arimaa.game.Step(self__.piece_position,self__.direction,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4342__auto__,G__16371),null));
 }
 }
 });
 
-arimaa.game.Step.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4245__auto__){
+arimaa.game.Step.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4346__auto__){
 var self__ = this;
-var this__4245__auto____$1 = this;
-return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$75,self__.piece_position],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$76,self__.direction],null))], null),self__.__extmap));
+var this__4346__auto____$1 = this;
+return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$40,self__.piece_position],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$41,self__.direction],null))], null),self__.__extmap));
 });
 
-arimaa.game.Step.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4232__auto__,G__16215){
+arimaa.game.Step.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4333__auto__,G__16371){
 var self__ = this;
-var this__4232__auto____$1 = this;
-return (new arimaa.game.Step(self__.piece_position,self__.direction,G__16215,self__.__extmap,self__.__hash));
+var this__4333__auto____$1 = this;
+return (new arimaa.game.Step(self__.piece_position,self__.direction,G__16371,self__.__extmap,self__.__hash));
 });
 
 arimaa.game.Step.prototype.arimaa$game$AUpdatePosition$ = true;
@@ -1100,10 +1100,10 @@ arimaa.game.Step.prototype.arimaa$game$AUpdatePosition$ = true;
 arimaa.game.Step.prototype.arimaa$game$AUpdatePosition$update_position$arity$2 = (function (this$,position){
 var self__ = this;
 var this$__$1 = this;
-var col = cljs.core.constant$keyword$69.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$74.cljs$core$IFn$_invoke$arity$1(self__.piece_position));
-var row = cljs.core.constant$keyword$70.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$74.cljs$core$IFn$_invoke$arity$1(self__.piece_position));
-var new_square = (function (){var G__16227 = (((self__.direction instanceof cljs.core.Keyword))?self__.direction.fqn:null);
-switch (G__16227) {
+var col = cljs.core.constant$keyword$34.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$39.cljs$core$IFn$_invoke$arity$1(self__.piece_position));
+var row = cljs.core.constant$keyword$35.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$39.cljs$core$IFn$_invoke$arity$1(self__.piece_position));
+var new_square = (function (){var G__16383 = (((self__.direction instanceof cljs.core.Keyword))?self__.direction.fqn:null);
+switch (G__16383) {
 case "west":
 return (new arimaa.game.Square(cljs.core.char$((col.charCodeAt() - (1))),row,null,null,null));
 
@@ -1125,36 +1125,36 @@ throw (new Error([cljs.core.str("No matching clause: "),cljs.core.str(self__.dir
 
 }
 })();
-var new_piece_position = (new arimaa.game.PiecePosition(cljs.core.constant$keyword$73.cljs$core$IFn$_invoke$arity$1(self__.piece_position),new_square,null,null,null));
+var new_piece_position = (new arimaa.game.PiecePosition(cljs.core.constant$keyword$38.cljs$core$IFn$_invoke$arity$1(self__.piece_position),new_square,null,null,null));
 return cljs.core.cons(new_piece_position,cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentHashSet.fromArray([self__.piece_position], true),position));
 });
 
-arimaa.game.Step.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4238__auto__,entry__4239__auto__){
+arimaa.game.Step.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4339__auto__,entry__4340__auto__){
 var self__ = this;
-var this__4238__auto____$1 = this;
-if(cljs.core.vector_QMARK_(entry__4239__auto__)){
-return cljs.core._assoc(this__4238__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(1)));
+var this__4339__auto____$1 = this;
+if(cljs.core.vector_QMARK_(entry__4340__auto__)){
+return cljs.core._assoc(this__4339__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(1)));
 } else {
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4238__auto____$1,entry__4239__auto__);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4339__auto____$1,entry__4340__auto__);
 }
 });
 
 arimaa.game.Step.cljs$lang$type = true;
 
-arimaa.game.Step.cljs$lang$ctorPrSeq = (function (this__4267__auto__){
+arimaa.game.Step.cljs$lang$ctorPrSeq = (function (this__4368__auto__){
 return cljs.core._conj(cljs.core.List.EMPTY,"arimaa.game/Step");
 });
 
-arimaa.game.Step.cljs$lang$ctorPrWriter = (function (this__4267__auto__,writer__4268__auto__){
-return cljs.core._write(writer__4268__auto__,"arimaa.game/Step");
+arimaa.game.Step.cljs$lang$ctorPrWriter = (function (this__4368__auto__,writer__4369__auto__){
+return cljs.core._write(writer__4369__auto__,"arimaa.game/Step");
 });
 
 arimaa.game.__GT_Step = (function __GT_Step(piece_position,direction){
 return (new arimaa.game.Step(piece_position,direction,null,null,null));
 });
 
-arimaa.game.map__GT_Step = (function map__GT_Step(G__16217){
-return (new arimaa.game.Step(cljs.core.constant$keyword$75.cljs$core$IFn$_invoke$arity$1(G__16217),cljs.core.constant$keyword$76.cljs$core$IFn$_invoke$arity$1(G__16217),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__16217,cljs.core.constant$keyword$75,cljs.core.array_seq([cljs.core.constant$keyword$76], 0)),null));
+arimaa.game.map__GT_Step = (function map__GT_Step(G__16373){
+return (new arimaa.game.Step(cljs.core.constant$keyword$40.cljs$core$IFn$_invoke$arity$1(G__16373),cljs.core.constant$keyword$41.cljs$core$IFn$_invoke$arity$1(G__16373),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__16373,cljs.core.constant$keyword$40,cljs.core.array_seq([cljs.core.constant$keyword$41], 0)),null));
 });
 
 
@@ -1176,23 +1176,23 @@ this.__hash = __hash;
 this.cljs$lang$protocol_mask$partition0$ = 2229667594;
 this.cljs$lang$protocol_mask$partition1$ = 8192;
 })
-arimaa.game.Capture.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4233__auto__,k__4234__auto__){
+arimaa.game.Capture.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4334__auto__,k__4335__auto__){
 var self__ = this;
-var this__4233__auto____$1 = this;
-return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4233__auto____$1,k__4234__auto__,null);
+var this__4334__auto____$1 = this;
+return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4334__auto____$1,k__4335__auto__,null);
 });
 
-arimaa.game.Capture.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4235__auto__,k16232,else__4236__auto__){
+arimaa.game.Capture.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4336__auto__,k16388,else__4337__auto__){
 var self__ = this;
-var this__4235__auto____$1 = this;
-var G__16234 = (((k16232 instanceof cljs.core.Keyword))?k16232.fqn:null);
-switch (G__16234) {
+var this__4336__auto____$1 = this;
+var G__16390 = (((k16388 instanceof cljs.core.Keyword))?k16388.fqn:null);
+switch (G__16390) {
 case "piece-position":
 return self__.piece_position;
 
 break;
 default:
-return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16232,else__4236__auto__);
+return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16388,else__4337__auto__);
 
 }
 });
@@ -1211,57 +1211,57 @@ var this$__$1 = this;
 return cljs.core.List.EMPTY;
 });
 
-arimaa.game.Capture.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4247__auto__,writer__4248__auto__,opts__4249__auto__){
+arimaa.game.Capture.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4348__auto__,writer__4349__auto__,opts__4350__auto__){
 var self__ = this;
-var this__4247__auto____$1 = this;
-var pr_pair__4250__auto__ = ((function (this__4247__auto____$1){
-return (function (keyval__4251__auto__){
-return cljs.core.pr_sequential_writer(writer__4248__auto__,cljs.core.pr_writer,""," ","",opts__4249__auto__,keyval__4251__auto__);
-});})(this__4247__auto____$1))
+var this__4348__auto____$1 = this;
+var pr_pair__4351__auto__ = ((function (this__4348__auto____$1){
+return (function (keyval__4352__auto__){
+return cljs.core.pr_sequential_writer(writer__4349__auto__,cljs.core.pr_writer,""," ","",opts__4350__auto__,keyval__4352__auto__);
+});})(this__4348__auto____$1))
 ;
-return cljs.core.pr_sequential_writer(writer__4248__auto__,pr_pair__4250__auto__,"#arimaa.game.Capture{",", ","}",opts__4249__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$75,self__.piece_position],null))], null),self__.__extmap));
+return cljs.core.pr_sequential_writer(writer__4349__auto__,pr_pair__4351__auto__,"#arimaa.game.Capture{",", ","}",opts__4350__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$40,self__.piece_position],null))], null),self__.__extmap));
 });
 
-arimaa.game.Capture.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4231__auto__){
+arimaa.game.Capture.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4332__auto__){
 var self__ = this;
-var this__4231__auto____$1 = this;
+var this__4332__auto____$1 = this;
 return self__.__meta;
 });
 
-arimaa.game.Capture.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4227__auto__){
+arimaa.game.Capture.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4328__auto__){
 var self__ = this;
-var this__4227__auto____$1 = this;
+var this__4328__auto____$1 = this;
 return (new arimaa.game.Capture(self__.piece_position,self__.__meta,self__.__extmap,self__.__hash));
 });
 
-arimaa.game.Capture.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4237__auto__){
+arimaa.game.Capture.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4338__auto__){
 var self__ = this;
-var this__4237__auto____$1 = this;
+var this__4338__auto____$1 = this;
 return (1 + cljs.core.count(self__.__extmap));
 });
 
-arimaa.game.Capture.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4228__auto__){
+arimaa.game.Capture.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4329__auto__){
 var self__ = this;
-var this__4228__auto____$1 = this;
-var h__4051__auto__ = self__.__hash;
-if(!((h__4051__auto__ == null))){
-return h__4051__auto__;
+var this__4329__auto____$1 = this;
+var h__4152__auto__ = self__.__hash;
+if(!((h__4152__auto__ == null))){
+return h__4152__auto__;
 } else {
-var h__4051__auto____$1 = cljs.core.hash_imap(this__4228__auto____$1);
-self__.__hash = h__4051__auto____$1;
+var h__4152__auto____$1 = cljs.core.hash_imap(this__4329__auto____$1);
+self__.__hash = h__4152__auto____$1;
 
-return h__4051__auto____$1;
+return h__4152__auto____$1;
 }
 });
 
-arimaa.game.Capture.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4229__auto__,other__4230__auto__){
+arimaa.game.Capture.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4330__auto__,other__4331__auto__){
 var self__ = this;
-var this__4229__auto____$1 = this;
-if(cljs.core.truth_((function (){var and__3618__auto__ = other__4230__auto__;
-if(cljs.core.truth_(and__3618__auto__)){
-return ((this__4229__auto____$1.constructor === other__4230__auto__.constructor)) && (cljs.core.equiv_map(this__4229__auto____$1,other__4230__auto__));
+var this__4330__auto____$1 = this;
+if(cljs.core.truth_((function (){var and__3719__auto__ = other__4331__auto__;
+if(cljs.core.truth_(and__3719__auto__)){
+return ((this__4330__auto____$1.constructor === other__4331__auto__.constructor)) && (cljs.core.equiv_map(this__4330__auto____$1,other__4331__auto__));
 } else {
-return and__3618__auto__;
+return and__3719__auto__;
 }
 })())){
 return true;
@@ -1278,41 +1278,41 @@ var this$__$1 = this;
 return [cljs.core.str(arimaa.game.show(self__.piece_position)),cljs.core.str("x")].join('');
 });
 
-arimaa.game.Capture.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4242__auto__,k__4243__auto__){
+arimaa.game.Capture.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4343__auto__,k__4344__auto__){
 var self__ = this;
-var this__4242__auto____$1 = this;
-if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$75,null], null), null),k__4243__auto__)){
-return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4242__auto____$1),self__.__meta),k__4243__auto__);
+var this__4343__auto____$1 = this;
+if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$40,null], null), null),k__4344__auto__)){
+return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4343__auto____$1),self__.__meta),k__4344__auto__);
 } else {
-return (new arimaa.game.Capture(self__.piece_position,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4243__auto__)),null));
+return (new arimaa.game.Capture(self__.piece_position,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4344__auto__)),null));
 }
 });
 
-arimaa.game.Capture.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4240__auto__,k__4241__auto__,G__16231){
+arimaa.game.Capture.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4341__auto__,k__4342__auto__,G__16387){
 var self__ = this;
-var this__4240__auto____$1 = this;
-var pred__16235 = cljs.core.keyword_identical_QMARK_;
-var expr__16236 = k__4241__auto__;
-if(cljs.core.truth_((function (){var G__16238 = cljs.core.constant$keyword$75;
-var G__16239 = expr__16236;
-return (pred__16235.cljs$core$IFn$_invoke$arity$2 ? pred__16235.cljs$core$IFn$_invoke$arity$2(G__16238,G__16239) : pred__16235.call(null,G__16238,G__16239));
+var this__4341__auto____$1 = this;
+var pred__16391 = cljs.core.keyword_identical_QMARK_;
+var expr__16392 = k__4342__auto__;
+if(cljs.core.truth_((function (){var G__16394 = cljs.core.constant$keyword$40;
+var G__16395 = expr__16392;
+return (pred__16391.cljs$core$IFn$_invoke$arity$2 ? pred__16391.cljs$core$IFn$_invoke$arity$2(G__16394,G__16395) : pred__16391.call(null,G__16394,G__16395));
 })())){
-return (new arimaa.game.Capture(G__16231,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.Capture(G__16387,self__.__meta,self__.__extmap,null));
 } else {
-return (new arimaa.game.Capture(self__.piece_position,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4241__auto__,G__16231),null));
+return (new arimaa.game.Capture(self__.piece_position,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4342__auto__,G__16387),null));
 }
 });
 
-arimaa.game.Capture.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4245__auto__){
+arimaa.game.Capture.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4346__auto__){
 var self__ = this;
-var this__4245__auto____$1 = this;
-return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$75,self__.piece_position],null))], null),self__.__extmap));
+var this__4346__auto____$1 = this;
+return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$40,self__.piece_position],null))], null),self__.__extmap));
 });
 
-arimaa.game.Capture.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4232__auto__,G__16231){
+arimaa.game.Capture.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4333__auto__,G__16387){
 var self__ = this;
-var this__4232__auto____$1 = this;
-return (new arimaa.game.Capture(self__.piece_position,G__16231,self__.__extmap,self__.__hash));
+var this__4333__auto____$1 = this;
+return (new arimaa.game.Capture(self__.piece_position,G__16387,self__.__extmap,self__.__hash));
 });
 
 arimaa.game.Capture.prototype.arimaa$game$AUpdatePosition$ = true;
@@ -1323,32 +1323,32 @@ var this$__$1 = this;
 return cljs.core.remove.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentHashSet.fromArray([self__.piece_position], true),position);
 });
 
-arimaa.game.Capture.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4238__auto__,entry__4239__auto__){
+arimaa.game.Capture.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4339__auto__,entry__4340__auto__){
 var self__ = this;
-var this__4238__auto____$1 = this;
-if(cljs.core.vector_QMARK_(entry__4239__auto__)){
-return cljs.core._assoc(this__4238__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(1)));
+var this__4339__auto____$1 = this;
+if(cljs.core.vector_QMARK_(entry__4340__auto__)){
+return cljs.core._assoc(this__4339__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(1)));
 } else {
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4238__auto____$1,entry__4239__auto__);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4339__auto____$1,entry__4340__auto__);
 }
 });
 
 arimaa.game.Capture.cljs$lang$type = true;
 
-arimaa.game.Capture.cljs$lang$ctorPrSeq = (function (this__4267__auto__){
+arimaa.game.Capture.cljs$lang$ctorPrSeq = (function (this__4368__auto__){
 return cljs.core._conj(cljs.core.List.EMPTY,"arimaa.game/Capture");
 });
 
-arimaa.game.Capture.cljs$lang$ctorPrWriter = (function (this__4267__auto__,writer__4268__auto__){
-return cljs.core._write(writer__4268__auto__,"arimaa.game/Capture");
+arimaa.game.Capture.cljs$lang$ctorPrWriter = (function (this__4368__auto__,writer__4369__auto__){
+return cljs.core._write(writer__4369__auto__,"arimaa.game/Capture");
 });
 
 arimaa.game.__GT_Capture = (function __GT_Capture(piece_position){
 return (new arimaa.game.Capture(piece_position,null,null,null));
 });
 
-arimaa.game.map__GT_Capture = (function map__GT_Capture(G__16233){
-return (new arimaa.game.Capture(cljs.core.constant$keyword$75.cljs$core$IFn$_invoke$arity$1(G__16233),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(G__16233,cljs.core.constant$keyword$75),null));
+arimaa.game.map__GT_Capture = (function map__GT_Capture(G__16389){
+return (new arimaa.game.Capture(cljs.core.constant$keyword$40.cljs$core$IFn$_invoke$arity$1(G__16389),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(G__16389,cljs.core.constant$keyword$40),null));
 });
 
 
@@ -1372,17 +1372,17 @@ this.__hash = __hash;
 this.cljs$lang$protocol_mask$partition0$ = 2229667594;
 this.cljs$lang$protocol_mask$partition1$ = 8192;
 })
-arimaa.game.ForceStep.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4233__auto__,k__4234__auto__){
+arimaa.game.ForceStep.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4334__auto__,k__4335__auto__){
 var self__ = this;
-var this__4233__auto____$1 = this;
-return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4233__auto____$1,k__4234__auto__,null);
+var this__4334__auto____$1 = this;
+return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4334__auto____$1,k__4335__auto__,null);
 });
 
-arimaa.game.ForceStep.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4235__auto__,k16242,else__4236__auto__){
+arimaa.game.ForceStep.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4336__auto__,k16398,else__4337__auto__){
 var self__ = this;
-var this__4235__auto____$1 = this;
-var G__16244 = (((k16242 instanceof cljs.core.Keyword))?k16242.fqn:null);
-switch (G__16244) {
+var this__4336__auto____$1 = this;
+var G__16400 = (((k16398 instanceof cljs.core.Keyword))?k16398.fqn:null);
+switch (G__16400) {
 case "step2":
 return self__.step2;
 
@@ -1392,7 +1392,7 @@ return self__.step1;
 
 break;
 default:
-return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16242,else__4236__auto__);
+return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16398,else__4337__auto__);
 
 }
 });
@@ -1411,57 +1411,57 @@ var this$__$1 = this;
 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [self__.step1,self__.step2], null);
 });
 
-arimaa.game.ForceStep.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4247__auto__,writer__4248__auto__,opts__4249__auto__){
+arimaa.game.ForceStep.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4348__auto__,writer__4349__auto__,opts__4350__auto__){
 var self__ = this;
-var this__4247__auto____$1 = this;
-var pr_pair__4250__auto__ = ((function (this__4247__auto____$1){
-return (function (keyval__4251__auto__){
-return cljs.core.pr_sequential_writer(writer__4248__auto__,cljs.core.pr_writer,""," ","",opts__4249__auto__,keyval__4251__auto__);
-});})(this__4247__auto____$1))
+var this__4348__auto____$1 = this;
+var pr_pair__4351__auto__ = ((function (this__4348__auto____$1){
+return (function (keyval__4352__auto__){
+return cljs.core.pr_sequential_writer(writer__4349__auto__,cljs.core.pr_writer,""," ","",opts__4350__auto__,keyval__4352__auto__);
+});})(this__4348__auto____$1))
 ;
-return cljs.core.pr_sequential_writer(writer__4248__auto__,pr_pair__4250__auto__,"#arimaa.game.ForceStep{",", ","}",opts__4249__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$77,self__.step1],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$78,self__.step2],null))], null),self__.__extmap));
+return cljs.core.pr_sequential_writer(writer__4349__auto__,pr_pair__4351__auto__,"#arimaa.game.ForceStep{",", ","}",opts__4350__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$42,self__.step1],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$43,self__.step2],null))], null),self__.__extmap));
 });
 
-arimaa.game.ForceStep.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4231__auto__){
+arimaa.game.ForceStep.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4332__auto__){
 var self__ = this;
-var this__4231__auto____$1 = this;
+var this__4332__auto____$1 = this;
 return self__.__meta;
 });
 
-arimaa.game.ForceStep.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4227__auto__){
+arimaa.game.ForceStep.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4328__auto__){
 var self__ = this;
-var this__4227__auto____$1 = this;
+var this__4328__auto____$1 = this;
 return (new arimaa.game.ForceStep(self__.step1,self__.step2,self__.__meta,self__.__extmap,self__.__hash));
 });
 
-arimaa.game.ForceStep.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4237__auto__){
+arimaa.game.ForceStep.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4338__auto__){
 var self__ = this;
-var this__4237__auto____$1 = this;
+var this__4338__auto____$1 = this;
 return (2 + cljs.core.count(self__.__extmap));
 });
 
-arimaa.game.ForceStep.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4228__auto__){
+arimaa.game.ForceStep.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4329__auto__){
 var self__ = this;
-var this__4228__auto____$1 = this;
-var h__4051__auto__ = self__.__hash;
-if(!((h__4051__auto__ == null))){
-return h__4051__auto__;
+var this__4329__auto____$1 = this;
+var h__4152__auto__ = self__.__hash;
+if(!((h__4152__auto__ == null))){
+return h__4152__auto__;
 } else {
-var h__4051__auto____$1 = cljs.core.hash_imap(this__4228__auto____$1);
-self__.__hash = h__4051__auto____$1;
+var h__4152__auto____$1 = cljs.core.hash_imap(this__4329__auto____$1);
+self__.__hash = h__4152__auto____$1;
 
-return h__4051__auto____$1;
+return h__4152__auto____$1;
 }
 });
 
-arimaa.game.ForceStep.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4229__auto__,other__4230__auto__){
+arimaa.game.ForceStep.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4330__auto__,other__4331__auto__){
 var self__ = this;
-var this__4229__auto____$1 = this;
-if(cljs.core.truth_((function (){var and__3618__auto__ = other__4230__auto__;
-if(cljs.core.truth_(and__3618__auto__)){
-return ((this__4229__auto____$1.constructor === other__4230__auto__.constructor)) && (cljs.core.equiv_map(this__4229__auto____$1,other__4230__auto__));
+var this__4330__auto____$1 = this;
+if(cljs.core.truth_((function (){var and__3719__auto__ = other__4331__auto__;
+if(cljs.core.truth_(and__3719__auto__)){
+return ((this__4330__auto____$1.constructor === other__4331__auto__.constructor)) && (cljs.core.equiv_map(this__4330__auto____$1,other__4331__auto__));
 } else {
-return and__3618__auto__;
+return and__3719__auto__;
 }
 })())){
 return true;
@@ -1478,48 +1478,48 @@ var this$__$1 = this;
 return [cljs.core.str(arimaa.game.show(self__.step1)),cljs.core.str(" "),cljs.core.str(arimaa.game.show(self__.step2))].join('');
 });
 
-arimaa.game.ForceStep.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4242__auto__,k__4243__auto__){
+arimaa.game.ForceStep.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4343__auto__,k__4344__auto__){
 var self__ = this;
-var this__4242__auto____$1 = this;
-if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$78,null,cljs.core.constant$keyword$77,null], null), null),k__4243__auto__)){
-return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4242__auto____$1),self__.__meta),k__4243__auto__);
+var this__4343__auto____$1 = this;
+if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$43,null,cljs.core.constant$keyword$42,null], null), null),k__4344__auto__)){
+return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4343__auto____$1),self__.__meta),k__4344__auto__);
 } else {
-return (new arimaa.game.ForceStep(self__.step1,self__.step2,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4243__auto__)),null));
+return (new arimaa.game.ForceStep(self__.step1,self__.step2,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4344__auto__)),null));
 }
 });
 
-arimaa.game.ForceStep.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4240__auto__,k__4241__auto__,G__16241){
+arimaa.game.ForceStep.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4341__auto__,k__4342__auto__,G__16397){
 var self__ = this;
-var this__4240__auto____$1 = this;
-var pred__16245 = cljs.core.keyword_identical_QMARK_;
-var expr__16246 = k__4241__auto__;
-if(cljs.core.truth_((function (){var G__16248 = cljs.core.constant$keyword$77;
-var G__16249 = expr__16246;
-return (pred__16245.cljs$core$IFn$_invoke$arity$2 ? pred__16245.cljs$core$IFn$_invoke$arity$2(G__16248,G__16249) : pred__16245.call(null,G__16248,G__16249));
+var this__4341__auto____$1 = this;
+var pred__16401 = cljs.core.keyword_identical_QMARK_;
+var expr__16402 = k__4342__auto__;
+if(cljs.core.truth_((function (){var G__16404 = cljs.core.constant$keyword$42;
+var G__16405 = expr__16402;
+return (pred__16401.cljs$core$IFn$_invoke$arity$2 ? pred__16401.cljs$core$IFn$_invoke$arity$2(G__16404,G__16405) : pred__16401.call(null,G__16404,G__16405));
 })())){
-return (new arimaa.game.ForceStep(G__16241,self__.step2,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.ForceStep(G__16397,self__.step2,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_((function (){var G__16250 = cljs.core.constant$keyword$78;
-var G__16251 = expr__16246;
-return (pred__16245.cljs$core$IFn$_invoke$arity$2 ? pred__16245.cljs$core$IFn$_invoke$arity$2(G__16250,G__16251) : pred__16245.call(null,G__16250,G__16251));
+if(cljs.core.truth_((function (){var G__16406 = cljs.core.constant$keyword$43;
+var G__16407 = expr__16402;
+return (pred__16401.cljs$core$IFn$_invoke$arity$2 ? pred__16401.cljs$core$IFn$_invoke$arity$2(G__16406,G__16407) : pred__16401.call(null,G__16406,G__16407));
 })())){
-return (new arimaa.game.ForceStep(self__.step1,G__16241,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.ForceStep(self__.step1,G__16397,self__.__meta,self__.__extmap,null));
 } else {
-return (new arimaa.game.ForceStep(self__.step1,self__.step2,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4241__auto__,G__16241),null));
+return (new arimaa.game.ForceStep(self__.step1,self__.step2,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4342__auto__,G__16397),null));
 }
 }
 });
 
-arimaa.game.ForceStep.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4245__auto__){
+arimaa.game.ForceStep.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4346__auto__){
 var self__ = this;
-var this__4245__auto____$1 = this;
-return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$77,self__.step1],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$78,self__.step2],null))], null),self__.__extmap));
+var this__4346__auto____$1 = this;
+return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$42,self__.step1],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$43,self__.step2],null))], null),self__.__extmap));
 });
 
-arimaa.game.ForceStep.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4232__auto__,G__16241){
+arimaa.game.ForceStep.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4333__auto__,G__16397){
 var self__ = this;
-var this__4232__auto____$1 = this;
-return (new arimaa.game.ForceStep(self__.step1,self__.step2,G__16241,self__.__extmap,self__.__hash));
+var this__4333__auto____$1 = this;
+return (new arimaa.game.ForceStep(self__.step1,self__.step2,G__16397,self__.__extmap,self__.__hash));
 });
 
 arimaa.game.ForceStep.prototype.arimaa$game$AUpdatePosition$ = true;
@@ -1530,32 +1530,32 @@ var this$__$1 = this;
 return arimaa.game.update_position(self__.step2,arimaa.game.update_position(self__.step1,position));
 });
 
-arimaa.game.ForceStep.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4238__auto__,entry__4239__auto__){
+arimaa.game.ForceStep.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4339__auto__,entry__4340__auto__){
 var self__ = this;
-var this__4238__auto____$1 = this;
-if(cljs.core.vector_QMARK_(entry__4239__auto__)){
-return cljs.core._assoc(this__4238__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(1)));
+var this__4339__auto____$1 = this;
+if(cljs.core.vector_QMARK_(entry__4340__auto__)){
+return cljs.core._assoc(this__4339__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(1)));
 } else {
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4238__auto____$1,entry__4239__auto__);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4339__auto____$1,entry__4340__auto__);
 }
 });
 
 arimaa.game.ForceStep.cljs$lang$type = true;
 
-arimaa.game.ForceStep.cljs$lang$ctorPrSeq = (function (this__4267__auto__){
+arimaa.game.ForceStep.cljs$lang$ctorPrSeq = (function (this__4368__auto__){
 return cljs.core._conj(cljs.core.List.EMPTY,"arimaa.game/ForceStep");
 });
 
-arimaa.game.ForceStep.cljs$lang$ctorPrWriter = (function (this__4267__auto__,writer__4268__auto__){
-return cljs.core._write(writer__4268__auto__,"arimaa.game/ForceStep");
+arimaa.game.ForceStep.cljs$lang$ctorPrWriter = (function (this__4368__auto__,writer__4369__auto__){
+return cljs.core._write(writer__4369__auto__,"arimaa.game/ForceStep");
 });
 
 arimaa.game.__GT_ForceStep = (function __GT_ForceStep(step1,step2){
 return (new arimaa.game.ForceStep(step1,step2,null,null,null));
 });
 
-arimaa.game.map__GT_ForceStep = (function map__GT_ForceStep(G__16243){
-return (new arimaa.game.ForceStep(cljs.core.constant$keyword$77.cljs$core$IFn$_invoke$arity$1(G__16243),cljs.core.constant$keyword$78.cljs$core$IFn$_invoke$arity$1(G__16243),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__16243,cljs.core.constant$keyword$77,cljs.core.array_seq([cljs.core.constant$keyword$78], 0)),null));
+arimaa.game.map__GT_ForceStep = (function map__GT_ForceStep(G__16399){
+return (new arimaa.game.ForceStep(cljs.core.constant$keyword$42.cljs$core$IFn$_invoke$arity$1(G__16399),cljs.core.constant$keyword$43.cljs$core$IFn$_invoke$arity$1(G__16399),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__16399,cljs.core.constant$keyword$42,cljs.core.array_seq([cljs.core.constant$keyword$43], 0)),null));
 });
 
 
@@ -1579,17 +1579,17 @@ this.__hash = __hash;
 this.cljs$lang$protocol_mask$partition0$ = 2229667594;
 this.cljs$lang$protocol_mask$partition1$ = 8192;
 })
-arimaa.game.Turn.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4233__auto__,k__4234__auto__){
+arimaa.game.Turn.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4334__auto__,k__4335__auto__){
 var self__ = this;
-var this__4233__auto____$1 = this;
-return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4233__auto____$1,k__4234__auto__,null);
+var this__4334__auto____$1 = this;
+return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4334__auto____$1,k__4335__auto__,null);
 });
 
-arimaa.game.Turn.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4235__auto__,k16254,else__4236__auto__){
+arimaa.game.Turn.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4336__auto__,k16410,else__4337__auto__){
 var self__ = this;
-var this__4235__auto____$1 = this;
-var G__16256 = (((k16254 instanceof cljs.core.Keyword))?k16254.fqn:null);
-switch (G__16256) {
+var this__4336__auto____$1 = this;
+var G__16412 = (((k16410 instanceof cljs.core.Keyword))?k16410.fqn:null);
+switch (G__16412) {
 case "colour":
 return self__.colour;
 
@@ -1599,62 +1599,62 @@ return self__.number;
 
 break;
 default:
-return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16254,else__4236__auto__);
+return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16410,else__4337__auto__);
 
 }
 });
 
-arimaa.game.Turn.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4247__auto__,writer__4248__auto__,opts__4249__auto__){
+arimaa.game.Turn.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4348__auto__,writer__4349__auto__,opts__4350__auto__){
 var self__ = this;
-var this__4247__auto____$1 = this;
-var pr_pair__4250__auto__ = ((function (this__4247__auto____$1){
-return (function (keyval__4251__auto__){
-return cljs.core.pr_sequential_writer(writer__4248__auto__,cljs.core.pr_writer,""," ","",opts__4249__auto__,keyval__4251__auto__);
-});})(this__4247__auto____$1))
+var this__4348__auto____$1 = this;
+var pr_pair__4351__auto__ = ((function (this__4348__auto____$1){
+return (function (keyval__4352__auto__){
+return cljs.core.pr_sequential_writer(writer__4349__auto__,cljs.core.pr_writer,""," ","",opts__4350__auto__,keyval__4352__auto__);
+});})(this__4348__auto____$1))
 ;
-return cljs.core.pr_sequential_writer(writer__4248__auto__,pr_pair__4250__auto__,"#arimaa.game.Turn{",", ","}",opts__4249__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$79,self__.number],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$72,self__.colour],null))], null),self__.__extmap));
+return cljs.core.pr_sequential_writer(writer__4349__auto__,pr_pair__4351__auto__,"#arimaa.game.Turn{",", ","}",opts__4350__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$44,self__.number],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$37,self__.colour],null))], null),self__.__extmap));
 });
 
-arimaa.game.Turn.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4231__auto__){
+arimaa.game.Turn.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4332__auto__){
 var self__ = this;
-var this__4231__auto____$1 = this;
+var this__4332__auto____$1 = this;
 return self__.__meta;
 });
 
-arimaa.game.Turn.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4227__auto__){
+arimaa.game.Turn.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4328__auto__){
 var self__ = this;
-var this__4227__auto____$1 = this;
+var this__4328__auto____$1 = this;
 return (new arimaa.game.Turn(self__.number,self__.colour,self__.__meta,self__.__extmap,self__.__hash));
 });
 
-arimaa.game.Turn.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4237__auto__){
+arimaa.game.Turn.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4338__auto__){
 var self__ = this;
-var this__4237__auto____$1 = this;
+var this__4338__auto____$1 = this;
 return (2 + cljs.core.count(self__.__extmap));
 });
 
-arimaa.game.Turn.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4228__auto__){
+arimaa.game.Turn.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4329__auto__){
 var self__ = this;
-var this__4228__auto____$1 = this;
-var h__4051__auto__ = self__.__hash;
-if(!((h__4051__auto__ == null))){
-return h__4051__auto__;
+var this__4329__auto____$1 = this;
+var h__4152__auto__ = self__.__hash;
+if(!((h__4152__auto__ == null))){
+return h__4152__auto__;
 } else {
-var h__4051__auto____$1 = cljs.core.hash_imap(this__4228__auto____$1);
-self__.__hash = h__4051__auto____$1;
+var h__4152__auto____$1 = cljs.core.hash_imap(this__4329__auto____$1);
+self__.__hash = h__4152__auto____$1;
 
-return h__4051__auto____$1;
+return h__4152__auto____$1;
 }
 });
 
-arimaa.game.Turn.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4229__auto__,other__4230__auto__){
+arimaa.game.Turn.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4330__auto__,other__4331__auto__){
 var self__ = this;
-var this__4229__auto____$1 = this;
-if(cljs.core.truth_((function (){var and__3618__auto__ = other__4230__auto__;
-if(cljs.core.truth_(and__3618__auto__)){
-return ((this__4229__auto____$1.constructor === other__4230__auto__.constructor)) && (cljs.core.equiv_map(this__4229__auto____$1,other__4230__auto__));
+var this__4330__auto____$1 = this;
+if(cljs.core.truth_((function (){var and__3719__auto__ = other__4331__auto__;
+if(cljs.core.truth_(and__3719__auto__)){
+return ((this__4330__auto____$1.constructor === other__4331__auto__.constructor)) && (cljs.core.equiv_map(this__4330__auto____$1,other__4331__auto__));
 } else {
-return and__3618__auto__;
+return and__3719__auto__;
 }
 })())){
 return true;
@@ -1668,79 +1668,79 @@ arimaa.game.Turn.prototype.arimaa$game$AShow$ = true;
 arimaa.game.Turn.prototype.arimaa$game$AShow$show$arity$1 = (function (this$){
 var self__ = this;
 var this$__$1 = this;
-return [cljs.core.str(self__.number),cljs.core.str(((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(self__.colour,cljs.core.constant$keyword$63))?"g":"s"))].join('');
+return [cljs.core.str(self__.number),cljs.core.str(((cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(self__.colour,cljs.core.constant$keyword$28))?"g":"s"))].join('');
 });
 
-arimaa.game.Turn.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4242__auto__,k__4243__auto__){
+arimaa.game.Turn.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4343__auto__,k__4344__auto__){
 var self__ = this;
-var this__4242__auto____$1 = this;
-if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$79,null,cljs.core.constant$keyword$72,null], null), null),k__4243__auto__)){
-return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4242__auto____$1),self__.__meta),k__4243__auto__);
+var this__4343__auto____$1 = this;
+if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$44,null,cljs.core.constant$keyword$37,null], null), null),k__4344__auto__)){
+return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4343__auto____$1),self__.__meta),k__4344__auto__);
 } else {
-return (new arimaa.game.Turn(self__.number,self__.colour,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4243__auto__)),null));
+return (new arimaa.game.Turn(self__.number,self__.colour,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4344__auto__)),null));
 }
 });
 
-arimaa.game.Turn.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4240__auto__,k__4241__auto__,G__16253){
+arimaa.game.Turn.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4341__auto__,k__4342__auto__,G__16409){
 var self__ = this;
-var this__4240__auto____$1 = this;
-var pred__16257 = cljs.core.keyword_identical_QMARK_;
-var expr__16258 = k__4241__auto__;
-if(cljs.core.truth_((function (){var G__16260 = cljs.core.constant$keyword$79;
-var G__16261 = expr__16258;
-return (pred__16257.cljs$core$IFn$_invoke$arity$2 ? pred__16257.cljs$core$IFn$_invoke$arity$2(G__16260,G__16261) : pred__16257.call(null,G__16260,G__16261));
+var this__4341__auto____$1 = this;
+var pred__16413 = cljs.core.keyword_identical_QMARK_;
+var expr__16414 = k__4342__auto__;
+if(cljs.core.truth_((function (){var G__16416 = cljs.core.constant$keyword$44;
+var G__16417 = expr__16414;
+return (pred__16413.cljs$core$IFn$_invoke$arity$2 ? pred__16413.cljs$core$IFn$_invoke$arity$2(G__16416,G__16417) : pred__16413.call(null,G__16416,G__16417));
 })())){
-return (new arimaa.game.Turn(G__16253,self__.colour,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.Turn(G__16409,self__.colour,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_((function (){var G__16262 = cljs.core.constant$keyword$72;
-var G__16263 = expr__16258;
-return (pred__16257.cljs$core$IFn$_invoke$arity$2 ? pred__16257.cljs$core$IFn$_invoke$arity$2(G__16262,G__16263) : pred__16257.call(null,G__16262,G__16263));
+if(cljs.core.truth_((function (){var G__16418 = cljs.core.constant$keyword$37;
+var G__16419 = expr__16414;
+return (pred__16413.cljs$core$IFn$_invoke$arity$2 ? pred__16413.cljs$core$IFn$_invoke$arity$2(G__16418,G__16419) : pred__16413.call(null,G__16418,G__16419));
 })())){
-return (new arimaa.game.Turn(self__.number,G__16253,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.Turn(self__.number,G__16409,self__.__meta,self__.__extmap,null));
 } else {
-return (new arimaa.game.Turn(self__.number,self__.colour,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4241__auto__,G__16253),null));
+return (new arimaa.game.Turn(self__.number,self__.colour,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4342__auto__,G__16409),null));
 }
 }
 });
 
-arimaa.game.Turn.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4245__auto__){
+arimaa.game.Turn.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4346__auto__){
 var self__ = this;
-var this__4245__auto____$1 = this;
-return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$79,self__.number],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$72,self__.colour],null))], null),self__.__extmap));
+var this__4346__auto____$1 = this;
+return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$44,self__.number],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$37,self__.colour],null))], null),self__.__extmap));
 });
 
-arimaa.game.Turn.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4232__auto__,G__16253){
+arimaa.game.Turn.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4333__auto__,G__16409){
 var self__ = this;
-var this__4232__auto____$1 = this;
-return (new arimaa.game.Turn(self__.number,self__.colour,G__16253,self__.__extmap,self__.__hash));
+var this__4333__auto____$1 = this;
+return (new arimaa.game.Turn(self__.number,self__.colour,G__16409,self__.__extmap,self__.__hash));
 });
 
-arimaa.game.Turn.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4238__auto__,entry__4239__auto__){
+arimaa.game.Turn.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4339__auto__,entry__4340__auto__){
 var self__ = this;
-var this__4238__auto____$1 = this;
-if(cljs.core.vector_QMARK_(entry__4239__auto__)){
-return cljs.core._assoc(this__4238__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(1)));
+var this__4339__auto____$1 = this;
+if(cljs.core.vector_QMARK_(entry__4340__auto__)){
+return cljs.core._assoc(this__4339__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(1)));
 } else {
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4238__auto____$1,entry__4239__auto__);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4339__auto____$1,entry__4340__auto__);
 }
 });
 
 arimaa.game.Turn.cljs$lang$type = true;
 
-arimaa.game.Turn.cljs$lang$ctorPrSeq = (function (this__4267__auto__){
+arimaa.game.Turn.cljs$lang$ctorPrSeq = (function (this__4368__auto__){
 return cljs.core._conj(cljs.core.List.EMPTY,"arimaa.game/Turn");
 });
 
-arimaa.game.Turn.cljs$lang$ctorPrWriter = (function (this__4267__auto__,writer__4268__auto__){
-return cljs.core._write(writer__4268__auto__,"arimaa.game/Turn");
+arimaa.game.Turn.cljs$lang$ctorPrWriter = (function (this__4368__auto__,writer__4369__auto__){
+return cljs.core._write(writer__4369__auto__,"arimaa.game/Turn");
 });
 
 arimaa.game.__GT_Turn = (function __GT_Turn(number,colour){
 return (new arimaa.game.Turn(number,colour,null,null,null));
 });
 
-arimaa.game.map__GT_Turn = (function map__GT_Turn(G__16255){
-return (new arimaa.game.Turn(cljs.core.constant$keyword$79.cljs$core$IFn$_invoke$arity$1(G__16255),cljs.core.constant$keyword$72.cljs$core$IFn$_invoke$arity$1(G__16255),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__16255,cljs.core.constant$keyword$79,cljs.core.array_seq([cljs.core.constant$keyword$72], 0)),null));
+arimaa.game.map__GT_Turn = (function map__GT_Turn(G__16411){
+return (new arimaa.game.Turn(cljs.core.constant$keyword$44.cljs$core$IFn$_invoke$arity$1(G__16411),cljs.core.constant$keyword$37.cljs$core$IFn$_invoke$arity$1(G__16411),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__16411,cljs.core.constant$keyword$44,cljs.core.array_seq([cljs.core.constant$keyword$37], 0)),null));
 });
 
 
@@ -1764,17 +1764,17 @@ this.__hash = __hash;
 this.cljs$lang$protocol_mask$partition0$ = 2229667594;
 this.cljs$lang$protocol_mask$partition1$ = 8192;
 })
-arimaa.game.Move.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4233__auto__,k__4234__auto__){
+arimaa.game.Move.prototype.cljs$core$ILookup$_lookup$arity$2 = (function (this__4334__auto__,k__4335__auto__){
 var self__ = this;
-var this__4233__auto____$1 = this;
-return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4233__auto____$1,k__4234__auto__,null);
+var this__4334__auto____$1 = this;
+return cljs.core._lookup.cljs$core$IFn$_invoke$arity$3(this__4334__auto____$1,k__4335__auto__,null);
 });
 
-arimaa.game.Move.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4235__auto__,k16266,else__4236__auto__){
+arimaa.game.Move.prototype.cljs$core$ILookup$_lookup$arity$3 = (function (this__4336__auto__,k16422,else__4337__auto__){
 var self__ = this;
-var this__4235__auto____$1 = this;
-var G__16268 = (((k16266 instanceof cljs.core.Keyword))?k16266.fqn:null);
-switch (G__16268) {
+var this__4336__auto____$1 = this;
+var G__16424 = (((k16422 instanceof cljs.core.Keyword))?k16422.fqn:null);
+switch (G__16424) {
 case "steps":
 return self__.steps;
 
@@ -1784,62 +1784,62 @@ return self__.turn;
 
 break;
 default:
-return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16266,else__4236__auto__);
+return cljs.core.get.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k16422,else__4337__auto__);
 
 }
 });
 
-arimaa.game.Move.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4247__auto__,writer__4248__auto__,opts__4249__auto__){
+arimaa.game.Move.prototype.cljs$core$IPrintWithWriter$_pr_writer$arity$3 = (function (this__4348__auto__,writer__4349__auto__,opts__4350__auto__){
 var self__ = this;
-var this__4247__auto____$1 = this;
-var pr_pair__4250__auto__ = ((function (this__4247__auto____$1){
-return (function (keyval__4251__auto__){
-return cljs.core.pr_sequential_writer(writer__4248__auto__,cljs.core.pr_writer,""," ","",opts__4249__auto__,keyval__4251__auto__);
-});})(this__4247__auto____$1))
+var this__4348__auto____$1 = this;
+var pr_pair__4351__auto__ = ((function (this__4348__auto____$1){
+return (function (keyval__4352__auto__){
+return cljs.core.pr_sequential_writer(writer__4349__auto__,cljs.core.pr_writer,""," ","",opts__4350__auto__,keyval__4352__auto__);
+});})(this__4348__auto____$1))
 ;
-return cljs.core.pr_sequential_writer(writer__4248__auto__,pr_pair__4250__auto__,"#arimaa.game.Move{",", ","}",opts__4249__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$80,self__.turn],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$81,self__.steps],null))], null),self__.__extmap));
+return cljs.core.pr_sequential_writer(writer__4349__auto__,pr_pair__4351__auto__,"#arimaa.game.Move{",", ","}",opts__4350__auto__,cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$45,self__.turn],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$46,self__.steps],null))], null),self__.__extmap));
 });
 
-arimaa.game.Move.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4231__auto__){
+arimaa.game.Move.prototype.cljs$core$IMeta$_meta$arity$1 = (function (this__4332__auto__){
 var self__ = this;
-var this__4231__auto____$1 = this;
+var this__4332__auto____$1 = this;
 return self__.__meta;
 });
 
-arimaa.game.Move.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4227__auto__){
+arimaa.game.Move.prototype.cljs$core$ICloneable$_clone$arity$1 = (function (this__4328__auto__){
 var self__ = this;
-var this__4227__auto____$1 = this;
+var this__4328__auto____$1 = this;
 return (new arimaa.game.Move(self__.turn,self__.steps,self__.__meta,self__.__extmap,self__.__hash));
 });
 
-arimaa.game.Move.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4237__auto__){
+arimaa.game.Move.prototype.cljs$core$ICounted$_count$arity$1 = (function (this__4338__auto__){
 var self__ = this;
-var this__4237__auto____$1 = this;
+var this__4338__auto____$1 = this;
 return (2 + cljs.core.count(self__.__extmap));
 });
 
-arimaa.game.Move.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4228__auto__){
+arimaa.game.Move.prototype.cljs$core$IHash$_hash$arity$1 = (function (this__4329__auto__){
 var self__ = this;
-var this__4228__auto____$1 = this;
-var h__4051__auto__ = self__.__hash;
-if(!((h__4051__auto__ == null))){
-return h__4051__auto__;
+var this__4329__auto____$1 = this;
+var h__4152__auto__ = self__.__hash;
+if(!((h__4152__auto__ == null))){
+return h__4152__auto__;
 } else {
-var h__4051__auto____$1 = cljs.core.hash_imap(this__4228__auto____$1);
-self__.__hash = h__4051__auto____$1;
+var h__4152__auto____$1 = cljs.core.hash_imap(this__4329__auto____$1);
+self__.__hash = h__4152__auto____$1;
 
-return h__4051__auto____$1;
+return h__4152__auto____$1;
 }
 });
 
-arimaa.game.Move.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4229__auto__,other__4230__auto__){
+arimaa.game.Move.prototype.cljs$core$IEquiv$_equiv$arity$2 = (function (this__4330__auto__,other__4331__auto__){
 var self__ = this;
-var this__4229__auto____$1 = this;
-if(cljs.core.truth_((function (){var and__3618__auto__ = other__4230__auto__;
-if(cljs.core.truth_(and__3618__auto__)){
-return ((this__4229__auto____$1.constructor === other__4230__auto__.constructor)) && (cljs.core.equiv_map(this__4229__auto____$1,other__4230__auto__));
+var this__4330__auto____$1 = this;
+if(cljs.core.truth_((function (){var and__3719__auto__ = other__4331__auto__;
+if(cljs.core.truth_(and__3719__auto__)){
+return ((this__4330__auto____$1.constructor === other__4331__auto__.constructor)) && (cljs.core.equiv_map(this__4330__auto____$1,other__4331__auto__));
 } else {
-return and__3618__auto__;
+return and__3719__auto__;
 }
 })())){
 return true;
@@ -1856,123 +1856,123 @@ var this$__$1 = this;
 return [cljs.core.str(arimaa.game.show(self__.turn)),cljs.core.str(" "),cljs.core.str(cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.str,cljs.core.interpose(" ",cljs.core.map.cljs$core$IFn$_invoke$arity$2(arimaa.game.show,self__.steps))))].join('');
 });
 
-arimaa.game.Move.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4242__auto__,k__4243__auto__){
+arimaa.game.Move.prototype.cljs$core$IMap$_dissoc$arity$2 = (function (this__4343__auto__,k__4344__auto__){
 var self__ = this;
-var this__4242__auto____$1 = this;
-if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$81,null,cljs.core.constant$keyword$80,null], null), null),k__4243__auto__)){
-return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4242__auto____$1),self__.__meta),k__4243__auto__);
+var this__4343__auto____$1 = this;
+if(cljs.core.contains_QMARK_(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$46,null,cljs.core.constant$keyword$45,null], null), null),k__4344__auto__)){
+return cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(cljs.core.with_meta(cljs.core.into.cljs$core$IFn$_invoke$arity$2(cljs.core.PersistentArrayMap.EMPTY,this__4343__auto____$1),self__.__meta),k__4344__auto__);
 } else {
-return (new arimaa.game.Move(self__.turn,self__.steps,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4243__auto__)),null));
+return (new arimaa.game.Move(self__.turn,self__.steps,self__.__meta,cljs.core.not_empty(cljs.core.dissoc.cljs$core$IFn$_invoke$arity$2(self__.__extmap,k__4344__auto__)),null));
 }
 });
 
-arimaa.game.Move.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4240__auto__,k__4241__auto__,G__16265){
+arimaa.game.Move.prototype.cljs$core$IAssociative$_assoc$arity$3 = (function (this__4341__auto__,k__4342__auto__,G__16421){
 var self__ = this;
-var this__4240__auto____$1 = this;
-var pred__16269 = cljs.core.keyword_identical_QMARK_;
-var expr__16270 = k__4241__auto__;
-if(cljs.core.truth_((function (){var G__16272 = cljs.core.constant$keyword$80;
-var G__16273 = expr__16270;
-return (pred__16269.cljs$core$IFn$_invoke$arity$2 ? pred__16269.cljs$core$IFn$_invoke$arity$2(G__16272,G__16273) : pred__16269.call(null,G__16272,G__16273));
+var this__4341__auto____$1 = this;
+var pred__16425 = cljs.core.keyword_identical_QMARK_;
+var expr__16426 = k__4342__auto__;
+if(cljs.core.truth_((function (){var G__16428 = cljs.core.constant$keyword$45;
+var G__16429 = expr__16426;
+return (pred__16425.cljs$core$IFn$_invoke$arity$2 ? pred__16425.cljs$core$IFn$_invoke$arity$2(G__16428,G__16429) : pred__16425.call(null,G__16428,G__16429));
 })())){
-return (new arimaa.game.Move(G__16265,self__.steps,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.Move(G__16421,self__.steps,self__.__meta,self__.__extmap,null));
 } else {
-if(cljs.core.truth_((function (){var G__16274 = cljs.core.constant$keyword$81;
-var G__16275 = expr__16270;
-return (pred__16269.cljs$core$IFn$_invoke$arity$2 ? pred__16269.cljs$core$IFn$_invoke$arity$2(G__16274,G__16275) : pred__16269.call(null,G__16274,G__16275));
+if(cljs.core.truth_((function (){var G__16430 = cljs.core.constant$keyword$46;
+var G__16431 = expr__16426;
+return (pred__16425.cljs$core$IFn$_invoke$arity$2 ? pred__16425.cljs$core$IFn$_invoke$arity$2(G__16430,G__16431) : pred__16425.call(null,G__16430,G__16431));
 })())){
-return (new arimaa.game.Move(self__.turn,G__16265,self__.__meta,self__.__extmap,null));
+return (new arimaa.game.Move(self__.turn,G__16421,self__.__meta,self__.__extmap,null));
 } else {
-return (new arimaa.game.Move(self__.turn,self__.steps,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4241__auto__,G__16265),null));
+return (new arimaa.game.Move(self__.turn,self__.steps,self__.__meta,cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(self__.__extmap,k__4342__auto__,G__16421),null));
 }
 }
 });
 
-arimaa.game.Move.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4245__auto__){
+arimaa.game.Move.prototype.cljs$core$ISeqable$_seq$arity$1 = (function (this__4346__auto__){
 var self__ = this;
-var this__4245__auto____$1 = this;
-return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$80,self__.turn],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$81,self__.steps],null))], null),self__.__extmap));
+var this__4346__auto____$1 = this;
+return cljs.core.seq(cljs.core.concat.cljs$core$IFn$_invoke$arity$2(new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$45,self__.turn],null)),(new cljs.core.PersistentVector(null,2,(5),cljs.core.PersistentVector.EMPTY_NODE,[cljs.core.constant$keyword$46,self__.steps],null))], null),self__.__extmap));
 });
 
-arimaa.game.Move.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4232__auto__,G__16265){
+arimaa.game.Move.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = (function (this__4333__auto__,G__16421){
 var self__ = this;
-var this__4232__auto____$1 = this;
-return (new arimaa.game.Move(self__.turn,self__.steps,G__16265,self__.__extmap,self__.__hash));
+var this__4333__auto____$1 = this;
+return (new arimaa.game.Move(self__.turn,self__.steps,G__16421,self__.__extmap,self__.__hash));
 });
 
-arimaa.game.Move.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4238__auto__,entry__4239__auto__){
+arimaa.game.Move.prototype.cljs$core$ICollection$_conj$arity$2 = (function (this__4339__auto__,entry__4340__auto__){
 var self__ = this;
-var this__4238__auto____$1 = this;
-if(cljs.core.vector_QMARK_(entry__4239__auto__)){
-return cljs.core._assoc(this__4238__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4239__auto__,(1)));
+var this__4339__auto____$1 = this;
+if(cljs.core.vector_QMARK_(entry__4340__auto__)){
+return cljs.core._assoc(this__4339__auto____$1,cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(0)),cljs.core._nth.cljs$core$IFn$_invoke$arity$2(entry__4340__auto__,(1)));
 } else {
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4238__auto____$1,entry__4239__auto__);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3(cljs.core._conj,this__4339__auto____$1,entry__4340__auto__);
 }
 });
 
 arimaa.game.Move.cljs$lang$type = true;
 
-arimaa.game.Move.cljs$lang$ctorPrSeq = (function (this__4267__auto__){
+arimaa.game.Move.cljs$lang$ctorPrSeq = (function (this__4368__auto__){
 return cljs.core._conj(cljs.core.List.EMPTY,"arimaa.game/Move");
 });
 
-arimaa.game.Move.cljs$lang$ctorPrWriter = (function (this__4267__auto__,writer__4268__auto__){
-return cljs.core._write(writer__4268__auto__,"arimaa.game/Move");
+arimaa.game.Move.cljs$lang$ctorPrWriter = (function (this__4368__auto__,writer__4369__auto__){
+return cljs.core._write(writer__4369__auto__,"arimaa.game/Move");
 });
 
 arimaa.game.__GT_Move = (function __GT_Move(turn,steps){
 return (new arimaa.game.Move(turn,steps,null,null,null));
 });
 
-arimaa.game.map__GT_Move = (function map__GT_Move(G__16267){
-return (new arimaa.game.Move(cljs.core.constant$keyword$80.cljs$core$IFn$_invoke$arity$1(G__16267),cljs.core.constant$keyword$81.cljs$core$IFn$_invoke$arity$1(G__16267),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__16267,cljs.core.constant$keyword$80,cljs.core.array_seq([cljs.core.constant$keyword$81], 0)),null));
+arimaa.game.map__GT_Move = (function map__GT_Move(G__16423){
+return (new arimaa.game.Move(cljs.core.constant$keyword$45.cljs$core$IFn$_invoke$arity$1(G__16423),cljs.core.constant$keyword$46.cljs$core$IFn$_invoke$arity$1(G__16423),null,cljs.core.dissoc.cljs$core$IFn$_invoke$arity$variadic(G__16423,cljs.core.constant$keyword$45,cljs.core.array_seq([cljs.core.constant$keyword$46], 0)),null));
 });
 
 arimaa.game.adjacent_squares = (function adjacent_squares(square){
-var col = cljs.core.constant$keyword$69.cljs$core$IFn$_invoke$arity$1(square);
-var row = cljs.core.constant$keyword$70.cljs$core$IFn$_invoke$arity$1(square);
+var col = cljs.core.constant$keyword$34.cljs$core$IFn$_invoke$arity$1(square);
+var row = cljs.core.constant$keyword$35.cljs$core$IFn$_invoke$arity$1(square);
 return cljs.core.filter.cljs$core$IFn$_invoke$arity$2(cljs.core.identity,cljs.core.PersistentHashSet.fromArray([((cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2((1),row))?(new arimaa.game.Square(col,(row - (1)),null,null,null)):null),((cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2((8),row))?(new arimaa.game.Square(col,(row + (1)),null,null,null)):null),((cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2("a",col))?(new arimaa.game.Square((col - (1)),row,null,null,null)):null),((cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2("h",col))?(new arimaa.game.Square((col + (1)),row,null,null,null)):null)], true));
 });
 arimaa.game.pieces_at = (function pieces_at(board,squares){
 return cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (piece_position){
-var G__16278 = cljs.core.constant$keyword$74.cljs$core$IFn$_invoke$arity$1(piece_position);
-return (squares.cljs$core$IFn$_invoke$arity$1 ? squares.cljs$core$IFn$_invoke$arity$1(G__16278) : squares.call(null,G__16278));
+var G__16434 = cljs.core.constant$keyword$39.cljs$core$IFn$_invoke$arity$1(piece_position);
+return (squares.cljs$core$IFn$_invoke$arity$1 ? squares.cljs$core$IFn$_invoke$arity$1(G__16434) : squares.call(null,G__16434));
 }),board);
 });
-arimaa.game.stronger_animals = new cljs.core.PersistentArrayMap(null, 6, [cljs.core.constant$keyword$57,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 5, [cljs.core.constant$keyword$58,null,cljs.core.constant$keyword$59,null,cljs.core.constant$keyword$62,null,cljs.core.constant$keyword$61,null,cljs.core.constant$keyword$60,null], null), null),cljs.core.constant$keyword$58,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$59,null,cljs.core.constant$keyword$62,null,cljs.core.constant$keyword$61,null,cljs.core.constant$keyword$60,null], null), null),cljs.core.constant$keyword$59,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$62,null,cljs.core.constant$keyword$61,null,cljs.core.constant$keyword$60,null], null), null),cljs.core.constant$keyword$60,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$62,null,cljs.core.constant$keyword$61,null], null), null),cljs.core.constant$keyword$61,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$62,null], null), null),cljs.core.constant$keyword$62,cljs.core.PersistentHashSet.EMPTY], null);
-arimaa.game.weaker_animals = new cljs.core.PersistentArrayMap(null, 6, [cljs.core.constant$keyword$62,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 5, [cljs.core.constant$keyword$58,null,cljs.core.constant$keyword$59,null,cljs.core.constant$keyword$61,null,cljs.core.constant$keyword$57,null,cljs.core.constant$keyword$60,null], null), null),cljs.core.constant$keyword$61,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$58,null,cljs.core.constant$keyword$59,null,cljs.core.constant$keyword$57,null,cljs.core.constant$keyword$60,null], null), null),cljs.core.constant$keyword$60,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$58,null,cljs.core.constant$keyword$59,null,cljs.core.constant$keyword$57,null], null), null),cljs.core.constant$keyword$59,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$58,null,cljs.core.constant$keyword$57,null], null), null),cljs.core.constant$keyword$58,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$57,null], null), null),cljs.core.constant$keyword$57,cljs.core.PersistentHashSet.EMPTY], null);
+arimaa.game.stronger_animals = new cljs.core.PersistentArrayMap(null, 6, [cljs.core.constant$keyword$22,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 5, [cljs.core.constant$keyword$23,null,cljs.core.constant$keyword$24,null,cljs.core.constant$keyword$27,null,cljs.core.constant$keyword$26,null,cljs.core.constant$keyword$25,null], null), null),cljs.core.constant$keyword$23,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$24,null,cljs.core.constant$keyword$27,null,cljs.core.constant$keyword$26,null,cljs.core.constant$keyword$25,null], null), null),cljs.core.constant$keyword$24,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$27,null,cljs.core.constant$keyword$26,null,cljs.core.constant$keyword$25,null], null), null),cljs.core.constant$keyword$25,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$27,null,cljs.core.constant$keyword$26,null], null), null),cljs.core.constant$keyword$26,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$27,null], null), null),cljs.core.constant$keyword$27,cljs.core.PersistentHashSet.EMPTY], null);
+arimaa.game.weaker_animals = new cljs.core.PersistentArrayMap(null, 6, [cljs.core.constant$keyword$27,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 5, [cljs.core.constant$keyword$23,null,cljs.core.constant$keyword$24,null,cljs.core.constant$keyword$26,null,cljs.core.constant$keyword$22,null,cljs.core.constant$keyword$25,null], null), null),cljs.core.constant$keyword$26,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 4, [cljs.core.constant$keyword$23,null,cljs.core.constant$keyword$24,null,cljs.core.constant$keyword$22,null,cljs.core.constant$keyword$25,null], null), null),cljs.core.constant$keyword$25,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 3, [cljs.core.constant$keyword$23,null,cljs.core.constant$keyword$24,null,cljs.core.constant$keyword$22,null], null), null),cljs.core.constant$keyword$24,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [cljs.core.constant$keyword$23,null,cljs.core.constant$keyword$22,null], null), null),cljs.core.constant$keyword$23,new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 1, [cljs.core.constant$keyword$22,null], null), null),cljs.core.constant$keyword$22,cljs.core.PersistentHashSet.EMPTY], null);
 arimaa.game.friendly_pieces = (function friendly_pieces(piece_position,piece_positions){
-return cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__16279_SHARP_){
-return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.constant$keyword$72.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$73.cljs$core$IFn$_invoke$arity$1(piece_position)),cljs.core.constant$keyword$72.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$73.cljs$core$IFn$_invoke$arity$1(p1__16279_SHARP_)));
+return cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__16435_SHARP_){
+return cljs.core._EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.constant$keyword$37.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$38.cljs$core$IFn$_invoke$arity$1(piece_position)),cljs.core.constant$keyword$37.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$38.cljs$core$IFn$_invoke$arity$1(p1__16435_SHARP_)));
 }),piece_positions);
 });
 arimaa.game.enemy_pieces = (function enemy_pieces(piece_position,piece_positions){
-return cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__16280_SHARP_){
-return cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.constant$keyword$72.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$73.cljs$core$IFn$_invoke$arity$1(piece_position)),cljs.core.constant$keyword$72.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$73.cljs$core$IFn$_invoke$arity$1(p1__16280_SHARP_)));
+return cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (p1__16436_SHARP_){
+return cljs.core.not_EQ_.cljs$core$IFn$_invoke$arity$2(cljs.core.constant$keyword$37.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$38.cljs$core$IFn$_invoke$arity$1(piece_position)),cljs.core.constant$keyword$37.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$38.cljs$core$IFn$_invoke$arity$1(p1__16436_SHARP_)));
 }),piece_positions);
 });
 arimaa.game.stronger_enemy_pieces = (function stronger_enemy_pieces(piece_position,piece_positions){
-return cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (){var G__16282 = cljs.core.constant$keyword$71.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$73.cljs$core$IFn$_invoke$arity$1(piece_position));
-return (arimaa.game.stronger_animals.cljs$core$IFn$_invoke$arity$1 ? arimaa.game.stronger_animals.cljs$core$IFn$_invoke$arity$1(G__16282) : arimaa.game.stronger_animals.call(null,G__16282));
+return cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (){var G__16438 = cljs.core.constant$keyword$36.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$38.cljs$core$IFn$_invoke$arity$1(piece_position));
+return (arimaa.game.stronger_animals.cljs$core$IFn$_invoke$arity$1 ? arimaa.game.stronger_animals.cljs$core$IFn$_invoke$arity$1(G__16438) : arimaa.game.stronger_animals.call(null,G__16438));
 })(),arimaa.game.enemy_pieces(piece_position,piece_positions));
 });
 arimaa.game.weaker_enemy_pieces = (function weaker_enemy_pieces(piece_position,piece_positions){
-return cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (){var G__16284 = cljs.core.constant$keyword$71.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$73.cljs$core$IFn$_invoke$arity$1(piece_position));
-return (arimaa.game.weaker_animals.cljs$core$IFn$_invoke$arity$1 ? arimaa.game.weaker_animals.cljs$core$IFn$_invoke$arity$1(G__16284) : arimaa.game.weaker_animals.call(null,G__16284));
+return cljs.core.filter.cljs$core$IFn$_invoke$arity$2((function (){var G__16440 = cljs.core.constant$keyword$36.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$38.cljs$core$IFn$_invoke$arity$1(piece_position));
+return (arimaa.game.weaker_animals.cljs$core$IFn$_invoke$arity$1 ? arimaa.game.weaker_animals.cljs$core$IFn$_invoke$arity$1(G__16440) : arimaa.game.weaker_animals.call(null,G__16440));
 })(),arimaa.game.enemy_pieces(piece_position,piece_positions));
 });
 arimaa.game.is_frozen = (function is_frozen(piece,adjacent_pieces){
-var colour = cljs.core.constant$keyword$72.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$73.cljs$core$IFn$_invoke$arity$1(piece));
-var stronger_anmls = (function (){var G__16286 = piece;
-return (arimaa.game.stronger_animals.cljs$core$IFn$_invoke$arity$1 ? arimaa.game.stronger_animals.cljs$core$IFn$_invoke$arity$1(G__16286) : arimaa.game.stronger_animals.call(null,G__16286));
+var colour = cljs.core.constant$keyword$37.cljs$core$IFn$_invoke$arity$1(cljs.core.constant$keyword$38.cljs$core$IFn$_invoke$arity$1(piece));
+var stronger_anmls = (function (){var G__16442 = piece;
+return (arimaa.game.stronger_animals.cljs$core$IFn$_invoke$arity$1 ? arimaa.game.stronger_animals.cljs$core$IFn$_invoke$arity$1(G__16442) : arimaa.game.stronger_animals.call(null,G__16442));
 })();
 return (cljs.core.empty_QMARK_(arimaa.game.friendly_pieces(piece,adjacent_pieces))) && (!(cljs.core.empty_QMARK_(arimaa.game.stronger_enemy_pieces(piece,adjacent_pieces))));
 });
 arimaa.game.find_empty = (function find_empty(squares,board){
-return cljs.core.filter.cljs$core$IFn$_invoke$arity$2(cljs.core.set(cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.constant$keyword$74,board)),squares);
+return cljs.core.filter.cljs$core$IFn$_invoke$arity$2(cljs.core.set(cljs.core.map.cljs$core$IFn$_invoke$arity$2(cljs.core.constant$keyword$39,board)),squares);
 });
 arimaa.game.position_after_move = (function position_after_move(position,move){
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (p1__16287_SHARP_){
-return arimaa.game.update_position(p1__16287_SHARP_,p1__16287_SHARP_);
-}),position,cljs.core.constant$keyword$81.cljs$core$IFn$_invoke$arity$1(move));
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (p1__16443_SHARP_){
+return arimaa.game.update_position(p1__16443_SHARP_,p1__16443_SHARP_);
+}),position,cljs.core.constant$keyword$46.cljs$core$IFn$_invoke$arity$1(move));
 });

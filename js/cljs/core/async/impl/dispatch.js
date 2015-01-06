@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-2511
+// Compiled by ClojureScript 0.0-2657 {}
 goog.provide('cljs.core.async.impl.dispatch');
 goog.require('cljs.core');
 goog.require('goog.async.nextTick');
@@ -12,16 +12,16 @@ cljs.core.async.impl.dispatch.running_QMARK_ = true;
 
 cljs.core.async.impl.dispatch.queued_QMARK_ = false;
 
-var count_26554 = (0);
+var count_27069 = (0);
 while(true){
-var m_26555 = cljs.core.async.impl.dispatch.tasks.pop();
-if((m_26555 == null)){
+var m_27070 = cljs.core.async.impl.dispatch.tasks.pop();
+if((m_27070 == null)){
 } else {
-(m_26555.cljs$core$IFn$_invoke$arity$0 ? m_26555.cljs$core$IFn$_invoke$arity$0() : m_26555.call(null));
+(m_27070.cljs$core$IFn$_invoke$arity$0 ? m_27070.cljs$core$IFn$_invoke$arity$0() : m_27070.call(null));
 
-if((count_26554 < cljs.core.async.impl.dispatch.TASK_BATCH_SIZE)){
-var G__26556 = (count_26554 + (1));
-count_26554 = G__26556;
+if((count_27069 < cljs.core.async.impl.dispatch.TASK_BATCH_SIZE)){
+var G__27071 = (count_27069 + (1));
+count_27069 = G__27071;
 continue;
 } else {
 }
@@ -38,19 +38,19 @@ return null;
 }
 });
 cljs.core.async.impl.dispatch.queue_dispatcher = (function queue_dispatcher(){
-if(cljs.core.truth_((function (){var and__3618__auto__ = cljs.core.async.impl.dispatch.queued_QMARK_;
-if(cljs.core.truth_(and__3618__auto__)){
+if(cljs.core.truth_((function (){var and__3719__auto__ = cljs.core.async.impl.dispatch.queued_QMARK_;
+if(cljs.core.truth_(and__3719__auto__)){
 return cljs.core.async.impl.dispatch.running_QMARK_;
 } else {
-return and__3618__auto__;
+return and__3719__auto__;
 }
 })())){
 return null;
 } else {
 cljs.core.async.impl.dispatch.queued_QMARK_ = true;
 
-var G__26558 = cljs.core.async.impl.dispatch.process_messages;
-return goog.async.nextTick(G__26558);
+var G__27073 = cljs.core.async.impl.dispatch.process_messages;
+return goog.async.nextTick(G__27073);
 }
 });
 cljs.core.async.impl.dispatch.run = (function run(f){
@@ -59,7 +59,7 @@ cljs.core.async.impl.dispatch.tasks.unbounded_unshift(f);
 return cljs.core.async.impl.dispatch.queue_dispatcher();
 });
 cljs.core.async.impl.dispatch.queue_delay = (function queue_delay(f,delay){
-var G__26561 = f;
-var G__26562 = delay;
-return setTimeout(G__26561,G__26562);
+var G__27076 = f;
+var G__27077 = delay;
+return setTimeout(G__27076,G__27077);
 });
