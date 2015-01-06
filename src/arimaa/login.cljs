@@ -36,5 +36,6 @@
                    :on-key-up #(if (= (.-keyCode %) 13) (login))}]]
         [:div
           [:button {:on-click login} "Login"]]
+        [:a {:href "http://arimaa.com/arimaa/gameroom/"} "Register"]
         (if @login-error
           [:div.login-error @login-error])])))
