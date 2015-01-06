@@ -12,9 +12,9 @@ goog.require('goog.Uri');
 */
 cljs_http.util.basic_auth = (function basic_auth(credentials){
 if(cljs.core.truth_(credentials)){
-var vec__23176 = ((cljs.core.map_QMARK_(credentials))?cljs.core.map.cljs$core$IFn$_invoke$arity$2(credentials,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$63,cljs.core.constant$keyword$55], null)):credentials);
-var username = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__23176,(0),null);
-var password = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__23176,(1),null);
+var vec__24141 = ((cljs.core.map_QMARK_(credentials))?cljs.core.map.cljs$core$IFn$_invoke$arity$2(credentials,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs.core.constant$keyword$176,cljs.core.constant$keyword$168], null)):credentials);
+var username = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__24141,(0),null);
+var password = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__24141,(1),null);
 return [cljs.core.str("Basic "),cljs.core.str(no.en.core.base64_encode([cljs.core.str(username),cljs.core.str(":"),cljs.core.str(password)].join('')))].join('');
 } else {
 return null;
@@ -23,32 +23,32 @@ return null;
 /**
 * Build the url from the request map.
 */
-cljs_http.util.build_url = (function build_url(p__23177){
-var map__23180 = p__23177;
-var map__23180__$1 = ((cljs.core.seq_QMARK_(map__23180))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__23180):map__23180);
-var query_string = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23180__$1,cljs.core.constant$keyword$61);
-var uri = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23180__$1,cljs.core.constant$keyword$59);
-var server_port = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23180__$1,cljs.core.constant$keyword$58);
-var server_name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23180__$1,cljs.core.constant$keyword$57);
-var scheme = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__23180__$1,cljs.core.constant$keyword$54);
-return [cljs.core.str((function (){var G__23181 = (new goog.Uri());
-G__23181.setScheme(cljs.core.name((function (){var or__3731__auto__ = scheme;
+cljs_http.util.build_url = (function build_url(p__24142){
+var map__24145 = p__24142;
+var map__24145__$1 = ((cljs.core.seq_QMARK_(map__24145))?cljs.core.apply.cljs$core$IFn$_invoke$arity$2(cljs.core.hash_map,map__24145):map__24145);
+var query_string = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__24145__$1,cljs.core.constant$keyword$174);
+var uri = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__24145__$1,cljs.core.constant$keyword$172);
+var server_port = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__24145__$1,cljs.core.constant$keyword$171);
+var server_name = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__24145__$1,cljs.core.constant$keyword$170);
+var scheme = cljs.core.get.cljs$core$IFn$_invoke$arity$2(map__24145__$1,cljs.core.constant$keyword$167);
+return [cljs.core.str((function (){var G__24146 = (new goog.Uri());
+G__24146.setScheme(cljs.core.name((function (){var or__3731__auto__ = scheme;
 if(cljs.core.truth_(or__3731__auto__)){
 return or__3731__auto__;
 } else {
-return cljs.core.constant$keyword$48;
+return cljs.core.constant$keyword$162;
 }
 })()));
 
-G__23181.setDomain(server_name);
+G__24146.setDomain(server_name);
 
-G__23181.setPort(server_port);
+G__24146.setPort(server_port);
 
-G__23181.setPath(uri);
+G__24146.setPath(uri);
 
-G__23181.setQuery(query_string,true);
+G__24146.setQuery(query_string,true);
 
-return G__23181;
+return G__24146;
 })())].join('');
 });
 /**
@@ -93,8 +93,8 @@ return cognitect.transit.write(wrtr,x);
 * JSON decode an object from `s`.
 */
 cljs_http.util.json_decode = (function json_decode(s){
-var temp__4124__auto__ = ((cljs.core.not(clojure.string.blank_QMARK_(s)))?(function (){var G__23183 = s;
-return JSON.parse(G__23183);
+var temp__4124__auto__ = ((cljs.core.not(clojure.string.blank_QMARK_(s)))?(function (){var G__24148 = s;
+return JSON.parse(G__24148);
 })():null);
 if(cljs.core.truth_(temp__4124__auto__)){
 var v = temp__4124__auto__;
@@ -107,14 +107,14 @@ return null;
 * JSON encode `x` into a String.
 */
 cljs_http.util.json_encode = (function json_encode(x){
-var G__23185 = cljs.core.clj__GT_js(x);
-return JSON.stringify(G__23185);
+var G__24150 = cljs.core.clj__GT_js(x);
+return JSON.stringify(G__24150);
 });
 cljs_http.util.parse_headers = (function parse_headers(headers){
-return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (p1__23187_SHARP_,p2__23186_SHARP_){
-var vec__23189 = clojure.string.split.cljs$core$IFn$_invoke$arity$2(p2__23186_SHARP_,/:\s+/);
-var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__23189,(0),null);
-var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__23189,(1),null);
+return cljs.core.reduce.cljs$core$IFn$_invoke$arity$3((function (p1__24152_SHARP_,p2__24151_SHARP_){
+var vec__24154 = clojure.string.split.cljs$core$IFn$_invoke$arity$2(p2__24151_SHARP_,/:\s+/);
+var k = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__24154,(0),null);
+var v = cljs.core.nth.cljs$core$IFn$_invoke$arity$3(vec__24154,(1),null);
 if(cljs.core.truth_((function (){var or__3731__auto__ = clojure.string.blank_QMARK_(k);
 if(cljs.core.truth_(or__3731__auto__)){
 return or__3731__auto__;
@@ -122,9 +122,9 @@ return or__3731__auto__;
 return clojure.string.blank_QMARK_(v);
 }
 })())){
-return p1__23187_SHARP_;
+return p1__24152_SHARP_;
 } else {
-return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__23187_SHARP_,clojure.string.lower_case(k),v);
+return cljs.core.assoc.cljs$core$IFn$_invoke$arity$3(p1__24152_SHARP_,clojure.string.lower_case(k),v);
 }
 }),cljs.core.PersistentArrayMap.EMPTY,clojure.string.split.cljs$core$IFn$_invoke$arity$2((function (){var or__3731__auto__ = headers;
 if(cljs.core.truth_(or__3731__auto__)){
