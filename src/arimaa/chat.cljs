@@ -4,20 +4,24 @@
     [arimaa.state :refer [username auth]]
     [arimaa.utils :refer [initial-focus-wrapper markup-user-messages scroll-bottom-wrapper subscribe-atom-to-channel!]]
     [reagent.core :as reagent :refer [atom]]
-    [cljs.core.async :as async :refer [chan close! timeout]])
+    [cljs.core.async :as async :refer [chan close! timeout]]
+    [cljs-time.format :refer [formatter unparse]])
   (:require-macros
     [cljs.core.async.macros :refer [go]]))
 
+(defn format-timestamp [timestamp]
+  (unparse (formatter "HH:mm:ss") timestamp))
+
 (defn chat-message [chat]
   [:div
-    [:span.chat-timestamp (:timestamp chat)]
+    [:span.chat-timestamp (format-timestamp (:timestamp chat))]
     [:span {:style {:color (:color chat)}}
       [:span.chat-player (:player-name chat)]
       (into [:span.chat-message] (markup-user-messages (:message chat)))]])
 
 (defn chat-event [chat icon text]
   [:div
-    [:span.chat-timestamp (:timestamp chat)]
+    [:span.chat-timestamp (format-timestamp (:timestamp chat))]
     [icon]
     [:span.chat-event
       [:span.chat-player (:player-name chat)]

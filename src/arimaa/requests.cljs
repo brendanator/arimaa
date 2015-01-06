@@ -1,11 +1,10 @@
 (ns arimaa.requests
   (:require
     [arimaa.game :refer [Piece Square Step Capture Turn Move PiecePosition PlaceStartingPiece]]
+    [arimaa.utils :refer[parse-timestamp]]
     [cljs-http.client :as http]
     [cljs.core.async :as async]
-    [clojure.string :as string]
-    [cljs-time.format :refer [formatter unparse]]
-    [cljs-time.coerce :as coerce]))
+    [clojure.string :as string]))
 
 (def ^:private protocol1-url "http://arimaa.com/arimaa/gameroom/client1gr.cgi")
 (def ^:private protocol2-url "http://arimaa.com/arimaa/gameroom/client2gr.cgi")
@@ -146,7 +145,7 @@
        :json-params {:sid session-id :action "state"}})))
 
 (defn- parse-chat-line [chat-line]
-  (let [timestamp (unparse (formatter "HH:mm") (coerce/from-long (* 1000 (first chat-line))))
+  (let [timestamp (parse-timestamp (first chat-line))
         player-name (second chat-line)
         chat-type (keyword (nth chat-line 2))
         chat {:timestamp timestamp :player-name player-name :chat-type chat-type}]

@@ -2,8 +2,8 @@
   (:require
     [arimaa.game :refer [show Square Turn update-position]]
     [arimaa.requests :as requests]
-    [arimaa.state :refer [gameroom-state logged-in session-id gameroom-id]]
-    [arimaa.utils :refer [cols scroll-bottom-wrapper subscribe-atom-to-channel!]]
+    [arimaa.state :refer [gameroom-state logged-in session-id gameroom-id username my-games live-games scheduled-games]]
+    [arimaa.utils :refer [cols parse-timestamp scroll-bottom-wrapper subscribe-atom-to-channel!]]
     [reagent.core :as reagent :refer [atom]]
     [cljs.core.async :as async :refer [chan close! timeout]])
   (:require-macros
@@ -129,7 +129,7 @@
     [:header
       [:h4 "My games"]]
     [:div
-      (map game-view (:mygames @gameroom-state))]])
+      (map game-view (my-games @username))]])
 
 (defn open-games-view []
   [:section
@@ -143,7 +143,7 @@
     [:header
       [:h4 "Live games"]]
     [:div
-      (for [live-game (:livegames @gameroom-state)]
+      (for [live-game (live-games @username)]
         ^{:key (:id live-game)} [ingame-view live-game])]])
 
 (defn recent-games-view []
@@ -153,6 +153,13 @@
     [:div
       (map game-view (:recentgames @gameroom-state))]])
 
+(defn scheduled-games-view []
+  [:section
+    [:header
+      [:h4 "Scheduled games"]]
+    [:div
+      (map game-view (scheduled-games))]])
+
 (defn gameroom-view []
   (subscribe-atom-to-channel! gameroom-state (gameroom-state-channel))
   [:section.games.pure-u-3-5
@@ -160,4 +167,5 @@
     [my-games-view]
     [open-games-view]
     [live-games-view]
-    [recent-games-view]])
+    [recent-games-view]
+    [scheduled-games-view]])

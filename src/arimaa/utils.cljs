@@ -1,6 +1,7 @@
 (ns arimaa.utils
   (:require
     [reagent.core :as reagent :refer [atom]]
+    [cljs-time.coerce :as coerce]
     [clojure.string :as string])
   (:require-macros
     [cljs.core.async.macros :refer [go]]))
@@ -41,3 +42,6 @@
     (if (= value (first urls))
       linked-urls
       (interleave non-url-parts (concat linked-urls [""])))))
+
+(defn parse-timestamp [value]
+  (coerce/from-long (* 1000 value)))

@@ -20,7 +20,7 @@
   (let [username-input (atom "")
         password (atom "")
         login-error (atom nil)
-        login #(login @username-input @password @login-error)]
+        login #(login @username-input @password login-error)]
     (fn []
       [:section.login-form
         [:div
