@@ -3,7 +3,7 @@
   :url "http://arimaa.club"
 
   :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/clojurescript "0.0-2657"]
+                 [org.clojure/clojurescript "0.0-2727"]
                  [org.clojure/core.async "0.1.346.0-17112a-alpha"]
                  [com.andrewmcveigh/cljs-time "0.2.4"]
                  [reagent "0.4.3"]
