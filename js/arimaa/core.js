@@ -1,4 +1,4 @@
-// Compiled by ClojureScript 0.0-2657 {}
+// Compiled by ClojureScript 0.0-2727 {}
 goog.provide('arimaa.core');
 goog.require('cljs.core');
 goog.require('reagent.core');
